@@ -17,15 +17,22 @@ a:hover {
   background-size: 100% 200%;
   background-position: top;
   /* transition: background-position 0.5s ease-in-out; /** I've changed the time for demo purposes **/
-  color: #ffffff;
+  color: #ffffff !important;
   transition: 0.2s ease-in-out;
 }
 
 .an-link:hover {
   background-position: bottom;
-  color: #6A68E2;
+  color: #6A68E2 !important;;
   cursor: pointer;
-  font-family: "Ortica-Bold";
+  font-family: "Ortica-Bold", serif;
+}
+
+.an-link > div > h4:hover {
+  background-position: bottom;
+  color: #6A68E2 !important;;
+  cursor: pointer;
+  font-family: "Ortica-Bold", serif;
 }
 
 header {
@@ -45,6 +52,22 @@ body {
 h2 {
   font-size: 10vw;
   line-height: 5vw;
+  color: white;
+}
+
+h3 {
+  font-size: 5vw;
+  line-height: 5vw;
+  color: white;
+}
+
+h4 {
+  font-size: 5vw;
+  line-height: 5vw;
+  color: white;
+}
+
+#foot {
   color: white;
 }
 
@@ -89,42 +112,42 @@ h2 {
   text-align: center;
   font-size: 1vw;
   font-family: 'Manrope', sans-serif;
-  color: black;
+  color: white;
 }
 
 #insta {
   cursor: pointer;
-  color: black;
+  color: white;
   text-decoration: none;
 }
 
 #git {
   cursor: pointer;
-  color: black;
+  color: white;
   text-decoration: none;
 }
 
 #telegram {
   cursor: pointer;
-  color: black;
+  color: white;
   text-decoration: none;
 }
 
 #twitter {
   cursor: pointer;
-  color: black;
+  color: white;
   text-decoration: none;
 }
 
 #vimeo {
   cursor: pointer;
-  color: black;
+  color: white;
   text-decoration: none;
 }
 
 #mail {
   cursor: pointer;
-  color: black;
+  color: white;
   text-decoration: none;
 }
 
@@ -194,7 +217,7 @@ h2 {
 }
 
 h1 {
-  font-family: "Ortica";
+  font-family: "Ortica", serif;
   font-size: 6vw;
   text-align: left;
   color: #6a68e2;
