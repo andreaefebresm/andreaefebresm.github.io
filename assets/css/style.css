@@ -13,17 +13,17 @@ a:hover {
 }
 
 .an-link {
-  background-image: linear-gradient(to top, #6A68E2 50%, transparent 50%);
+  background-image: linear-gradient(to top, #ffffff 50%, transparent 50%);
   background-size: 100% 200%;
   background-position: top;
   /* transition: background-position 0.5s ease-in-out; /** I've changed the time for demo purposes **/
-  color: #6A68E2;
-  transition: 0.3s ease-in-out;
+  color: #ffffff;
+  transition: 0.2s ease-in-out;
 }
 
 .an-link:hover {
   background-position: bottom;
-  color: white;
+  color: #6A68E2;
   cursor: pointer;
   font-family: "Ortica-Bold";
 }
@@ -32,8 +32,20 @@ header {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  background: white;
+  background: #6A68E2;
   z-index: 20;
+  color: white !important;
+}
+
+body {
+  background: #6A68E2;
+  color: white;
+}
+
+h2 {
+  font-size: 10vw;
+  line-height: 5vw;
+  color: white;
 }
 
 #intest {
@@ -145,6 +157,7 @@ header {
   background-color: #C55445;
   transition: 0.3s;
 }
+
 
 /* iphone */
 @media only screen and (max-width: 414px) {
