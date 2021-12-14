@@ -34,6 +34,20 @@ a:hover {
   cursor: pointer;
 }
 
+.an-link-viola {
+  background-image: linear-gradient(to top, #6a68e2 50%, transparent 50%);
+  background-size: 100% 200%;
+  background-position: top;
+  /* transition: background-position 0.5s ease-in-out; /** I've changed the time for demo purposes **/
+  color: #6a68e2 !important;
+  transition: 0.2s ease-in-out;
+}
+
+.an-link-viola:hover {
+  background-position: bottom;
+  color: #ffffff !important;
+  cursor: pointer;
+}
 header {
   position: -webkit-sticky;
   position: sticky;
@@ -70,6 +84,10 @@ p {
   font-size: 2vw;
 }
 
+.descrizione {
+  font-size: 1.2vw;
+  line-height: 1.4vw;
+}
 .tags {
   font-size: 1.2vw;
   font-family: "Trap";
@@ -103,7 +121,13 @@ body.white {
 #intest {
   font-size: 0.9rem;
 }
-
+.cliente {
+  font-family: "Trap";
+  font-size: 1vw;
+  font-weight: 500;
+  color: #6a68e2;
+  text-align: right;
+}
 .introdiv {
   height: 80vh;
 }
