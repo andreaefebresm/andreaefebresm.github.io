@@ -23,14 +23,16 @@ a:hover {
 
 .an-link:hover {
   background-position: bottom;
-  color: #6A68E2 !important;;
+  color: #6A68E2 !important;
+  ;
   cursor: pointer;
   font-family: "Ortica-Bold", serif;
 }
 
-.an-link > div > h4:hover {
+.an-link>div>h4:hover {
   background-position: bottom;
-  color: #6A68E2 !important;;
+  color: #6A68E2 !important;
+  ;
   cursor: pointer;
   font-family: "Ortica-Bold", serif;
 }
@@ -65,6 +67,17 @@ h4 {
   font-size: 5vw;
   line-height: 5vw;
   color: white;
+}
+
+.bianco {
+  color: #6A68E2;
+}
+
+
+
+body.white {
+  background-color: #fff;
+  color: black;
 }
 
 #foot {
@@ -181,7 +194,6 @@ h4 {
   transition: 0.3s;
 }
 
-
 /* iphone */
 @media only screen and (max-width: 414px) {
   .margin-mob-t {
@@ -221,5 +233,5 @@ h1 {
   font-size: 6vw;
   text-align: left;
   color: #6a68e2;
-margin-left: 1rem;
+  margin-left: 1rem;
 }
