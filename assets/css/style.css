@@ -24,9 +24,7 @@ a:hover {
 .an-link:hover {
   background-position: bottom;
   color: #6A68E2 !important;
-  ;
   cursor: pointer;
-  font-family: "Ortica-Bold", serif;
 }
 
 .an-link>div>h4:hover {
@@ -34,7 +32,6 @@ a:hover {
   color: #6A68E2 !important;
   ;
   cursor: pointer;
-  font-family: "Ortica-Bold", serif;
 }
 
 header {
@@ -69,12 +66,31 @@ h4 {
   color: white;
 }
 
+p {
+  font-size: 2vw;
+}
+
+.tags {
+  font-size: 1.2vw;
+  font-family: "Trap";
+  text-align: right;
+}
+
 .bianco {
   color: #6A68E2;
 }
 
+.trap {
+  font-family: "Trap";
+}
 
-
+.herecv {
+  font-weight: 800;
+  color: white;
+}
+.here-email {
+  font-style: italic;
+}
 body.white {
   background-color: #fff;
   color: black;
@@ -95,7 +111,8 @@ body.white {
 #intro {
   font-size: 5vw;
   line-height: 5vw;
-  font-family: 'Ortica', sans-serif;
+  font-family: 'Trap', sans-serif;
+  padding-top: ;
 }
 
 #talk {
