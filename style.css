@@ -20,6 +20,9 @@ p, li {
 p{
     color: #FF4B00;
 }
+.copy{
+    padding-top: 2rem;
+}
 li {
     list-style: none;
 }
@@ -29,11 +32,12 @@ ul {
 .container {
     display: grid;
     grid-template-columns: 1fr 2fr;
+    overflow-y: auto;
 }
 .filter {
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
     position: sticky;
+    display: grid;
+    grid-template-rows: 1fr 10fr 1fr;
 }
 .images {
     display: grid;
@@ -50,14 +54,15 @@ img {
 .filter ul li:hover {
     color: #FF4B00;
 }
-
 .filter ul li.active {
     color: #FF4B00;
 }
 .images img {
     transition: opacity 0.2s ease, transform 0.2s ease; 
     opacity: 0; 
-    transform: scale(0.99); 
+    transform: scale(0.99);  
+    width: 100%;
+    object-fit: cover;
 }
 .images img.show {
     opacity: 1; 
