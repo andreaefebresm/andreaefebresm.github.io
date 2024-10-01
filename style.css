@@ -64,10 +64,22 @@ img {
     width: 100%;
     object-fit: cover;
 }
+/*HOVER TESTO*/
+.image-text {
+    display: none; 
+}
 .images img.show {
     opacity: 1; 
     transform: scale(1); 
 }
 .all-filter {
     transition: opacity 0.2s ease; /* Transizione per l'opacità */
+}
+.tooltip {
+    position: absolute; 
+    color: white; 
+    font-family: "Syne", sans-serif;
+    pointer-events: none; 
+    opacity: 0; 
+    transition: opacity 0.1s ease; 
 }
