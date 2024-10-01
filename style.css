@@ -1,42 +1,68 @@
 html {
     background-color: rgb(254, 245, 234);
 }
-
+html, body {
+   height:100vh;
+}
+body {
+    padding: 0 0.5rem;
+    margin: 0;
+}
 .syne-reg {
   font-family: "Syne", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
 }
-
-header{
-    position: sticky;
-    top: 0;
-}
-
 p, li {
     font-family: "Syne", sans-serif;
 }
-
+p{
+    color: #FF4B00;
+}
 li {
     list-style: none;
 }
-
 ul {
     padding-left: 0;
 }
-
 .container {
     display: grid;
     grid-template-columns: 1fr 2fr;
 }
-
+.filter {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    position: sticky;
+}
 .images {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 0.5rem;
+    height:100vh;
 }
-
 img {
     max-width: 100%;
+}
+.filter ul li {
+    cursor: pointer;
+}
+.filter ul li:hover {
+    color: #FF4B00;
+}
+
+.filter ul li.active {
+    color: #FF4B00;
+}
+.images img {
+    transition: opacity 0.2s ease, transform 0.2s ease; 
+    opacity: 0; 
+    transform: scale(0.99); 
+}
+.images img.show {
+    opacity: 1; 
+    transform: scale(1); 
+}
+.all-filter {
+    transition: opacity 0.2s ease; /* Transizione per l'opacità */
 }
