@@ -1,0 +1,42 @@
+html {
+    background-color: rgb(254, 245, 234);
+}
+
+.syne-reg {
+  font-family: "Syne", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+header{
+    position: sticky;
+    top: 0;
+}
+
+p, li {
+    font-family: "Syne", sans-serif;
+}
+
+li {
+    list-style: none;
+}
+
+ul {
+    padding-left: 0;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.images {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0.5rem;
+}
+
+img {
+    max-width: 100%;
+}
