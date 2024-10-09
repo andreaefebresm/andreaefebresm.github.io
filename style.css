@@ -52,7 +52,7 @@ a:hover{
     transition: font-weight 0.5s linear;
 }
 h1{
-    font-size: 1.667rem;
+    font-size: 1.4rem;
     font-weight: 300;
 }
 .copy{
@@ -71,7 +71,7 @@ h2{
 }
 .sub{
     font-family: "EB Garamond", serif;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: 400;
     color: black;
 }
@@ -157,6 +157,6 @@ img {
     object-fit: fill;
     width: 100%;
 }
-.intro{
-    
+.intro {
+    padding-bottom: 2rem;
 }
