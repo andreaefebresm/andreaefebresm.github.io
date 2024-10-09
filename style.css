@@ -84,21 +84,19 @@ h2{
 /**/
 .container {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr;
     overflow-y: auto;
     gap:2.5rem;
-    max-height: 100vh;
 }
 .filter {
     position: sticky;
     display: grid;
-    grid-template-rows: 1fr 10fr 1fr;
+    grid-template-rows: 1fr;
 }
 .images {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 0.5rem;
-    height:100vh;
     max-height: 100vh;
 }
 img {
@@ -120,10 +118,7 @@ img {
     width: 100%;
     object-fit: cover;
 }
-/*HOVER TESTO*/
-.image-text {
-    display: none; 
-}
+
 .images img.show {
     opacity: 1; 
     transform: scale(1); 
@@ -131,32 +126,68 @@ img {
 .all-filter {
     transition: opacity 0.2s ease; /* Transizione per l'opacità */
 }
-.tooltip {
-    position: absolute; 
-    color: white; 
-    font-family: "Syne", sans-serif;
-    pointer-events: none; 
-    opacity: 0; 
-    transition: opacity 0.1s ease; 
-}
-.sx {
-    display: grid;
-    grid-template-columns: 1fr 10fr 1fr;
-}
 
-/*progetto*/
-.prog_side{
-    display: grid;
-    align-content: space-between;
-    gap: 1rem;
-}
-.immagine {
-    max-height: 100vh;
-}
-.img_p{
-    object-fit: fill;
-    width: 100%;
-}
-.intro {
-    padding-bottom: 2rem;
+/*------desktop-------*/
+@media screen and (min-width: 768px) {
+    /**/
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        overflow-y: auto;
+        gap:2.5rem;
+        max-height: 100vh;
+    }
+    .filter {
+        position: sticky;
+        display: grid;
+        grid-template-rows: 1fr 10fr 1fr;
+    }
+    .images {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 0.5rem;
+        height:100vh;
+        max-height: 100vh;
+    }   
+    /**/
+        /*HOVER TESTO*/
+    .image-text {
+        display: none; 
+    }
+    .tooltip {
+        position: absolute; 
+        color: white; 
+        font-family: "Syne", sans-serif;
+        pointer-events: none; 
+        opacity: 0; 
+        transition: opacity 0.1s ease; 
+    }
+    .sx {
+        display: grid;
+        grid-template-columns: 1fr 10fr 1fr;
+    }
+    .images img {
+        transition: opacity 0.2s ease, transform 0.2s ease; 
+        opacity: 0; 
+        transform: scale(0.99);  
+        width: 100%;
+        object-fit: cover;
+    }
+
+    /*progetto*/
+    .prog_side{
+        display: grid;
+        align-content: space-between;
+        gap: 1rem;
+    }
+    .immagine {
+        max-height: 100vh;
+    }
+    .img_p{
+        object-fit: fill;
+        width: 100%;
+    }
+    .intro {
+        padding-bottom: 2rem;
+    }
 }
