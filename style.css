@@ -40,8 +40,16 @@ body {
 h1, p, li {
     font-family: "Syne", sans-serif;
 }
-p{
+p, a{
     color: #FF4B00;
+    text-decoration: none;
+}
+a{
+    font-weight: 400;
+}
+a:hover{
+    font-weight: 500;
+    transition: font-weight 0.5s linear;
 }
 h1{
     font-size: 1.667rem;
@@ -78,7 +86,8 @@ h2{
     display: grid;
     grid-template-columns: 1fr 2fr;
     overflow-y: auto;
-    gap:2.5rem
+    gap:2.5rem;
+    max-height: 100vh;
 }
 .filter {
     position: sticky;
@@ -90,6 +99,7 @@ h2{
     grid-template-columns: 1fr 1fr 1fr;
     gap: 0.5rem;
     height:100vh;
+    max-height: 100vh;
 }
 img {
     max-width: 100%;
@@ -138,6 +148,7 @@ img {
 .prog_side{
     display: grid;
     align-content: space-between;
+    gap: 1rem;
 }
 .immagine {
     max-height: 100vh;
@@ -145,4 +156,7 @@ img {
 .img_p{
     object-fit: fill;
     width: 100%;
+}
+.intro{
+    
 }
