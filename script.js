@@ -2,7 +2,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const filterItems = document.querySelectorAll(".filter ul li");
     const allFilter = document.querySelector(".all-filter");
     const images = document.querySelectorAll(".images img");
-
     const imagestool = document.querySelectorAll(".image-container img");
     const tooltip = document.getElementById("tooltip");
 
@@ -42,11 +41,11 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    //tooltip
+    // Tooltip
     imagestool.forEach(image => {
         const container = image.parentElement; // Ottieni il contenitore dell'immagine
 
-        image.addEventListener("mouseenter", (e) => {
+        image.addEventListener("mouseenter", () => {
             const text = container.querySelector(".image-text").textContent; // Ottieni il testo dall'elemento image-text
             tooltip.textContent = text; // Imposta il testo del tooltip
             tooltip.style.opacity = 1; // Rendi il tooltip visibile
@@ -61,4 +60,12 @@ document.addEventListener("DOMContentLoaded", () => {
             tooltip.style.opacity = 0; // Nascondi il tooltip
         });
     });
+});
+
+window.addEventListener("load", function() {
+    const loader = document.getElementById("loader");
+    console.log("Loader complete"); // Log per verificare il caricamento
+    setTimeout(() => {
+        loader.classList.add("loader-hidden");
+    }, 1000);
 });
