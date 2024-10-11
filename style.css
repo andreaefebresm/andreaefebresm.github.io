@@ -5,7 +5,7 @@ html, body {
    height:100vh;
 }
 body {
-    padding: 0 0.5rem;
+    padding: 0;
     margin: 0;
 }
 
@@ -84,10 +84,20 @@ h2{
 }
 /**/
 .container {
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column-reverse;
     overflow-y: auto;
     gap:2.5rem;
+}
+.prog_side {
+    padding: 0 0.5rem;
+}
+.immagine {
+    max-height: 50vh;
+    width: 100vw;
+}
+.img_p{
+    max-width: 100%;
 }
 .filter {
     position: sticky;
@@ -128,6 +138,28 @@ h2{
 }
 .image-text{
     font-family: "Syne", sans-serif;
+}
+
+    /* Loader Styles */
+/* Loader Styles */
+#loader {
+    position: fixed; /* Fisso per coprire tutto lo schermo */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black; /* Sfondo nero */
+    z-index: 9999; /* Assicurati che il loader sia sopra tutto il resto */
+    display: flex; /* Allinea gli elementi al centro */
+    justify-content: center; /* Centra orizzontalmente */
+    align-items: center; /* Centra verticalmente */
+    opacity: 1; /* Inizialmente visibile */
+    transition: opacity 0.8s ease; /* Modifica il tempo di transizione a 0.8 secondi */
+}
+
+/* Nascondi il loader dopo il caricamento */
+.loader-hidden {
+    opacity: 1; /* Nascondi il loader */
 }
 
 /*------desktop-------*/
@@ -219,8 +251,7 @@ h2{
 
 /* Nascondi il loader dopo il caricamento */
 .loader-hidden {
-    opacity: 0; /* Nascondi il loader */
-    pointer-events: none; /* Disabilita gli eventi di puntamento */
+    opacity: 1; /* Nascondi il loader */
 }
 
 }

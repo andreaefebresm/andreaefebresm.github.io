@@ -62,10 +62,12 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+/*
 window.addEventListener("load", function() {
-    const loader = document.getElementById("loader");
+
+    const loader = document.querySelector(".loader");
     console.log("Loader complete"); // Log per verificare il caricamento
     setTimeout(() => {
-        loader.classList.add("loader-hidden");
+        loader.classList.add('loader-hidden');
     }, 1000);
-});
+});*/
