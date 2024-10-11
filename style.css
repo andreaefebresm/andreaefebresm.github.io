@@ -2,58 +2,57 @@ html {
     background-color: rgb(254, 245, 234);
 }
 html, body {
-   height:100vh;
+    height: 100vh;
 }
 body {
     padding: 0;
     margin: 0;
 }
 
-
 /*typo*/
 .syne-reg {
-  font-family: "Syne", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
+    font-family: "Syne", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 }
 .syne-med {
     font-family: "Syne", sans-serif;
     font-optical-sizing: auto;
     font-weight: 500;
     font-style: normal;
-  }
+}
 .eb-garamond-med {
     font-family: "EB Garamond", serif;
     font-optical-sizing: auto;
     font-weight: 500;
     font-style: normal;
-  }
-  .eb-garamond-reg {
+}
+.eb-garamond-reg {
     font-family: "EB Garamond", serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-  }
+}
 h1, p, li {
     font-family: "Syne", sans-serif;
 }
-p, a{
+p, a {
     color: #FF4B00;
     text-decoration: none;
 }
-a{
+a {
     font-weight: 400;
 }
-a:hover{
+a:hover {
     font-weight: 500;
     transition: font-weight 0.5s linear;
 }
-h1{
+h1 {
     font-size: 1.4rem;
     font-weight: 300;
 }
-.copy{
+.copy {
     padding-top: 2rem;
 }
 li {
@@ -62,44 +61,57 @@ li {
 ul {
     padding-left: 0;
 }
-h2{
+h2 {
     font-family: "Syne", sans-serif;
     font-weight: 500;
     font-size: 1rem;
 }
-.sub{
+.sub {
     font-family: "EB Garamond", serif;
     font-size: 1.4rem;
     font-weight: 400;
     color: black;
 }
-.description{
+.description {
     font-family: "EB Garamond", serif;
     font-size: 1rem;
     font-weight: 400;
     color: black;
 }
-.nav {
-    position: sticky;
+
+header {
+    padding: 0.5rem; 
+    text-align: left;
+    position: fixed; 
+    width: 100%; 
+    top: 0; 
+    z-index: 1000; 
 }
-/**/
+/* Main */
+main {
+    margin-top: 0; 
+}
+
+/* Container */
 .container {
     display: flex;
     flex-direction: column-reverse;
     overflow-y: auto;
-    gap:2.5rem;
+    gap: 2.5rem;
 }
 .prog_side {
     padding: 0 0.5rem;
 }
-.img_p{
+.img_p {
     max-width: 100%;
 }
+
+/* Filter */
 .filter {
-    position: sticky;
-    display: grid;
-    grid-template-rows: 1fr;
+    padding: 5rem 0.5rem;
 }
+
+/* Images */
 .images {
     display: flex;
     gap: 0.5rem;
@@ -119,6 +131,8 @@ h2{
 .filter ul li.active {
     color: #FF4B00;
 }
+
+/* Image transitions */
 .images img {
     transition: opacity 0.2s ease, transform 0.2s ease; 
     opacity: 0; 
@@ -132,11 +146,10 @@ h2{
 .all-filter {
     transition: opacity 0.2s ease; /* Transizione per l'opacità */
 }
-.image-text{
+.image-text {
     font-family: "Syne", sans-serif;
 }
 
-    /* Loader Styles */
 /* Loader Styles */
 #loader {
     position: fixed; /* Fisso per coprire tutto lo schermo */
@@ -160,28 +173,27 @@ h2{
 
 /*------desktop-------*/
 @media screen and (min-width: 768px) {
-    /**/
     .container {
         display: grid;
         grid-template-columns: 1fr 2fr;
         overflow-y: auto;
-        gap:2.5rem;
+        gap: 2.5rem;
         max-height: 100vh;
     }
-    .filter {
-        position: sticky;
-        display: grid;
-        grid-template-rows: 1fr 10fr 1fr;
-    }
+
     .images {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         gap: 0.5rem;
-        height:100vh;
+        height: 100vh;
         max-height: 100vh;
-    }   
-    /**/
-        /*HOVER TESTO*/
+    }
+    footer {
+        position: fixed;
+        bottom: 0;
+        padding: 0.5rem;
+    }
+    /* HOVER TESTO */
     .image-text {
         display: none; 
     }
@@ -208,17 +220,17 @@ h2{
         max-width: 100%;
     }
 
-    /*progetto*/
-    .prog_side{
+    /* Progetto */
+    .prog_side {
         display: grid;
         align-content: space-between;
         gap: 1rem;
-        padding:0;
+        padding: 0;
     }
     .immagine {
         max-height: 100vh;
     }
-    .img_p{
+    .img_p {
         object-fit: fill;
         width: 100%;
     }
@@ -229,26 +241,26 @@ h2{
         padding: 0 0 0 0.5rem;
         max-height: 100vh;
     }
-    /* Loader Styles */
-/* Loader Styles */
-#loader {
-    position: fixed; /* Fisso per coprire tutto lo schermo */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: black; /* Sfondo nero */
-    z-index: 9999; /* Assicurati che il loader sia sopra tutto il resto */
-    display: flex; /* Allinea gli elementi al centro */
-    justify-content: center; /* Centra orizzontalmente */
-    align-items: center; /* Centra verticalmente */
-    opacity: 1; /* Inizialmente visibile */
-    transition: opacity 0.8s ease; /* Modifica il tempo di transizione a 0.8 secondi */
-}
 
-/* Nascondi il loader dopo il caricamento */
-.loader-hidden {
-    opacity: 1; /* Nascondi il loader */
-}
+    /* Loader Styles */
+    #loader {
+        position: fixed; /* Fisso per coprire tutto lo schermo */
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: black; /* Sfondo nero */
+        z-index: 9999; /* Assicurati che il loader sia sopra tutto il resto */
+        display: flex; /* Allinea gli elementi al centro */
+        justify-content: center; /* Centra orizzontalmente */
+        align-items: center; /* Centra verticalmente */
+        opacity: 1; /* Inizialmente visibile */
+        transition: opacity 0.8s ease; /* Modifica il tempo di transizione a 0.8 secondi */
+    }
+
+    /* Nascondi il loader dopo il caricamento */
+    .loader-hidden {
+        opacity: 1; /* Nascondi il loader */
+    }
 
 }
