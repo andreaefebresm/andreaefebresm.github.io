@@ -92,10 +92,6 @@ h2{
 .prog_side {
     padding: 0 0.5rem;
 }
-.immagine {
-    max-height: 50vh;
-    width: 100vw;
-}
 .img_p{
     max-width: 100%;
 }
@@ -217,6 +213,7 @@ h2{
         display: grid;
         align-content: space-between;
         gap: 1rem;
+        padding:0;
     }
     .immagine {
         max-height: 100vh;
