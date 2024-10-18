@@ -20,7 +20,7 @@
     <header>
         <nav>
             <p>
-                <a href="index.html">AEFM</a>
+                <a href="../index.html">AEFM</a>
             </p>
         </nav>
     </header>
@@ -29,38 +29,41 @@
             <div class="prog_side">
                 <div>
                     <div class="intro">
-                        <h1>
-                            INTERCONNECTED
-                        </h1>
+                        <h1>INTERCONNECTED</h1>
                         <p class="sub">
-                            Interconnected is an online platform with the aim to inform the audience with simple language and clear content that Internet of Things devices collect, store and elaborate user data. Interconnected aims to visually show how data travels through the ecosystem of smart objects and to do so dissects the ecosystems itself.
+                            Interconnected is an online platform aimed at informing the audience with simple language and clear content about how Internet of Things devices collect, store, and elaborate user data.
                         </p>
                     </div>
                     <div>
-                        <h2>
-                            INTERCONNECTED
-                        </h2>
+                        <h2>INTERCONNECTED</h2>
                         <p class="description">
-                            Interconnected is an online platform with the aim to inform the audience with simple language and clear content that Internet of Things devices collect, store and elaborate user data. Interconnected aims to visually show how data travels through the ecosystem of smart objects and to do so dissects the ecosystems itself.
+                            Interconnected is an online platform that aims to inform the audience with simple language and clear content about how Internet of Things devices collect, store, and elaborate user data. It visually shows how data travels through the ecosystem of smart objects and dissects the ecosystems themselves.
                             <br>
                             <br>
-                            Interconnected is an online platform with the aim to inform the audience with simple language and clear content that Internet of Things devices collect, store and elaborate user data. Interconnected aims to visually show how data travels through the ecosystem of smart objects and to do so dissects the ecosystems itself.
+                            Interconnected is an online platform that aims to inform the audience with simple language and clear content about how Internet of Things devices collect, store, and elaborate user data. It visually shows how data travels through the ecosystem of smart objects and dissects the ecosystems themselves.
                             <br>
                             <br>
-                            Interconnected is an online platform with the aim to inform the audience with simple language and clear content that Internet of Things devices collect, store and elaborate user data. Interconnected aims to visually show how data travels through the ecosystem of smart objects and to do so dissects the ecosystems itself.
+                            Interconnected is an online platform that aims to inform the audience with simple language and clear content about how Internet of Things devices collect, store, and elaborate user data. It visually shows how data travels through the ecosystem of smart objects and dissects the ecosystems themselves.
                         </p>
                     </div>
                 </div>
             </div>
-            <div class="immagine">
-                <img class="img_p" src="../src/01_01.png">
-    
+            <div class="gallery-container">
+                <span class="arrow arrow-left" onclick="changeImage(-1)">&#10094;</span>
+                <div class="immagine">
+                    <img id="mainImage" src="../src/01_01.png" alt="Immagine principale">
+                </div>
+                <span class="arrow arrow-right" onclick="changeImage(1)">&#10095;</span>
             </div>  
-        </div> 
-    </div>
+        </div>
     </main>
     <footer>
         <p class="copy">COPYRIGHT 2024</p>
     </footer>
+    <script>
+        function changeImage(src) {
+            document.getElementById('mainImage').src = src;
+        }
+    </script>
 </body>
 </html>

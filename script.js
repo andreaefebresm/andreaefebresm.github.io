@@ -71,3 +71,23 @@ window.addEventListener("load", function() {
         loader.classList.add('loader-hidden');
     }, 1000);
 });*/
+
+const imagesproj = [
+    '../src/01_01.png',
+    '../src/01_02.png',
+    '../src/01_01.png',
+    '../src/01_01.png',
+    '../src/01_01.png'
+];
+let currentIndex = 0;
+
+function changeImage(direction) {
+    currentIndex += direction;
+    // Cicla l'indice
+    if (currentIndex < 0) {
+        currentIndex = imagesproj.length - 1; // Torna all'ultima immagine
+    } else if (currentIndex >= imagesproj.length) {
+        currentIndex = 0; // Torna alla prima immagine
+    }
+    document.getElementById('mainImage').src = imagesproj[currentIndex];
+}
