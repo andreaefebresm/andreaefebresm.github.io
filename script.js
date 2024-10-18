@@ -91,3 +91,4 @@ function changeImage(direction) {
     }
     document.getElementById('mainImage').src = imagesproj[currentIndex];
 }
+
