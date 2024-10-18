@@ -101,9 +101,15 @@ main {
 }
 .prog_side {
     padding: 0 0.5rem;
+    position: absolute;
+    top: 40vh;
 }
 .img_p {
     max-width: 100%;
+    position: fixed;
+    height: 40vh;
+    width: 100vh;
+    object-fit: cover;
 }
 
 /* Filter */
@@ -225,14 +231,19 @@ main {
         display: grid;
         align-content: space-between;
         gap: 1rem;
-        padding: 0;
+        margin-top: 5rem;
+        position: unset;
+      
     }
     .immagine {
         max-height: 100vh;
     }
     .img_p {
-        object-fit: fill;
         width: 100%;
+        max-width: 100%;
+        position: unset;
+        height: 100vh;
+        object-fit: cover;
     }
     .intro {
         padding-bottom: 2rem;
