@@ -99,8 +99,8 @@ a {
     font-weight: 400;
 }
 a:hover {
-    font-weight: 500;
-    transition: font-weight 0.5s linear;
+    font-weight: 400;
+    text-decoration: underline;
 }
 h1 {
     font-size: 1.4rem;
