@@ -72,7 +72,7 @@ window.addEventListener("load", function() {
     }, 1000);
 });*/
 
-const imagesproj = [
+const imagesproj1 = [
     '../src/01_01.png',
     '../src/01_02.png',
     '../src/01_01.png',
@@ -85,10 +85,12 @@ function changeImage(direction) {
     currentIndex += direction;
     // Cicla l'indice
     if (currentIndex < 0) {
-        currentIndex = imagesproj.length - 1; // Torna all'ultima immagine
-    } else if (currentIndex >= imagesproj.length) {
+        currentIndex = imagesproj1.length - 1; // Torna all'ultima immagine
+    } else if (currentIndex >= imagesproj1.length) {
         currentIndex = 0; // Torna alla prima immagine
     }
-    document.getElementById('mainImage').src = imagesproj[currentIndex];
+    document.getElementById('mainImage').src = imagesproj1[currentIndex];
 }
+
+
 
