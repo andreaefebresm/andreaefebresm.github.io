@@ -28,7 +28,7 @@ body {
     height: 100%; 
 }
 
-#mainImage {
+.mainImage {
     width: 100%; 
     height: 40vh; 
     object-fit: cover;
@@ -343,7 +343,7 @@ main {
         justify-content: center;
     }
 
-    #mainImage {
+    .mainImage {
         width: 100%; 
         height: 100vh; 
         object-fit: cover;

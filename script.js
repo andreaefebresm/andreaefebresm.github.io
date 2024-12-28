@@ -72,6 +72,7 @@ window.addEventListener("load", function() {
     }, 1000);
 });*/
 
+// Images for the first gallery
 const imagesproj1 = [
     '../src/01_01.png',
     '../src/01_02.png',
@@ -79,18 +80,44 @@ const imagesproj1 = [
     '../src/01_01.png',
     '../src/01_01.png'
 ];
-let currentIndex = 0;
 
-function changeImage(direction) {
-    currentIndex += direction;
-    // Cicla l'indice
-    if (currentIndex < 0) {
-        currentIndex = imagesproj1.length - 1; // Torna all'ultima immagine
-    } else if (currentIndex >= imagesproj1.length) {
-        currentIndex = 0; // Torna alla prima immagine
+
+// SUPERFORMA
+let currentIndex1 = 0;  
+
+function changeImage1(direction) {
+    currentIndex1 += direction;
+
+   
+    if (currentIndex1 < 0) {
+        currentIndex1 = imagesproj1.length - 1; 
+    } else if (currentIndex1 >= imagesproj1.length) {
+        currentIndex1 = 0; 
     }
-    document.getElementById('mainImage').src = imagesproj1[currentIndex];
+
+    document.getElementById('mainImage1').src = imagesproj1[currentIndex1];
 }
 
+// AMAROFAVERO
+const imagesproj12 = [
+    '../src/12_01.png',
+    '../src/12_02.png',
+    '../src/01_01.png',
+    '../src/01_01.png',
+    '../src/01_01.png'
+];
+let currentIndex12 = 0;  
+
+function changeImage12(direction) {
+    currentIndex12 += direction;
+
+    if (currentIndex12 < 0) {
+        currentIndex12 = imagesproj12.length - 1; 
+    } else if (currentIndex12 >= imagesproj12.length) {
+        currentIndex12 = 0; 
+    }
+
+    document.getElementById('mainImage12').src = imagesproj12[currentIndex12];
+}
 
 
