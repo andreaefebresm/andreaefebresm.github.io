@@ -120,6 +120,24 @@ h2 {
     font-weight: 500;
     font-size: 1rem;
 }
+button{
+    background-color: #FF4B00;
+    border-radius: 50px;
+    border: none;
+    padding: 0.6rem;
+    font-family: "Syne", sans-serif;
+    color: rgb(254, 245, 234);
+    font-size:1rem ;
+}
+button:hover{
+    background-color: rgb(254, 245, 234);
+    border-radius: 50px;
+    border: solid 1px #FF4B00;
+    padding: 0.6rem;
+    font-family: "Syne", sans-serif;
+    color: #FF4B00;
+    font-size: 1rem;
+}
 .sub {
     font-family: "EB Garamond", serif;
     font-size: 1.4rem;

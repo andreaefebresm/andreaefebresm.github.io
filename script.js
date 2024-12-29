@@ -72,7 +72,7 @@ window.addEventListener("load", function() {
     }, 1000);
 });*/
 
-// Images for the first gallery
+// SUPERFORMA
 const imagesproj1 = [
     '../src/01_01.png',
     '../src/01_02.png',
@@ -81,8 +81,6 @@ const imagesproj1 = [
     '../src/01_01.png'
 ];
 
-
-// SUPERFORMA
 let currentIndex1 = 0;  
 
 function changeImage1(direction) {
@@ -98,13 +96,33 @@ function changeImage1(direction) {
     document.getElementById('mainImage1').src = imagesproj1[currentIndex1];
 }
 
+// DOUBLECHECK
+const imagesproj04 = [
+    '../src/04_01.png',
+    '../src/04_02.png',
+    '../src/04_03.png',
+    '../src/04_04.png',
+];
+let currentIndex12 = 0;  
+
+function changeImage12(direction) {
+    currentIndex12 += direction;
+
+    if (currentIndex12 < 0) {
+        currentIndex12 = imagesproj12.length - 1; 
+    } else if (currentIndex12 >= imagesproj12.length) {
+        currentIndex12 = 0; 
+    }
+
+    document.getElementById('mainImage12').src = imagesproj12[currentIndex12];
+}
+
 // AMAROFAVERO
 const imagesproj12 = [
     '../src/12_01.png',
     '../src/12_02.png',
-    '../src/01_01.png',
-    '../src/01_01.png',
-    '../src/01_01.png'
+    '../src/12_03.png',
+    '../src/12_04.png',
 ];
 let currentIndex12 = 0;  
 
