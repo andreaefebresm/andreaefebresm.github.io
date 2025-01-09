@@ -103,18 +103,18 @@ const imagesproj04 = [
     '../src/04_03.png',
     '../src/04_04.png',
 ];
-let currentIndex12 = 0;  
+let currentIndex04 = 0;  
 
-function changeImage12(direction) {
-    currentIndex12 += direction;
+function changeImage04(direction) {
+    currentIndex04 += direction;
 
-    if (currentIndex12 < 0) {
-        currentIndex12 = imagesproj12.length - 1; 
-    } else if (currentIndex12 >= imagesproj12.length) {
-        currentIndex12 = 0; 
+    if (currentIndex04 < 0) {
+        currentIndex04 = imagesproj04.length - 1; 
+    } else if (currentIndex04 >= imagesproj04.length) {
+        currentIndex04 = 0; 
     }
 
-    document.getElementById('mainImage12').src = imagesproj12[currentIndex12];
+    document.getElementById('mainImage04').src = imagesproj04[currentIndex12];
 }
 
 // AMAROFAVERO
