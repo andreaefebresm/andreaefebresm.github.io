@@ -251,6 +251,23 @@ main {
 
 /*------desktop-------*/
 @media screen and (min-width: 768px) {
+    /*-----------------------------------*/
+    .image-container {
+        height: calc((100vh / 3) - 0.5rem); /* 1/3 dell'altezza del viewport meno il gutter */
+        overflow: hidden; /* Nasconde contenuti in eccesso */
+        position: relative;
+        display: flex; /* Assicura un layout flessibile */
+        justify-content: center; /* Centra l'immagine orizzontalmente */
+        align-items: center; /* Centra l'immagine verticalmente */
+    }
+    
+    .image-container img {
+        max-width: 100%; /* Adatta la larghezza dell'immagine al contenitore */
+        max-height: 100%; /* Adatta l'altezza dell'immagine al contenitore */
+        object-fit: contain; /* L'immagine si adatta senza tagliarla */
+        object-position: center; /* Centra l'immagine */
+        transition: transform 0.3s ease; /* Transizione per effetto hover fluido */
+    }
     .container {
         display: grid;
         grid-template-columns: 1fr 2fr;
@@ -351,7 +368,7 @@ main {
         position: relative; 
         width: 100%;
         max-width: 100%; 
-        margin: auto; 
+        margin: 0; 
         object-fit: cover;
         max-height: 100%;
     }

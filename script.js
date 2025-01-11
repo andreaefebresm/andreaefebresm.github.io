@@ -60,82 +60,117 @@ document.addEventListener("DOMContentLoaded", () => {
             tooltip.style.opacity = 0; // Nascondi il tooltip
         });
     });
+
+    // Hover per cambiare immagini
+    const galleryImages = document.querySelectorAll(".image-container img");
+
+    // Salva l'immagine originale per ogni immagine
+    const originalSrcMap = new Map();
+    galleryImages.forEach((img) => {
+        originalSrcMap.set(img, img.src); // Salva il valore originale di `src`
+    });
+
+    galleryImages.forEach((img) => {
+        img.addEventListener("mouseover", () => {
+            galleryImages.forEach((otherImg) => {
+                if (otherImg !== img) {
+                    otherImg.src = otherImg.dataset.hover || originalSrcMap.get(otherImg); // Cambia immagine degli altri
+                    otherImg.classList.add("replaced"); // Aggiungi una classe visiva (opzionale)
+                }
+            });
+        });
+
+        img.addEventListener("mouseout", () => {
+            galleryImages.forEach((otherImg) => {
+                otherImg.src = originalSrcMap.get(otherImg); // Torna all'immagine originale
+                otherImg.classList.remove("replaced"); // Rimuovi la classe visiva
+            });
+        });
+    });
+
+    // SUPERFORMA
+    const imagesproj1 = [
+        '../src/01_01.png',
+        '../src/01_02.png',
+        '../src/01_01.png',
+        '../src/01_01.png',
+        '../src/01_01.png'
+    ];
+
+    let currentIndex1 = 0;
+
+    function changeImage1(direction) {
+        currentIndex1 += direction;
+
+        if (currentIndex1 < 0) {
+            currentIndex1 = imagesproj1.length - 1;
+        } else if (currentIndex1 >= imagesproj1.length) {
+            currentIndex1 = 0;
+        }
+
+        document.getElementById('mainImage1').src = imagesproj1[currentIndex1];
+    }
+
+    // DOUBLECHECK
+    const imagesproj04 = [
+        '../src/04_01.png',
+        '../src/04_02.png',
+        '../src/04_03.png',
+        '../src/04_04.png',
+    ];
+    let currentIndex04 = 0;
+
+    function changeImage04(direction) {
+        currentIndex04 += direction;
+
+        if (currentIndex04 < 0) {
+            currentIndex04 = imagesproj04.length - 1;
+        } else if (currentIndex04 >= imagesproj04.length) {
+            currentIndex04 = 0;
+        }
+
+        document.getElementById('mainImage04').src = imagesproj04[currentIndex04];
+    }
+
+    // AMAROFAVERO
+    const imagesproj12 = [
+        '../src/12_01.png',
+        '../src/12_02.png',
+        '../src/12_03.png',
+        '../src/12_04.png',
+    ];
+    let currentIndex12 = 0;
+
+    function changeImage12(direction) {
+        currentIndex12 += direction;
+
+        if (currentIndex12 < 0) {
+            currentIndex12 = imagesproj12.length - 1;
+        } else if (currentIndex12 >= imagesproj12.length) {
+            currentIndex12 = 0;
+        }
+
+        document.getElementById('mainImage12').src = imagesproj12[currentIndex12];
+    }
+
+    // DISCOJOURNAL
+    const imagesproj06 = [
+        '../src/06_01.png',
+        '../src/12_02.png',
+        '../src/12_03.png',
+        '../src/12_04.png',
+    ];
+    let currentIndex06 = 0;
+
+    function changeImage06(direction) {
+        currentIndex06 += direction;
+
+        if (currentIndex06 < 0) {
+            currentIndex06 = imagesproj06.length - 1;
+        } else if (currentIndex06 >= imagesproj06.length) {
+            currentIndex06 = 0;
+        }
+
+        document.getElementById('mainImage06').src = imagesproj06[currentIndex06];
+    }
 });
-
-/*
-window.addEventListener("load", function() {
-
-    const loader = document.querySelector(".loader");
-    console.log("Loader complete"); // Log per verificare il caricamento
-    setTimeout(() => {
-        loader.classList.add('loader-hidden');
-    }, 1000);
-});*/
-
-// SUPERFORMA
-const imagesproj1 = [
-    '../src/01_01.png',
-    '../src/01_02.png',
-    '../src/01_01.png',
-    '../src/01_01.png',
-    '../src/01_01.png'
-];
-
-let currentIndex1 = 0;  
-
-function changeImage1(direction) {
-    currentIndex1 += direction;
-
-   
-    if (currentIndex1 < 0) {
-        currentIndex1 = imagesproj1.length - 1; 
-    } else if (currentIndex1 >= imagesproj1.length) {
-        currentIndex1 = 0; 
-    }
-
-    document.getElementById('mainImage1').src = imagesproj1[currentIndex1];
-}
-
-// DOUBLECHECK
-const imagesproj04 = [
-    '../src/04_01.png',
-    '../src/04_02.png',
-    '../src/04_03.png',
-    '../src/04_04.png',
-];
-let currentIndex04 = 0;  
-
-function changeImage04(direction) {
-    currentIndex04 += direction;
-
-    if (currentIndex04 < 0) {
-        currentIndex04 = imagesproj04.length - 1; 
-    } else if (currentIndex04 >= imagesproj04.length) {
-        currentIndex04 = 0; 
-    }
-
-    document.getElementById('mainImage04').src = imagesproj04[currentIndex12];
-}
-
-// AMAROFAVERO
-const imagesproj12 = [
-    '../src/12_01.png',
-    '../src/12_02.png',
-    '../src/12_03.png',
-    '../src/12_04.png',
-];
-let currentIndex12 = 0;  
-
-function changeImage12(direction) {
-    currentIndex12 += direction;
-
-    if (currentIndex12 < 0) {
-        currentIndex12 = imagesproj12.length - 1; 
-    } else if (currentIndex12 >= imagesproj12.length) {
-        currentIndex12 = 0; 
-    }
-
-    document.getElementById('mainImage12').src = imagesproj12[currentIndex12];
-}
-
-
