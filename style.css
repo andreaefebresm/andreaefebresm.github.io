@@ -284,9 +284,13 @@ main {
         max-height: 100vh;
     }
     footer {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
         position: fixed;
         bottom: 0;
         padding: 0.5rem;
+        gap: 4rem;
+        align-items: baseline;
     }
     /* HOVER TESTO */
     .image-text {
