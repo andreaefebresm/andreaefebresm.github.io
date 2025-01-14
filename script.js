@@ -88,89 +88,269 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // SUPERFORMA
-    const imagesproj1 = [
-        '../src/01_01.png',
-        '../src/01_02.png',
-        '../src/01_01.png',
-        '../src/01_01.png',
-        '../src/01_01.png'
-    ];
+       // 01SF
+const imagesproj01 = [
+    '../src/01_01.png',
+    '../src/01_02.png',
+    '../src/01_03.png',
+    '../src/01_04.png',
+];
 
-    let currentIndex1 = 0;
+let currentIndex01 = 0;
 
-    function changeImage1(direction) {
-        currentIndex1 += direction;
+function changeImage01(direction) {
+    currentIndex01 += direction;  
 
-        if (currentIndex1 < 0) {
-            currentIndex1 = imagesproj1.length - 1;
-        } else if (currentIndex1 >= imagesproj1.length) {
-            currentIndex1 = 0;
-        }
-
-        document.getElementById('mainImage1').src = imagesproj1[currentIndex1];
+    if (currentIndex01 < 0) {
+        currentIndex01 = imagesproj01.length - 1;
+    } else if (currentIndex01 >= imagesproj01.length) {
+        currentIndex01 = 0; 
     }
 
-    // DOUBLECHECK
-    const imagesproj04 = [
-        '../src/04_01.png',
-        '../src/04_02.png',
-        '../src/04_03.png',
-        '../src/04_04.png',
-    ];
-    let currentIndex04 = 0;
+    document.getElementById('mainImage01').src = imagesproj01[currentIndex01];
+}
 
-    function changeImage04(direction) {
-        currentIndex04 += direction;
+const prevButton01 = document.querySelector('.arrow-left');
+const nextButton01 = document.querySelector('.arrow-right');
 
-        if (currentIndex04 < 0) {
-            currentIndex04 = imagesproj04.length - 1;
-        } else if (currentIndex04 >= imagesproj04.length) {
-            currentIndex04 = 0;
-        }
+prevButton01.addEventListener('click', () => changeImage01(-1)); 
+nextButton01.addEventListener('click', () => changeImage01(1));  
 
-        document.getElementById('mainImage04').src = imagesproj04[currentIndex04];
+
+// 02AF
+const imagesproj02 = [
+    '../src/02_01.png',
+    '../src/02_02.png',
+];
+
+let currentIndex02 = 0;
+
+function changeImage02(direction) {
+    currentIndex02 += direction;  
+
+    if (currentIndex02 < 0) {
+        currentIndex02 = imagesproj02.length - 1;
+    } else if (currentIndex02 >= imagesproj02.length) {
+        currentIndex02 = 0; 
     }
 
-    // AMAROFAVERO
-    const imagesproj12 = [
-        '../src/12_01.png',
-        '../src/12_02.png',
-        '../src/12_03.png',
-        '../src/12_04.png',
-    ];
-    let currentIndex12 = 0;
+    document.getElementById('mainImage02').src = imagesproj02[currentIndex02];
+}
 
-    function changeImage12(direction) {
-        currentIndex12 += direction;
+const prevButton02 = document.querySelector('.arrow-left');
+const nextButton02 = document.querySelector('.arrow-right');
 
-        if (currentIndex12 < 0) {
-            currentIndex12 = imagesproj12.length - 1;
-        } else if (currentIndex12 >= imagesproj12.length) {
-            currentIndex12 = 0;
-        }
+prevButton02.addEventListener('click', () => changeImage02(-1)); // Previous button
+nextButton02.addEventListener('click', () => changeImage02(1));  // Next button
 
-        document.getElementById('mainImage12').src = imagesproj12[currentIndex12];
+
+// 03SF
+const imagesproj03 = [
+    '../src/03_01.png',
+    '../src/03_02.png',
+    '../src/03_03.png',
+    '../src/03_04.png',
+    '../src/03_02.png'
+];
+
+let currentIndex03 = 0;
+
+function changeImage03(direction) {
+    currentIndex03 += direction;
+
+    if (currentIndex03 < 0) {
+        currentIndex03 = imagesproj03.length - 1;
+    } else if (currentIndex03 >= imagesproj03.length) {
+        currentIndex03 = 0;
     }
 
-    // DISCOJOURNAL
-    const imagesproj06 = [
-        '../src/06_01.png',
-        '../src/12_02.png',
-        '../src/12_03.png',
-        '../src/12_04.png',
-    ];
-    let currentIndex06 = 0;
+    document.getElementById('mainImage03').src = imagesproj03[currentIndex03];
+}
 
-    function changeImage06(direction) {
-        currentIndex06 += direction;
+const prevButton03 = document.querySelector('.arrow-left');
+const nextButton03 = document.querySelector('.arrow-right');
 
-        if (currentIndex06 < 0) {
-            currentIndex06 = imagesproj06.length - 1;
-        } else if (currentIndex06 >= imagesproj06.length) {
-            currentIndex06 = 0;
-        }
+prevButton03.addEventListener('click', () => changeImage03(-1)); 
+nextButton03.addEventListener('click', () => changeImage03(1)); 
 
-        document.getElementById('mainImage06').src = imagesproj06[currentIndex06];
+
+// 04AF
+const imagesproj04 = [
+    '../src/04_01.png',
+    '../src/04_02.png',
+    '../src/04_03.png',
+    '../src/04_04.png',
+    '../src/04_02.png'
+];
+
+let currentIndex04 = 0;
+
+function changeImage04(direction) {
+    currentIndex04 += direction;
+
+    if (currentIndex04 < 0) {
+        currentIndex04 = imagesproj04.length - 1;
+    } else if (currentIndex04 >= imagesproj04.length) {
+        currentIndex04 = 0;
     }
+
+    document.getElementById('mainImage04').src = imagesproj04[currentIndex04];
+}
+
+const prevButton04 = document.querySelector('.arrow-left');
+const nextButton04 = document.querySelector('.arrow-right');
+
+prevButton04.addEventListener('click', () => changeImage04(-1)); 
+nextButton04.addEventListener('click', () => changeImage04(1)); 
+
+
+// 05SF
+const imagesproj05 = [
+    '../src/05_01.png',
+    '../src/05_02.png',
+    '../src/05_03.png',
+    '../src/05_04.png',
+    '../src/05_02.png'
+];
+
+let currentIndex05 = 0;
+
+function changeImage05(direction) {
+    currentIndex05 += direction;
+
+    if (currentIndex05 < 0) {
+        currentIndex05 = imagesproj05.length - 1;
+    } else if (currentIndex05 >= imagesproj05.length) {
+        currentIndex05 = 0;
+    }
+
+    document.getElementById('mainImage05').src = imagesproj05[currentIndex05];
+}
+
+const prevButton05 = document.querySelector('.arrow-left');
+const nextButton05 = document.querySelector('.arrow-right');
+
+prevButton05.addEventListener('click', () => changeImage05(-1)); 
+nextButton05.addEventListener('click', () => changeImage05(1)); 
+
+
+// 06AF
+const imagesproj06 = [
+    '../src/06_01.png',
+    '../src/06_02.png',
+    '../src/06_03.png',
+    '../src/06_04.png',
+    '../src/06_02.png'
+];
+
+let currentIndex06 = 0;
+
+function changeImage06(direction) {
+    currentIndex06 += direction;
+
+    if (currentIndex06 < 0) {
+        currentIndex06 = imagesproj06.length - 1;
+    } else if (currentIndex06 >= imagesproj06.length) {
+        currentIndex06 = 0;
+    }
+
+    document.getElementById('mainImage06').src = imagesproj06[currentIndex06];
+}
+
+const prevButton06 = document.querySelector('.arrow-left');
+const nextButton06 = document.querySelector('.arrow-right');
+
+prevButton06.addEventListener('click', () => changeImage06(-1)); 
+nextButton06.addEventListener('click', () => changeImage06(1)); 
+
+
+// 07SF
+const imagesproj07 = [
+    '../src/07_01.png',
+    '../src/07_02.png',
+    '../src/07_03.png',
+    '../src/07_04.png',
+    '../src/07_02.png'
+];
+
+let currentIndex07 = 0;
+
+function changeImage07(direction) {
+    currentIndex07 += direction;
+
+    if (currentIndex07 < 0) {
+        currentIndex07 = imagesproj07.length - 1;
+    } else if (currentIndex07 >= imagesproj07.length) {
+        currentIndex07 = 0;
+    }
+
+    document.getElementById('mainImage07').src = imagesproj07[currentIndex07];
+}
+
+const prevButton07 = document.querySelector('.arrow-left');
+const nextButton07 = document.querySelector('.arrow-right');
+
+prevButton07.addEventListener('click', () => changeImage07(-1)); 
+nextButton07.addEventListener('click', () => changeImage07(1)); 
+
+
+// 08AF
+const imagesproj08 = [
+    '../src/08_01.png',
+    '../src/08_02.png',
+    '../src/08_03.png',
+    '../src/08_04.png',
+    '../src/08_02.png'
+];
+
+let currentIndex08 = 0;
+
+function changeImage08(direction) {
+    currentIndex08 += direction;
+
+    if (currentIndex08 < 0) {
+        currentIndex08 = imagesproj08.length - 1;
+    } else if (currentIndex08 >= imagesproj08.length) {
+        currentIndex08 = 0;
+    }
+
+    document.getElementById('mainImage08').src = imagesproj08[currentIndex08];
+}
+
+const prevButton08 = document.querySelector('.arrow-left');
+const nextButton08 = document.querySelector('.arrow-right');
+
+prevButton08.addEventListener('click', () => changeImage08(-1)); 
+nextButton08.addEventListener('click', () => changeImage08(1)); 
+
+
+// 09SF
+const imagesproj09 = [
+    '../src/09_01.png',
+    '../src/09_02.png',
+    '../src/09_03.png',
+    '../src/09_04.png',
+    '../src/09_02.png'
+];
+
+let currentIndex09 = 0;
+
+function changeImage09(direction) {
+    currentIndex09 += direction;
+
+    if (currentIndex09 < 0) {
+        currentIndex09 = imagesproj09.length - 1;
+    } else if (currentIndex09 >= imagesproj09.length) {
+        currentIndex09 = 0;
+    }
+
+    document.getElementById('mainImage09').src = imagesproj09[currentIndex09];
+}
+
+const prevButton09 = document.querySelector('.arrow-left');
+const nextButton09 = document.querySelector('.arrow-right');
+
+prevButton09.addEventListener('click', () => changeImage09(-1)); 
+nextButton09.addEventListener('click', () => changeImage09(1)); 
+
 });
