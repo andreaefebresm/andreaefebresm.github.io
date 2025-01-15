@@ -234,9 +234,6 @@ nextButton05.addEventListener('click', () => changeImage05(1));
 const imagesproj06 = [
     '../src/06_01.png',
     '../src/06_02.png',
-    '../src/06_03.png',
-    '../src/06_04.png',
-    '../src/06_02.png'
 ];
 
 let currentIndex06 = 0;
