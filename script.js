@@ -263,7 +263,6 @@ const imagesproj07 = [
     '../src/07_02.png',
     '../src/07_03.png',
     '../src/07_04.png',
-    '../src/07_02.png'
 ];
 
 let currentIndex07 = 0;
