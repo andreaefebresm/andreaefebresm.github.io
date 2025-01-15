@@ -207,8 +207,6 @@ const imagesproj05 = [
     '../src/05_01.png',
     '../src/05_02.png',
     '../src/05_03.png',
-    '../src/05_04.png',
-    '../src/05_02.png'
 ];
 
 let currentIndex05 = 0;
