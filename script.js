@@ -146,11 +146,9 @@ nextButton02.addEventListener('click', () => changeImage02(1));  // Next button
 
 // 03SF
 const imagesproj03 = [
-    '../src/03_01.png',
     '../src/03_02.png',
     '../src/03_03.png',
     '../src/03_04.png',
-    '../src/03_02.png'
 ];
 
 let currentIndex03 = 0;
@@ -180,7 +178,7 @@ const imagesproj04 = [
     '../src/04_02.png',
     '../src/04_03.png',
     '../src/04_04.png',
-    '../src/04_02.png'
+    '../src/04_05.png'
 ];
 
 let currentIndex04 = 0;
