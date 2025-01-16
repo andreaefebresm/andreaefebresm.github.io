@@ -172,6 +172,20 @@ header {
     top: 0; 
     z-index: 1000; 
 }
+
+footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: baseline;
+    padding: 0.5rem;
+}
+.email {
+    text-align: center;
+}
+.cv {
+    text-align: right;
+}
+
 /* Main */
 main {
     margin-top: 0; 
@@ -293,6 +307,7 @@ main {
         padding: 0.5rem;
         gap: 4rem;
         align-items: baseline;
+        width: 30vw;
     }
     /* HOVER TESTO */
     .image-text {
