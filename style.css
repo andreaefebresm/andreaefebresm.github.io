@@ -268,8 +268,8 @@ main {
 @media screen and (min-width: 768px) {
     /*-----------------------------------*/
     .image-container {
-        height: calc((100vh / 3) - 0.5rem); /* 1/3 dell'altezza del viewport meno il gutter */
-        overflow: hidden; /* Nasconde contenuti in eccesso */
+        height: calc((100vh / 3) - 0.5rem); 
+        overflow: hidden; /
         position: relative;
         display: flex; /* Assicura un layout flessibile */
         justify-content: center; /* Centra l'immagine orizzontalmente */
