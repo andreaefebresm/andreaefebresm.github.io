@@ -365,4 +365,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
     prevButton09.addEventListener('click', () => changeImage09(-1)); 
     nextButton09.addEventListener('click', () => changeImage09(1)); 
+
+    const lazyImages = document.querySelectorAll('img[data-src]');
+
+    const lazyLoadObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const img = entry.target;
+                img.src = img.getAttribute('data-src');
+                img.removeAttribute('data-src'); 
+                observer.unobserve(img); 
+            }
+        });
+    }, {
+        rootMargin: '100px 0px',
+    });
+
+    lazyImages.forEach(image => {
+        lazyLoadObserver.observe(image);
+    });
 });
