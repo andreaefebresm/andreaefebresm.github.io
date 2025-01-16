@@ -160,7 +160,6 @@ document.addEventListener("DOMContentLoaded", () => {
         '../src/03_02.png',
         '../src/03_03.png',
         '../src/03_04.png',
-        '../src/03_02.png'
     ];
 
     let currentIndex03 = 0;
@@ -190,7 +189,7 @@ document.addEventListener("DOMContentLoaded", () => {
         '../src/04_02.png',
         '../src/04_03.png',
         '../src/04_04.png',
-        '../src/04_02.png'
+        '../src/04_05.png'
     ];
 
     let currentIndex04 = 0;
@@ -219,8 +218,6 @@ document.addEventListener("DOMContentLoaded", () => {
         '../src/05_01.png',
         '../src/05_02.png',
         '../src/05_03.png',
-        '../src/05_04.png',
-        '../src/05_02.png'
     ];
 
     let currentIndex05 = 0;
@@ -248,9 +245,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const imagesproj06 = [
         '../src/06_01.png',
         '../src/06_02.png',
-        '../src/06_03.png',
-        '../src/06_04.png',
-        '../src/06_02.png'
     ];
 
     let currentIndex06 = 0;
@@ -280,7 +274,6 @@ document.addEventListener("DOMContentLoaded", () => {
         '../src/07_02.png',
         '../src/07_03.png',
         '../src/07_04.png',
-        '../src/07_02.png'
     ];
 
     let currentIndex07 = 0;
@@ -308,9 +301,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const imagesproj08 = [
         '../src/08_01.png',
         '../src/08_02.png',
-        '../src/08_03.png',
-        '../src/08_04.png',
-        '../src/08_02.png'
     ];
 
     let currentIndex08 = 0;
@@ -338,9 +328,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const imagesproj09 = [
         '../src/09_01.png',
         '../src/09_02.png',
-        '../src/09_03.png',
-        '../src/09_04.png',
-        '../src/09_02.png'
     ];
 
     let currentIndex09 = 0;
