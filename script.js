@@ -130,10 +130,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // 02AF Image Navigation
     const imagesproj02 = [
         '../src/02_01.png',
-        '../src/01_02.png',
-        '../src/01_03.png',
-        '../src/01_04.png',
-        '../src/01_02.png'
+        '../src/02_02.png',
     ];
 
     let currentIndex02 = 0;
