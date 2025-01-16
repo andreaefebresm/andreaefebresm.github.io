@@ -282,6 +282,7 @@ main {
         grid-template-columns: 1fr 1fr 1fr;
         gap: 0.5rem;
         height: 100vh;
+        width:auto;
         max-height: 100vh;
     }
     footer {
