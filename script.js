@@ -5,9 +5,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const imagestool = document.querySelectorAll(".image-container img");
     const tooltip = document.getElementById("tooltip");
 
-    // Mostra tutte le immagini all'apertura del sito
-    images.forEach(img => {
-        img.classList.add('show'); // Assicurati che tutte le immagini siano visibili
+        images.forEach(img => {
+        img.classList.add('show'); 
     });
 
     filterItems.forEach(item => {
@@ -17,47 +16,44 @@ document.addEventListener("DOMContentLoaded", () => {
             filterItems.forEach(i => i.classList.remove('active'));
             item.classList.add('active');
 
-            // Mostra o nascondi le immagini in base alla categoria
-            images.forEach(img => {
+                      images.forEach(img => {
                 if (category === "ALL" || img.getAttribute('data-category') === category) {
-                    img.classList.add('show'); // Applica la classe per mostrare l'immagine
+                    img.classList.add('show'); 
                 } else {
-                    img.classList.remove('show'); // Rimuovi la classe per nascondere l'immagine
+                    img.classList.remove('show'); 
                 }
             });
 
-            // Gestisci la visibilità dell'elemento "ALL"
-            if (category !== "ALL") {
-                allFilter.style.display = "block"; // Mostra "ALL" quando un filtro è attivo
+                      if (category !== "ALL") {
+                allFilter.style.display = "block"; 
                 setTimeout(() => {
-                    allFilter.style.opacity = "1"; // Animazione di apparizione
-                }, 10); // Piccola attesa per permettere l'animazione
+                    allFilter.style.opacity = "1"; 
+                }, 10); 
             } else {
-                allFilter.style.opacity = "0"; // Nascondi "ALL" se è selezionato
+                allFilter.style.opacity = "0"; 
                 setTimeout(() => {
-                    allFilter.style.display = "none"; // Nascondi completamente dopo l'animazione
-                }, 500); // Aspetta la fine dell'animazione
+                    allFilter.style.display = "none"; 
+                }, 500); 
             }
         });
     });
 
-    // Tooltip
     imagestool.forEach(image => {
-        const container = image.parentElement; // Ottieni il contenitore dell'immagine
+        const container = image.parentElement; 
 
         image.addEventListener("mouseenter", () => {
-            const text = container.querySelector(".image-text").textContent; // Ottieni il testo dall'elemento image-text
-            tooltip.textContent = text; // Imposta il testo del tooltip
-            tooltip.style.opacity = 1; // Rendi il tooltip visibile
+            const text = container.querySelector(".image-text").textContent; 
+            tooltip.textContent = text;
+            tooltip.style.opacity = 1; 
         });
 
         image.addEventListener("mousemove", (e) => {
-            tooltip.style.left = e.pageX + 10 + "px"; // Posiziona il tooltip a destra del cursore
-            tooltip.style.top = e.pageY + 10 + "px"; // Posiziona il tooltip sotto il cursore
+            tooltip.style.left = e.pageX + 10 + "px"; 
+            tooltip.style.top = e.pageY + 10 + "px"; 
         });
 
         image.addEventListener("mouseleave", () => {
-            tooltip.style.opacity = 0; // Nascondi il tooltip
+            tooltip.style.opacity = 0; 
         });
     });
 

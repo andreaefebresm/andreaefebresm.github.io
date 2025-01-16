@@ -1,15 +1,18 @@
 html {
     background-color: rgb(254, 245, 234);
 }
+
 html, body {
     height: 100vh;
 }
+
 body {
     padding: 0;
     margin: 0;
 }
+
 /*------------------------------------------------*/
-/* gallery */
+/* gallery progetto singolo */
 .gallery-container {
     top: 0;
     left: 0;
@@ -60,7 +63,17 @@ body {
 }
 
 .prog_side {
+    padding: 0 0.5rem;
+    position: absolute;
+    top: 40vh;
     margin-bottom: 2rem; 
+}
+.img_p {
+    max-width: 100%;
+    position: fixed;
+    height: 40vh;
+    width: 100vh;
+    object-fit: cover;
 }
 /*------------------------------------------------*/
 /*typo*/
@@ -164,41 +177,27 @@ main {
     margin-top: 0; 
 }
 
-/* Container */
+/* homepage */
 .container {
-    display: flex;
-    flex-direction: column-reverse;
+    display: grid;
     overflow-y: auto;
-    gap: 2.5rem;
-}
-.prog_side {
-    padding: 0 0.5rem;
-    position: absolute;
-    top: 40vh;
-}
-.img_p {
-    max-width: 100%;
-    position: fixed;
-    height: 40vh;
-    width: 100vh;
-    object-fit: cover;
+    gap: 1.5rem;
+    width: 100vw;
+    max-width: 100vw;
 }
 
 /* Filter */
 .filter {
-    padding: 5rem 0.5rem;
+    padding: 5rem 0.5rem 0rem 0.5rem;
 }
 
 /* Images */
 .images {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 0.5rem;
-    max-height: 100vh;
-    overflow: auto;
-    white-space: nowrap;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: flex-start;
+    width: 100vw;
+    max-width: 100vw;
 }
 .filter ul li {
     cursor: pointer;
@@ -216,6 +215,8 @@ main {
     opacity: 0; 
     transform: scale(0.99);  
     object-fit: cover;
+    max-width: 50vw;
+    width:50vw;
 }
 .images img.show {
     opacity: 1; 
