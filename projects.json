@@ -1,0 +1,104 @@
+[
+  {
+    "slug": "superforma",
+    "title": "Superforma",
+    "sub": "As a business partner and Digital Communication Manager at <a href=\"www.superforma.xyz\" target=\"_blank\">SuperForma</a>, I’ve been deeply involved in shaping the studio’s identity and presence. SuperForma focuses on 3D printing and digital fabrication, combining technology and sustainability in its work.",
+    "description": "I’ve curated the company’s branding, including the visual identity of SuperForma and its products. I designed the website twice to reflect the studio’s growth and ensure it’s easy to navigate, showcasing our projects clearly and effectively. I’ve also managed our Instagram and LinkedIn pages, creating content that shares what we do and keeps our audience engaged.<br><br>I’ve organized and led workshops, live demos, and other events, representing the studio and connecting with clients and collaborators. On top of that, I’ve managed consulting and service projects, helping to deliver tailored solutions for different needs.",
+    "link": "https://www.superforma.xyz/",
+    "linkLabel": "VISIT SUPERFORMA",
+    "image": "src/1.png",
+    "hoverImage": "src/1H.png",
+    "category": "BRANDING WEBSITE PHYSICAL EDITORIAL DESIGN",
+    "gallery": ["src/01_01.png", "src/01_02.png", "src/01_03.png", "src/01_04.png"]
+  },
+  {
+    "slug": "amarofavero",
+    "title": "VEROAMARO FAVERO",
+    "sub": "Vero Amaro is a contemporary Italian brand dedicated to crafting authentic herbal liqueurs inspired by traditional recipes. The project encompassed branding, packaging design, website creation, and photography for their promotional materials. As part of the team, I focused on developing the brand identity and designing a user-friendly, visually engaging website to communicate the essence of Vero Amaro.",
+    "description": "The branding work aimed to reflect the artisanal quality of the product, combining a modern aesthetic with nods to Italian tradition. The website showcases the story, craftsmanship, and passion behind Vero Amaro, offering visitors an immersive digital experience that aligns with the brand's values.<br><br>For this project, I worked on creating a cohesive brand identity and translating it into a dynamic online presence. My role included designing the website's layout, ensuring seamless navigation, and incorporating visual elements that highlight the product's unique qualities. The result is a cohesive brand experience that captures the essence of Vero Amaro across digital and physical platforms.",
+    "link": "https://www.veroamaro.it/",
+    "linkLabel": "VISIT AMAROFAVERO",
+    "image": "src/2.png",
+    "hoverImage": "src/2H.png",
+    "category": "BRANDING",
+    "gallery": ["src/02_01.png", "src/02_02.png"]
+  },
+  {
+    "slug": "interconnected",
+    "title": "INTERCONNECTED",
+    "sub": "Interconnected is an online platform developed as part of my Master’s Degree Thesis in Communication Design. The project examines how Internet of Things (IoT) devices collect, store, and process user data, presenting these processes in a clear and accessible way. By using simple language and straightforward visuals, Interconnected helps audiences understand the complex interactions between IoT technology and personal information.",
+    "description": "The platform aims to educate users on the mechanisms behind IoT communication, highlighting the implications of data collection and storage on privacy and everyday life. With a focus on clarity and user engagement, Interconnected provides tools to help people navigate the data-driven world more consciously.<br><br>This thesis project blends communication design and digital storytelling to bridge the gap between technical complexity and everyday understanding, encouraging critical thinking about IoT and its impact on society.",
+    "link": "https://interconnected-ecru.vercel.app/",
+    "linkLabel": "VISIT INTERCONNECTED",
+    "image": "src/3.png",
+    "hoverImage": "src/3H.png",
+    "category": "INFORMATION DESIGN",
+    "gallery": ["src/03_01.png", "src/03_02.png", "src/03_03.png", "src/03_04.png"]
+  },
+  {
+    "slug": "discojournal",
+    "title": "DISCOJOURNAL",
+    "sub": "DiSCo Journal is an annual online publication that explores digital art, culture, and methodologies, serving as a critical space to question the meaning of digitalization in everyday life. It aims to foster interdisciplinary conversations and insights into the impact of technology on society. For this project, I was responsible for the branding of the collective, creating a visual identity that reflects its interdisciplinary and critical approach.",
+    "description": "I also designed and developed the website, ensuring it provides an engaging user experience. Additionally, I conceptualized and designed the first two issues of the journal, each with its own unique focus.<br><br>Issue 1 channels DISCO vibes from the 1970s, incorporating playful references to music, culture, and aesthetics of the disco era, while examining their resonance in contemporary digital culture. Issue 2 delves into the realm of digital art, featuring themes like ASCII art, hacking, and the creative possibilities of early digital technologies.<br><br>The result is a cohesive brand identity and dynamic online platform that seamlessly integrate the journal's themes, offering readers a visually compelling and thought-provoking experience.",
+    "link": "https://www.discojournal.com/",
+    "linkLabel": "VISIT DISCOJOURNAL",
+    "image": "src/4.png",
+    "hoverImage": "src/4H.png",
+    "category": "BRANDING",
+    "gallery": ["src/04_01.png", "src/04_02.png", "src/04_03.png", "src/04_04.png", "src/04_05.png"]
+  },
+  {
+    "slug": "doublecheck",
+    "title": "DOUBLECHECK - THE QUIZ",
+    "sub": "Doublecheck is an <span class=\"impo\">interactive web quiz designed</span> to educate users about misinformation, particularly focusing on fake and manipulated images. It challenges participants to critically analyze visuals and learn how to spot signs of misinformation.<br><br>Initially developed as the final project for the Density Design Final Studio at Politecnico di Milano, Doublecheck was later selected by Tactical Tech to be part of <a href=\"https://theglassroom.org/en/misinformation-edition/exhibits/doublecheck/\">The Glass Room: Misinformation Edition</a>. The project has been translated into 23 languages and exhibited worldwide.",
+    "description": "Through engaging questions and informative feedback, the quiz provides practical tools and strategies to help users navigate the complex world of online misinformation. Its approachable format makes the topic accessible to diverse audiences, fostering greater awareness and critical thinking.<br><br>For this project, I concentrated on the concept, UX/UI design, and coding of the website, ensuring an intuitive and user-friendly experience. Additionally, I contributed to the research phase, verifying the accuracy and relevance of the content to ensure its effectiveness in addressing global misinformation challenges.",
+    "link": "https://doublecheck.theglassroom.org/english/index.html",
+    "linkLabel": "DOUBLECHECK GLASSROOM",
+    "image": "src/5.png",
+    "hoverImage": "src/5H.png",
+    "category": "WEBSITE DEVELOPMENT",
+    "gallery": ["src/05_01.png", "src/05_02.png", "src/05_03.png"]
+  },
+  {
+    "slug": "socialnetwork",
+    "title": "MEDIAZIONI ALGORITMICHE RESULTS",
+    "sub": "These two projects were developed as part of the Density Design course, focusing on data visualization to explore complex societal phenomena. Both were collaborative efforts, and my contributions were centered on graphic design, concept development, data organization, and coding.",
+    "description": "I See It Therefore I Believe It examines how manipulated and fake images shape beliefs, blur the line between reality and fiction, and impact visual culture. By analyzing cases of debunking, the project highlights the role of images in influencing perceptions and connecting people across distances.<br><br>Social Networks by Cultural Areas visualizes global social media usage, organizing 43 platforms into thematic families and dividing the world into 11 cultural regions. It reveals how digital habits and social network penetration vary across cultural contexts.",
+    "link": "https://densitydesign.github.io/teaching-dd15/course-results/es01/group01/",
+    "linkLabel": "SOCIAL NETWORK VIZ",
+    "image": "src/6.png",
+    "hoverImage": "src/6H.png",
+    "category": "",
+    "gallery": ["src/06_01.png", "src/06_02.png"]
+  },
+  {
+    "slug": "sottofondo",
+    "title": "SOTTOFONDO",
+    "sub": "Sottofondo is a magazine that approaches environmentalism in a broad and unconventional way. Moving beyond the typical association with ecology, it delves into the concept of environmentalism as the influence of environmental factors on human personality and behavior. The project examines the environment not just as nature, but as the space and context in which humans live, move, and interact.",
+    "description": "The zero issue of Sottofondo focuses on acoustic pollution, using it as an exemplary case to explore how everyday sounds and noises are undervalued in our overstimulated world. The issue challenges the perception of sound as a neutral background and proposes that we re-educate ourselves to engage with this overlooked element of our environment. The aim is to foster critical awareness of the ways in which sound—or its neglect—shapes human behavior and societal norms.<br><br>For this project, I was involved in all phases, with a primary focus on concept development. I curated the selection of articles and artists, ensuring diverse perspectives and authoritative voices shaped the content. The editorial team emphasized a constructive critique, encouraging readers to question and explore rather than simply consume predefined answers.",
+    "image": "src/7.png",
+    "hoverImage": "src/7H.png",
+    "category": "WEBSITE DEVELOPMENT",
+    "gallery": ["src/07_01.png", "src/07_02.png", "src/07_03.png", "src/07_04.png"]
+  },
+  {
+    "slug": "antartic",
+    "title": "ANTARTIC RESOLUTION VIZ",
+    "sub": "Antarctic Resolution is an ambitious multidisciplinary publication that brings together experts from science, architecture, and the arts to provide an unprecedented, holistic view of Antarctica. The project, led by Giulia Foscari/UNLESS, sheds light on the environmental, geopolitical, and cultural significance of the southernmost continent, combining essays, data, and visuals to create a unique narrative.",
+    "description": "As part of the design team, I contributed to the creation of infographics for this publication. My role focused on understanding and organizing the complex data provided, translating it into visual elements under the guidance of the main design team. These infographics complement the content of the book, helping to communicate the crucial issues surrounding Antarctica in an accessible and compelling way.",
+    "image": "src/8.png",
+    "hoverImage": "src/8H.png",
+    "category": "INFORMATION DESIGN",
+    "gallery": ["src/08_01.png", "src/08_02.png"]
+  },
+  {
+    "slug": "postergenerative",
+    "title": "SPACE ODDITIES",
+    "sub": "Space Oddities is a generative poster series that highlights the growing issue of space debris and its impact on space activities. Space debris includes non-operational satellites, rocket parts, and fragments from accidents or collisions, all of which orbit Earth at alarming speeds. According to NASA, in low Earth orbit, debris can collide at speeds of about 22,370 mph (36,000 km/h), making even tiny fragments capable of causing severe damage to satellites, spacecraft, and even the International Space Station.",
+    "description": "This project aims to shed light on the dual nature of satellites: while they provide essential services for daily life, they also pose significant risks to space operations. Each poster visualizes the presence and orbits of satellites from a chosen country, overlaid with quotes about space debris sourced from online research. The filtered imagery is generated through code written in OPENRNDR during a one-week workshop, combining data from the Union of Concerned Scientists database and images from NASA’s archives.<br><br>The generative design and randomization of quotes create a dynamic and thought-provoking representation of a pressing issue, encouraging viewers to reflect on the balance between technological advancement and its environmental impact in space.",
+    "image": "src/9.png",
+    "hoverImage": "src/9H.png",
+    "category": "BRANDING",
+    "gallery": ["src/09_01.png", "src/09_02.png"]
+  }
+]
