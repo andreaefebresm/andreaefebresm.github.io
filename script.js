@@ -17,7 +17,7 @@ function buildIndex(projects) {
   gallery.innerHTML = projects.map(p => `
     <a href="project.html?slug=${p.slug}">
       <div class="image-container">
-        <img src="${p.image}" data-hover="${p.hoverImage}" data-category="${p.category}">
+        <img src="${p.image}" alt="${p.title}" data-hover="${p.hoverImage}" data-category="${p.category}">
         <div class="image-text">${p.title}</div>
       </div>
     </a>
