@@ -194,7 +194,6 @@ main {
 /* homepage */
 .container {
     display: grid;
-    overflow-y: auto;
     gap: 1.5rem;
     width: 100vw;
     max-width: 100vw;
@@ -202,7 +201,9 @@ main {
 
 /* Filter */
 .filter {
-    padding: 5rem 0.5rem 0rem 0.5rem;
+    padding: 5rem 0.5rem 6rem 0.5rem;
+    overflow-y: auto;
+    max-height: 100vh;
 }
 
 /* Images */
@@ -212,6 +213,11 @@ main {
     gap: 0.5rem;
     width: 100vw;
     max-width: 100vw;
+}
+#gallery {
+    position: sticky;
+    top: 0;
+    height: 100vh;
 }
 .filter ul li {
     cursor: pointer;
@@ -286,7 +292,6 @@ main {
     .container {
         display: grid;
         grid-template-columns: 1fr 2fr;
-        overflow-y: auto;
         gap: 2.5rem;
         max-height: 100vh;
     }
