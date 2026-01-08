@@ -242,6 +242,9 @@ main {
     max-width: calc(100% - 1rem);
     z-index: 2;
 }
+.project-tags-detail {
+    position: absolute;
+}
 .tag {
     border: 1px solid #FF4B00;
     border-radius: 999px;

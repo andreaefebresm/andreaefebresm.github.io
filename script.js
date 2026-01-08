@@ -27,7 +27,7 @@ function buildIndex(projects) {
     <a href="project.html?slug=${project.slug}">
       <div class="image-container">
         <div class="project-tags">
-          ${project.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
+          ${renderTags(project).map(tag => `<span class="tag">${tag}</span>`).join('')}
         </div>
         <img src="${project.image}" data-hover="${project.hoverImage}" data-category="${project.category}" alt="${project.title}">
         <div class="image-text">${project.title}</div>
@@ -88,12 +88,15 @@ function buildProject(project, projects) {
   document.title = `AEFM | ${project.title}`;
   document.getElementById('project-title').textContent = project.title;
   document.getElementById('project-sub').innerHTML = project.sub || '';
-  document.getElementById('project-description').innerHTML = project.description || '';
+  document.getElementById('project-description').innerHTML = formatDescription(project.description);
   setProjectBreadcrumb(project);
   setProjectNavigation(project, projects);
+  renderProjectTags(project);
   const linkDiv = document.getElementById('project-link');
-  if (project.link) {
-    linkDiv.innerHTML = `<a href="${project.link}" target="_blank"><button>${project.linkLabel || 'VISIT'}</button></a>`;
+  if (project.externalLink) {
+    linkDiv.innerHTML = `<a href="${project.externalLink}" target="_blank"><button>External link</button></a>`;
+  } else {
+    linkDiv.innerHTML = '';
   }
 
   const images = project.gallery || [];
@@ -109,6 +112,27 @@ function buildProject(project, projects) {
   }
   document.querySelector('.arrow-left').addEventListener('click', () => change(-1));
   document.querySelector('.arrow-right').addEventListener('click', () => change(1));
+}
+
+function renderTags(project) {
+  const tags = Array.isArray(project.tags) ? project.tags : [];
+  return project.selected ? [...tags, 'S'] : tags;
+}
+
+function renderProjectTags(project) {
+  const tagContainer = document.getElementById('project-tags');
+  if (!tagContainer) return;
+  tagContainer.innerHTML = renderTags(project)
+    .map(tag => `<span class="tag">${tag}</span>`)
+    .join('');
+}
+
+function formatDescription(description) {
+  if (!description) return '';
+  return description
+    .split(/\n\s*\n/)
+    .map(paragraph => `<p class="description">${paragraph}</p>`)
+    .join('');
 }
 
 const projectOrder = [
