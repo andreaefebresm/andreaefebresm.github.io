@@ -15,8 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function buildIndex(projects) {
   const gallery = document.getElementById('gallery');
-  const primaryProjects = projects.filter(project => project.tier === 'primary');
-  const secondaryProjects = projects.filter(project => project.tier === 'secondary');
   const renderProjects = items => items.map(project => `
     <a href="project.html?slug=${project.slug}">
       <div class="image-container">
@@ -28,16 +26,7 @@ function buildIndex(projects) {
       </div>
     </a>
   `).join('');
-  gallery.innerHTML = `
-    <div class="gallery-group">
-      <h2 class="gallery-heading">Selected work</h2>
-      ${renderProjects(primaryProjects)}
-    </div>
-    <div class="gallery-group">
-      <h2 class="gallery-heading">Additional work</h2>
-      ${renderProjects(secondaryProjects)}
-    </div>
-  `;
+  gallery.innerHTML = renderProjects(projects);
   setupInteractions();
 }
 

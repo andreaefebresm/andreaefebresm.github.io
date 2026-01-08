@@ -213,19 +213,10 @@ main {
     width: 100vw;
     max-width: 100vw;
 }
-.gallery-group {
-    display: contents;
-}
-.gallery-heading {
-    grid-column: 1 / -1;
-    margin: 0.75rem 0 0.25rem;
-    padding-left: 0.5rem;
-}
-.gallery-group:first-of-type .gallery-heading {
-    margin-top: 0;
-}
 .image-container {
     position: relative;
+    overflow: hidden;
+    aspect-ratio: 4 / 3;
 }
 .project-tags {
     position: absolute;
@@ -261,9 +252,9 @@ main {
     transition: opacity 0.2s ease, transform 0.2s ease; 
     opacity: 0; 
     transform: scale(0.99);  
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    max-width: 50vw;
-    width:50vw;
 }
 .images img.show {
     opacity: 1; 
@@ -302,17 +293,18 @@ main {
     /*-----------------------------------*/
     .image-container {
         height: calc((100vh / 3) - 0.5rem); 
-        overflow: hidden; /
+        overflow: hidden;
         position: relative;
         display: flex; /* Assicura un layout flessibile */
         justify-content: center; /* Centra l'immagine orizzontalmente */
         align-items: center; /* Centra l'immagine verticalmente */
+        aspect-ratio: auto;
     }
     
     .image-container img {
-        max-width: 100%; /* Adatta la larghezza dell'immagine al contenitore */
-        max-height: 100%; /* Adatta l'altezza dell'immagine al contenitore */
-        object-fit: contain; /* L'immagine si adatta senza tagliarla */
+        width: 100%; /* Adatta la larghezza dell'immagine al contenitore */
+        height: 100%; /* Adatta l'altezza dell'immagine al contenitore */
+        object-fit: cover; /* L'immagine si adatta senza tagliarla */
         object-position: center; /* Centra l'immagine */
         transition: transform 0.3s ease; /* Transizione per effetto hover fluido */
     }

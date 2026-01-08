@@ -8,8 +8,7 @@
     "hoverImage": "src/1H.png",
     "category": "",
     "gallery": ["src/01_01.png", "src/01_02.png", "src/01_03.png", "src/01_04.png"],
-    "tier": "primary",
-    "tags": ["UX/UI", "Enterprise", "Sanitized"]
+    "tags": ["S", "UX/UI", "Enterprise", "Sanitized"]
   },
   {
     "slug": "ovosode",
@@ -20,8 +19,7 @@
     "hoverImage": "src/2H.png",
     "category": "",
     "gallery": ["src/02_01.png", "src/02_02.png", "src/02_04.png"],
-    "tier": "primary",
-    "tags": ["UX/UI", "Enterprise"]
+    "tags": ["S", "UX/UI", "Enterprise"]
   },
   {
     "slug": "codici",
@@ -32,8 +30,7 @@
     "hoverImage": "src/3H.png",
     "category": "",
     "gallery": ["src/03_01.png", "src/03_02.png", "src/03_03.png", "src/03_04.png"],
-    "tier": "primary",
-    "tags": ["UX/UI", "IA", "Sanitized"]
+    "tags": ["S", "UX/UI", "IA", "Sanitized"]
   },
   {
     "slug": "antarctic-resolution",
@@ -44,8 +41,7 @@
     "hoverImage": "src/8H.png",
     "category": "INFORMATION DESIGN",
     "gallery": ["src/08_01.png", "src/08_02.png"],
-    "tier": "primary",
-    "tags": ["Data Viz", "Editorial"]
+    "tags": ["S", "Data Viz", "Editorial"]
   },
   {
     "slug": "design-economy",
@@ -56,8 +52,7 @@
     "hoverImage": "src/9H.png",
     "category": "",
     "gallery": ["src/09_01.png", "src/09_02.png"],
-    "tier": "primary",
-    "tags": ["Data Viz", "Editorial"]
+    "tags": ["S", "Data Viz", "Editorial"]
   },
   {
     "slug": "the-passenger-via-propp",
@@ -68,7 +63,6 @@
     "hoverImage": "src/4H.png",
     "category": "",
     "gallery": ["src/04_01.png", "src/04_02.png", "src/04_03.png", "src/04_04.png", "src/04_05.png"],
-    "tier": "secondary",
     "tags": ["Data Viz", "Editorial"]
   },
   {
@@ -80,7 +74,6 @@
     "hoverImage": "src/5H.png",
     "category": "",
     "gallery": ["src/05_01.png", "src/05_02.png", "src/05_03.png"],
-    "tier": "secondary",
     "tags": ["Data Viz", "Product"]
   },
   {
@@ -92,7 +85,6 @@
     "hoverImage": "src/6H.png",
     "category": "",
     "gallery": ["src/06_01.png", "src/06_02.png"],
-    "tier": "secondary",
     "tags": ["UX/UI", "Product"]
   },
   {
@@ -104,7 +96,6 @@
     "hoverImage": "src/7H.png",
     "category": "",
     "gallery": ["src/07_01.png", "src/07_02.png", "src/07_03.png", "src/07_04.png"],
-    "tier": "secondary",
     "tags": ["UX/UI", "Product"]
   }
 ]
