@@ -258,7 +258,10 @@ main {
     font-size: 0.65rem;
     line-height: 1;
     color: #FF4B00;
-    background-color: transparent;
+    background-color: rgb(254, 245, 234);
+    font-family: "Syne", sans-serif;
+    font-weight: 400;
+    letter-spacing: 0;
 }
 .filter ul li {
     cursor: pointer;
