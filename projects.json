@@ -92,10 +92,10 @@
     "selected": false,
     "externalLink": "",
     "sub": "",
-    "image": "src/7.png",
+    "image": "src/1.png",
     "hoverImage": "src/7H.png",
     "category": "",
-    "gallery": ["src/07_01.png", "src/07_02.png", "src/07_03.png", "src/07_04.png"]
+    "gallery": ["src/01_01.png", "src/01_02.png", "src/01_03.png", "src/01_04.png"]
   },
   {
     "slug": "doublecheck",
