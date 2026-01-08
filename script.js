@@ -15,14 +15,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function buildIndex(projects) {
   const gallery = document.getElementById('gallery');
-  gallery.innerHTML = projects.map(p => `
-    <a href="project.html?slug=${p.slug}">
+  const renderProjects = items => items.map(project => `
+    <a href="project.html?slug=${project.slug}">
       <div class="image-container">
-        <img src="${p.image}" data-hover="${p.hoverImage}" data-category="${p.category}" alt="${p.title}">
-        <div class="image-text">${p.title}</div>
+        <div class="project-tags">
+          ${project.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
+        </div>
+        <img src="${project.image}" data-hover="${project.hoverImage}" data-category="${project.category}" alt="${project.title}">
+        <div class="image-text">${project.title}</div>
       </div>
     </a>
   `).join('');
+  gallery.innerHTML = renderProjects(projects);
   setupInteractions();
 }
 
