@@ -86,7 +86,6 @@ function buildProject(project, projects) {
   if (!project) return;
   document.title = `AEFM | ${project.title}`;
   document.getElementById('project-title').textContent = project.title;
-  document.getElementById('project-year').textContent = project.year || '';
   document.getElementById('project-sub').innerHTML = project.sub || '';
   document.getElementById('project-description').innerHTML = formatDescription(project.description);
   setProjectBreadcrumb(project);
@@ -143,7 +142,9 @@ function mapTag(tag) {
 function renderProjectTags(project) {
   const tagContainer = document.getElementById('project-tags');
   if (!tagContainer) return;
-  tagContainer.innerHTML = renderTags(project)
+  const tags = renderTags(project);
+  const yearTag = project.year ? [project.year, ...tags] : tags;
+  tagContainer.innerHTML = yearTag
     .map(tag => `<span class="tag">${tag}</span>`)
     .join('');
 }
