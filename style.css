@@ -163,6 +163,20 @@ button:hover{
     font-weight: 400;
     color: black;
 }
+.breadcrumb {
+    margin: 0 0 0.5rem 0;
+    font-size: 0.9rem;
+}
+.project-nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+}
+.project-nav-link {
+    font-size: 0.9rem;
+}
 
 header {
     padding: 0.5rem; 
@@ -174,10 +188,13 @@ header {
 }
 
 footer {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
     align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
     padding: 0.5rem;
+    flex-wrap: wrap;
+    white-space: nowrap;
 }
 .email {
     text-align: center;
@@ -227,6 +244,9 @@ main {
     gap: 0.25rem;
     max-width: calc(100% - 1rem);
     z-index: 2;
+}
+.project-tags-detail {
+    position: absolute;
 }
 .tag {
     border: 1px solid #FF4B00;
@@ -325,14 +345,16 @@ main {
         max-height: 100vh;
     }
     footer {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        display: flex;
         position: fixed;
         bottom: 0;
         padding: 0.5rem;
-        gap: 4rem;
+        gap: 1rem;
         align-items: baseline;
+        justify-content: space-between;
         width: 30vw;
+        flex-wrap: nowrap;
+        white-space: nowrap;
     }
     /* HOVER TESTO */
     .image-text {
