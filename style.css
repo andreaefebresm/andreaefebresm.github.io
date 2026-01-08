@@ -163,6 +163,20 @@ button:hover{
     font-weight: 400;
     color: black;
 }
+.breadcrumb {
+    margin: 0 0 0.5rem 0;
+    font-size: 0.9rem;
+}
+.project-nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+}
+.project-nav-link {
+    font-size: 0.9rem;
+}
 
 header {
     padding: 0.5rem; 
@@ -227,6 +241,9 @@ main {
     gap: 0.25rem;
     max-width: calc(100% - 1rem);
     z-index: 2;
+}
+.project-tags-detail {
+    position: absolute;
 }
 .tag {
     border: 1px solid #FF4B00;
