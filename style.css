@@ -250,6 +250,21 @@ main {
     max-width: calc(100% - 1rem);
     z-index: 2;
 }
+.project-tags-overlay {
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+    max-width: calc(100% - 1rem);
+    z-index: 2;
+    pointer-events: none;
+}
+.project-tags-overlay .tag {
+    font-size: 0.875rem;
+    line-height: 1.3;
+}
 .project-tags-detail {
     position: absolute;
 }

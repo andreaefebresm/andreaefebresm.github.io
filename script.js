@@ -26,13 +26,8 @@ function buildIndex(projects) {
   const renderProjects = items => items.map(project => `
     <a href="project.html?slug=${project.slug}">
       <div class="image-container">
-        <img src="${project.image}" data-hover="${project.hoverImage}" data-category="${project.category}" alt="${project.title}">
-        <div class="image-text">${project.title}</div>
-      </div>
-      <div class="card-meta">
-        <p class="card-title">${project.title}</p>
-        ${project.year ? `<p class="project-year">${project.year}</p>` : ''}
-        <div class="project-tags-inline">
+        <img src="${project.image}" data-hover="${project.hoverImage}" data-category="${project.category}" data-title="${project.title}" alt="${project.title}">
+        <div class="project-tags-overlay">
           ${renderTags(project).map(tag => `<span class="tag">${tag}</span>`).join('')}
         </div>
       </div>
@@ -51,7 +46,7 @@ function setupInteractions() {
   imagestool.forEach(image => {
     const container = image.parentElement;
     image.addEventListener('mouseenter', () => {
-      const text = container.querySelector('.image-text').textContent;
+      const text = image.dataset.title || image.alt || '';
       tooltip.textContent = text;
       tooltip.style.opacity = 1;
     });
