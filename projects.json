@@ -64,10 +64,10 @@
     "selected": false,
     "externalLink": "",
     "sub": "",
-    "image": "src/2.png",
-    "hoverImage": "src/2H.png",
+    "image": "src/04_25_02.png",
+    "hoverImage": "src/04_25_01.png",
     "category": "",
-    "gallery": ["src/02_01.png", "src/02_02.png", "src/02_04.png"]
+    "gallery": ["src/04_25_02.png", "src/04_25_03.png", "src/04_25_04.png"]
   },
   {
     "slug": "discojournal",
