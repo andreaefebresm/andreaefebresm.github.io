@@ -112,8 +112,8 @@
     "gallery": ["src/05_01.png", "src/05_02.png", "src/05_03.png"]
   },
   {
-    "slug": "data-visualization-studies",
-    "title": "Data Visualization Studies",
+    "slug": "data-visualization-works",
+    "title": "Data Visualization Works",
     "year": "2019–2025",
     "description": "Data Visualization Studies groups a series of projects exploring how data can be translated into maps and visual systems to support interpretation and exploration. The work includes cartographic and infographic contributions developed for The Passenger as part of Propp, as well as experimental visualizations focused on algorithmic mediation and data relationships.\n\nAcross these projects, my contribution centered on transforming structured datasets into readable visual forms. The visualizations balance accuracy, clarity, and narrative coherence, and are designed to invite exploration rather than impose a single interpretation.",
     "tags": ["Data Viz", "Editorial"],
