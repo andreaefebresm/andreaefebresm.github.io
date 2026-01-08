@@ -35,6 +35,7 @@ body {
     width: 100%; 
     height: 40vh; 
     object-fit: cover;
+    border-radius: 8px;
 }
 
 .arrow {
@@ -163,6 +164,23 @@ button:hover{
     font-weight: 400;
     color: black;
 }
+.breadcrumb {
+    margin: 0 0 0.5rem 0;
+    font-size: 0.9rem;
+}
+.project-nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 0 0.5rem;
+    box-sizing: border-box;
+}
+.project-nav-link {
+    font-size: 0.9rem;
+}
 
 header {
     padding: 0.5rem; 
@@ -174,10 +192,13 @@ header {
 }
 
 footer {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
     align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
     padding: 0.5rem;
+    flex-wrap: wrap;
+    white-space: nowrap;
 }
 .email {
     text-align: center;
@@ -217,6 +238,7 @@ main {
     position: relative;
     overflow: hidden;
     aspect-ratio: 4 / 3;
+    border-radius: 8px;
 }
 .project-tags {
     position: absolute;
@@ -228,6 +250,9 @@ main {
     max-width: calc(100% - 1rem);
     z-index: 2;
 }
+.project-tags-detail {
+    position: absolute;
+}
 .tag {
     border: 1px solid #FF4B00;
     border-radius: 999px;
@@ -235,7 +260,14 @@ main {
     font-size: 0.65rem;
     line-height: 1;
     color: #FF4B00;
-    background-color: transparent;
+    background-color: rgba(254, 245, 234, 0.8);
+    font-family: "Syne", sans-serif;
+    font-weight: 400;
+    letter-spacing: 0;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    cursor: default;
+    pointer-events: none;
 }
 .filter ul li {
     cursor: pointer;
@@ -325,14 +357,16 @@ main {
         max-height: 100vh;
     }
     footer {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        display: flex;
         position: fixed;
         bottom: 0;
         padding: 0.5rem;
-        gap: 4rem;
+        gap: 1rem;
         align-items: baseline;
+        justify-content: space-between;
         width: 30vw;
+        flex-wrap: nowrap;
+        white-space: nowrap;
     }
     /* HOVER TESTO */
     .image-text {
@@ -428,6 +462,7 @@ main {
         width: 100%; 
         height: 100vh; 
         object-fit: cover;
+        border-radius: 8px;
     }
 
     .arrow {
