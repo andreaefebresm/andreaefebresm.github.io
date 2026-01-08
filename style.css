@@ -253,6 +253,24 @@ main {
 .project-tags-detail {
     position: absolute;
 }
+.project-tags-inline {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+}
+.card-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    padding-top: 0.35rem;
+}
+.card-title {
+    margin: 0;
+}
+.project-year {
+    margin: 0;
+    font-size: 0.9rem;
+}
 .tag {
     border: 1px solid #FF4B00;
     border-radius: 999px;

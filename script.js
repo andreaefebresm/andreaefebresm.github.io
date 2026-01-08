@@ -26,11 +26,15 @@ function buildIndex(projects) {
   const renderProjects = items => items.map(project => `
     <a href="project.html?slug=${project.slug}">
       <div class="image-container">
-        <div class="project-tags">
-          ${renderTags(project).map(tag => `<span class="tag">${tag}</span>`).join('')}
-        </div>
         <img src="${project.image}" data-hover="${project.hoverImage}" data-category="${project.category}" alt="${project.title}">
         <div class="image-text">${project.title}</div>
+      </div>
+      <div class="card-meta">
+        <p class="card-title">${project.title}</p>
+        ${project.year ? `<p class="project-year">${project.year}</p>` : ''}
+        <div class="project-tags-inline">
+          ${renderTags(project).map(tag => `<span class="tag">${tag}</span>`).join('')}
+        </div>
       </div>
     </a>
   `).join('');
@@ -87,6 +91,7 @@ function buildProject(project, projects) {
   if (!project) return;
   document.title = `AEFM | ${project.title}`;
   document.getElementById('project-title').textContent = project.title;
+  document.getElementById('project-year').textContent = project.year || '';
   document.getElementById('project-sub').innerHTML = project.sub || '';
   document.getElementById('project-description').innerHTML = formatDescription(project.description);
   setProjectBreadcrumb(project);
