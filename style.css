@@ -163,6 +163,20 @@ button:hover{
     font-weight: 400;
     color: black;
 }
+.breadcrumb {
+    margin: 0 0 0.5rem 0;
+    font-size: 0.9rem;
+}
+.project-nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+}
+.project-nav-link {
+    font-size: 0.9rem;
+}
 
 header {
     padding: 0.5rem; 
