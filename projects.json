@@ -14,20 +14,6 @@
     "gallery": ["src/01_01.png", "src/01_02.png", "src/01_03.png", "src/01_04.png"]
   },
   {
-    "slug": "antarctic-resolution",
-    "title": "Antarctic Resolution",
-    "year": "2020",
-    "description": "Antarctic Resolution is an editorial research project investigating Antarctica as a complex geopolitical and environmental system. The publication relies on data visualization to support analysis and interpretation across multiple layers of information.\n\nWithin a data visualization team at The Pomo, I contributed to the visual translation of datasets prepared by the research team. Using RAWGraphs for exploration and Adobe Illustrator for refinement, the work focused on clarity, consistency, and accuracy, aligning with strict editorial constraints and integrating seamlessly into a publication designed by others.",
-    "tags": ["Data Viz", "Editorial"],
-    "selected": true,
-    "externalLink": "",
-    "sub": "",
-    "image": "src/8.png",
-    "hoverImage": "src/8H.png",
-    "category": "INFORMATION DESIGN",
-    "gallery": ["src/08_01.png", "src/08_02.png"]
-  },
-  {
     "slug": "design-economy",
     "title": "Design Economy",
     "year": "2025",
@@ -40,20 +26,6 @@
     "hoverImage": "src/9H.png",
     "category": "",
     "gallery": ["src/09_01.png", "src/09_02.png"]
-  },
-  {
-    "slug": "data-visualization-studies",
-    "title": "Data Visualization Studies",
-    "year": "2019–2025",
-    "description": "Data Visualization Studies groups a series of projects exploring how data can be translated into maps and visual systems to support interpretation and exploration. The work includes cartographic and infographic contributions developed for The Passenger as part of Propp, as well as experimental visualizations focused on algorithmic mediation and data relationships.\n\nAcross these projects, my contribution centered on transforming structured datasets into readable visual forms. The visualizations balance accuracy, clarity, and narrative coherence, and are designed to invite exploration rather than impose a single interpretation.",
-    "tags": ["Data Viz", "Cartography", "Editorial"],
-    "selected": false,
-    "externalLink": "",
-    "sub": "",
-    "image": "src/4.png",
-    "hoverImage": "src/4H.png",
-    "category": "",
-    "gallery": ["src/04_01.png", "src/04_02.png", "src/04_03.png", "src/04_04.png", "src/04_05.png", "src/05_01.png", "src/05_02.png", "src/05_03.png"]
   },
   {
     "slug": "milano-oltre-il-visibile",
@@ -70,18 +42,18 @@
     "gallery": ["src/12_01.png", "src/12_02.png", "src/12_03.png", "src/12_04.png"]
   },
   {
-    "slug": "discojournal",
-    "title": "DiscoJournal",
-    "year": "2022–2025",
-    "description": "DiscoJournal is a digital platform created for a collective of researchers, designed to support evolving editorial formats over time. Each annual issue adopts a distinct form and visual language in response to its theme, while remaining anchored to a shared framework.\n\nMy work focused on defining this flexible visual and structural system during the initial branding and digital identity phase. The result is an adaptable platform that allows the website to evolve across editions while preserving coherence, recognizability, and usability for content-heavy research outputs.",
-    "tags": ["UX/UI", "Editorial Systems"],
-    "selected": false,
+    "slug": "antarctic-resolution",
+    "title": "Antarctic Resolution",
+    "year": "2020",
+    "description": "Antarctic Resolution is an editorial research project investigating Antarctica as a complex geopolitical and environmental system. The publication relies on data visualization to support analysis and interpretation across multiple layers of information.\n\nWithin a data visualization team at The Pomo, I contributed to the visual translation of datasets prepared by the research team. Using RAWGraphs for exploration and Adobe Illustrator for refinement, the work focused on clarity, consistency, and accuracy, aligning with strict editorial constraints and integrating seamlessly into a publication designed by others.",
+    "tags": ["Data Viz", "Editorial"],
+    "selected": true,
     "externalLink": "",
     "sub": "",
-    "image": "src/6.png",
-    "hoverImage": "src/6H.png",
-    "category": "",
-    "gallery": ["src/06_01.png", "src/06_02.png"]
+    "image": "src/8.png",
+    "hoverImage": "src/8H.png",
+    "category": "INFORMATION DESIGN",
+    "gallery": ["src/08_01.png", "src/08_02.png"]
   },
   {
     "slug": "cfs-lab",
@@ -98,18 +70,18 @@
     "gallery": ["src/02_01.png", "src/02_02.png", "src/02_04.png"]
   },
   {
-    "slug": "doublecheck",
-    "title": "DoubleCheck",
-    "year": "2019",
-    "description": "DoubleCheck is an interactive web project designed to test users’ ability to recognize manipulated and misleading images online. The experience is structured as a quiz and was developed as the final project of Density Design.\n\nThe work focused on structuring the interaction flow and ensuring clarity and usability across different contexts. The platform was translated into 22 languages, requiring particular attention to scalability, accessibility, and consistency across localized versions.",
-    "tags": ["UX/UI", "Service", "Platform"],
+    "slug": "discojournal",
+    "title": "DiscoJournal",
+    "year": "2022–2025",
+    "description": "DiscoJournal is a digital platform created for a collective of researchers, designed to support evolving editorial formats over time. Each annual issue adopts a distinct form and visual language in response to its theme, while remaining anchored to a shared framework.\n\nMy work focused on defining this flexible visual and structural system during the initial branding and digital identity phase. The result is an adaptable platform that allows the website to evolve across editions while preserving coherence, recognizability, and usability for content-heavy research outputs.",
+    "tags": ["UX/UI", "Editorial Systems"],
     "selected": false,
-    "externalLink": "https://doublecheck.theglassroom.org/english/about.html",
+    "externalLink": "",
     "sub": "",
-    "image": "src/3.png",
-    "hoverImage": "src/3H.png",
+    "image": "src/6.png",
+    "hoverImage": "src/6H.png",
     "category": "",
-    "gallery": ["src/03_01.png", "src/03_02.png", "src/03_03.png", "src/03_04.png"]
+    "gallery": ["src/06_01.png", "src/06_02.png"]
   },
   {
     "slug": "superforma",
@@ -124,5 +96,33 @@
     "hoverImage": "src/7H.png",
     "category": "",
     "gallery": ["src/07_01.png", "src/07_02.png", "src/07_03.png", "src/07_04.png"]
+  },
+  {
+    "slug": "doublecheck",
+    "title": "DoubleCheck",
+    "year": "2019",
+    "description": "DoubleCheck is an interactive web project designed to test users’ ability to recognize manipulated and misleading images online. The experience is structured as a quiz and was developed as the final project of Density Design.\n\nThe work focused on structuring the interaction flow and ensuring clarity and usability across different contexts. The platform was translated into 22 languages, requiring particular attention to scalability, accessibility, and consistency across localized versions.",
+    "tags": ["UX/UI", "Service", "Platform"],
+    "selected": false,
+    "externalLink": "https://doublecheck.theglassroom.org/english/about.html",
+    "sub": "",
+    "image": "src/3.png",
+    "hoverImage": "src/3H.png",
+    "category": "",
+    "gallery": ["src/03_01.png", "src/03_02.png", "src/03_03.png", "src/03_04.png"]
+  },
+  {
+    "slug": "data-visualization-studies",
+    "title": "Data Visualization Studies",
+    "year": "2019–2025",
+    "description": "Data Visualization Studies groups a series of projects exploring how data can be translated into maps and visual systems to support interpretation and exploration. The work includes cartographic and infographic contributions developed for The Passenger as part of Propp, as well as experimental visualizations focused on algorithmic mediation and data relationships.\n\nAcross these projects, my contribution centered on transforming structured datasets into readable visual forms. The visualizations balance accuracy, clarity, and narrative coherence, and are designed to invite exploration rather than impose a single interpretation.",
+    "tags": ["Data Viz", "Cartography", "Editorial"],
+    "selected": false,
+    "externalLink": "",
+    "sub": "",
+    "image": "src/4.png",
+    "hoverImage": "src/4H.png",
+    "category": "",
+    "gallery": ["src/04_01.png", "src/04_02.png", "src/04_03.png", "src/04_04.png", "src/04_05.png", "src/05_01.png", "src/05_02.png", "src/05_03.png"]
   }
 ]

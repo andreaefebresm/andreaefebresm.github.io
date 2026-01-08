@@ -121,7 +121,28 @@ function buildProject(project, projects) {
 
 function renderTags(project) {
   const tags = Array.isArray(project.tags) ? project.tags : [];
-  return project.selected ? [...tags, 'S'] : tags;
+  const mappedTags = Array.from(new Set(tags.map(mapTag)));
+  return project.selected ? [...mappedTags, 'S'] : mappedTags;
+}
+
+function mapTag(tag) {
+  const normalized = String(tag).toLowerCase();
+  if (normalized === 'ux/ui') return 'UX/UI';
+  if (normalized.includes('data viz') || normalized.includes('cartography')) {
+    return 'Data Viz';
+  }
+  if (normalized.includes('editorial')) return 'Editorial';
+  if (
+    normalized.includes('product') ||
+    normalized.includes('platform') ||
+    normalized.includes('service') ||
+    normalized.includes('systems') ||
+    normalized.includes('enterprise') ||
+    normalized.includes('ia')
+  ) {
+    return 'Product';
+  }
+  return tag;
 }
 
 function renderProjectTags(project) {
@@ -142,14 +163,14 @@ function formatDescription(description) {
 
 const projectOrder = [
   'enterprise-ux-systems',
-  'antarctic-resolution',
   'design-economy',
-  'data-visualization-studies',
   'milano-oltre-il-visibile',
-  'discojournal',
+  'antarctic-resolution',
   'cfs-lab',
+  'discojournal',
+  'superforma',
   'doublecheck',
-  'superforma'
+  'data-visualization-studies'
 ];
 
 function setProjectBreadcrumb(project) {
