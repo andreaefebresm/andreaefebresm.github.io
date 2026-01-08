@@ -1,17 +1,25 @@
 document.addEventListener('DOMContentLoaded', () => {
+  setCurrentYear();
   fetch('projects.json')
     .then(res => res.json())
     .then(projects => {
       const params = new URLSearchParams(window.location.search);
       const slug = params.get('slug');
       if (slug) {
-        buildProject(projects.find(p => p.slug === slug));
+        buildProject(projects.find(p => p.slug === slug), projects);
       } else {
         buildIndex(projects);
       }
     })
     .catch(err => console.error(err));
 });
+
+function setCurrentYear() {
+  const year = new Date().getFullYear();
+  document.querySelectorAll('[data-current-year]').forEach(element => {
+    element.textContent = year;
+  });
+}
 
 function buildIndex(projects) {
   const gallery = document.getElementById('gallery');
@@ -75,12 +83,14 @@ function setupInteractions() {
   });
 }
 
-function buildProject(project) {
+function buildProject(project, projects) {
   if (!project) return;
   document.title = `AEFM | ${project.title}`;
   document.getElementById('project-title').textContent = project.title;
   document.getElementById('project-sub').innerHTML = project.sub || '';
   document.getElementById('project-description').innerHTML = project.description || '';
+  setProjectBreadcrumb(project);
+  setProjectNavigation(project, projects);
   const linkDiv = document.getElementById('project-link');
   if (project.link) {
     linkDiv.innerHTML = `<a href="${project.link}" target="_blank"><button>${project.linkLabel || 'VISIT'}</button></a>`;
@@ -99,4 +109,56 @@ function buildProject(project) {
   }
   document.querySelector('.arrow-left').addEventListener('click', () => change(-1));
   document.querySelector('.arrow-right').addEventListener('click', () => change(1));
+}
+
+const projectOrder = [
+  'bwt',
+  'ovosode',
+  'codici',
+  'antarctic-resolution',
+  'design-economy',
+  'the-passenger-via-propp',
+  'mediazioni-algoritmiche',
+  'discojournal',
+  'superforma'
+];
+
+function setProjectBreadcrumb(project) {
+  const breadcrumb = document.getElementById('breadcrumb');
+  if (!breadcrumb) return;
+  breadcrumb.innerHTML = `<a href="index.html">Home</a> / <a href="index.html">Projects</a> / ${project.title}`;
+}
+
+function setProjectNavigation(project, projects) {
+  const prevLink = document.getElementById('prev-project');
+  const nextLink = document.getElementById('next-project');
+  if (!prevLink || !nextLink) return;
+
+  const currentIndex = projectOrder.indexOf(project.slug);
+  if (currentIndex === -1) {
+    prevLink.hidden = true;
+    nextLink.hidden = true;
+    return;
+  }
+
+  const prevSlug = projectOrder[currentIndex - 1];
+  const nextSlug = projectOrder[currentIndex + 1];
+  const prevProject = projects.find(item => item.slug === prevSlug);
+  const nextProject = projects.find(item => item.slug === nextSlug);
+
+  if (prevProject) {
+    prevLink.hidden = false;
+    prevLink.href = `project.html?slug=${prevProject.slug}`;
+    prevLink.textContent = `← Previous: ${prevProject.title}`;
+  } else {
+    prevLink.hidden = true;
+  }
+
+  if (nextProject) {
+    nextLink.hidden = false;
+    nextLink.href = `project.html?slug=${nextProject.slug}`;
+    nextLink.textContent = `Next: ${nextProject.title} →`;
+  } else {
+    nextLink.hidden = true;
+  }
 }
