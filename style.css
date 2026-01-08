@@ -173,6 +173,9 @@ button:hover{
     gap: 1rem;
     margin-top: 1.5rem;
     flex-wrap: wrap;
+    width: 100%;
+    padding: 0 0.5rem;
+    box-sizing: border-box;
 }
 .project-nav-link {
     font-size: 0.9rem;

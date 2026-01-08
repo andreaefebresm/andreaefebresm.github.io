@@ -150,7 +150,7 @@ const projectOrder = [
 function setProjectBreadcrumb(project) {
   const breadcrumb = document.getElementById('breadcrumb');
   if (!breadcrumb) return;
-  breadcrumb.innerHTML = `<a href="index.html">Home</a> / <a href="index.html">Projects</a> / ${project.title}`;
+  breadcrumb.innerHTML = `<a href="index.html">Back to projects</a> / ${project.title}`;
 }
 
 function setProjectNavigation(project, projects) {
