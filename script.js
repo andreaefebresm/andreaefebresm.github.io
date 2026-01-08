@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+  setCurrentYear();
   fetch('projects.json')
     .then(res => res.json())
     .then(projects => {
@@ -12,6 +13,13 @@ document.addEventListener('DOMContentLoaded', () => {
     })
     .catch(err => console.error(err));
 });
+
+function setCurrentYear() {
+  const year = new Date().getFullYear();
+  document.querySelectorAll('[data-current-year]').forEach(element => {
+    element.textContent = year;
+  });
+}
 
 function buildIndex(projects) {
   const gallery = document.getElementById('gallery');
