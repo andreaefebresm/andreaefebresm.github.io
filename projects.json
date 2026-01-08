@@ -78,8 +78,8 @@
     "selected": false,
     "externalLink": "https://discojournal.com/",
     "sub": "",
-    "image": "src/6.png",
-    "hoverImage": "src/6H.png",
+    "image": "src/4.png",
+    "hoverImage": "src/4H.png",
     "category": "",
     "gallery": ["src/05_25_02.png","src/05_25_03.png","src/04_01.png", "src/04_02.png", "src/04_03.png", "src/04_04.png", "src/04_05.png", "src/05_01.png", "src/05_02.png", "src/05_03.png"]
   },
@@ -106,10 +106,10 @@
     "selected": false,
     "externalLink": "https://doublecheck.theglassroom.org/english/about.html",
     "sub": "",
-    "image": "src/3.png",
-    "hoverImage": "src/3H.png",
+    "image": "src/5.png",
+    "hoverImage": "src/5H.png",
     "category": "",
-    "gallery": ["src/03_01.png", "src/03_02.png", "src/03_03.png", "src/03_04.png"]
+    "gallery": ["src/05_01.png", "src/05_02.png", "src/05_03.png"]
   },
   {
     "slug": "data-visualization-studies",
