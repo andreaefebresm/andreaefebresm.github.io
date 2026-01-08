@@ -8,8 +8,8 @@
     "selected": true,
     "externalLink": "",
     "sub": "",
-    "image": "src/1.png",
-    "hoverImage": "src/1H.png",
+    "image": "src/00_25_02.png",
+    "hoverImage": "src/00_25_01.png",
     "category": "",
     "gallery": ["src/00_25_02.png", "src/00_25_03.png", "src/00_25_04.png"]
   },
@@ -22,8 +22,8 @@
     "selected": true,
     "externalLink": "",
     "sub": "",
-    "image": "src/9.png",
-    "hoverImage": "src/9H.png",
+    "image": "src/01_25_02.png",
+    "hoverImage": "src/01_25_01.png",
     "category": "",
     "gallery": ["src/01_25_02.png", "src/01_25_03.png", "src/01_25_04.png"]
   },
@@ -36,8 +36,8 @@
     "selected": false,
     "externalLink": "https://propp.it/Milano-oltre-il-visibile",
     "sub": "",
-    "image": "src/12_01.png",
-    "hoverImage": "src/12_02.png",
+    "image": "src/02_25_02.png",
+    "hoverImage": "src/02_25_01.png",
     "category": "",
     "gallery": ["src/02_25_02.png", "src/02_25_03.png"]
   },
