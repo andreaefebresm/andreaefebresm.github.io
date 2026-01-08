@@ -1,36 +1,14 @@
 [
   {
-    "slug": "bwt",
-    "title": "BWT",
+    "slug": "enterprise-ux-systems",
+    "title": "Enterprise UX Systems",
     "sub": "",
     "description": "",
     "image": "src/1.png",
     "hoverImage": "src/1H.png",
     "category": "",
     "gallery": ["src/01_01.png", "src/01_02.png", "src/01_03.png", "src/01_04.png"],
-    "tags": ["S", "UX/UI", "Enterprise", "Sanitized"]
-  },
-  {
-    "slug": "ovosode",
-    "title": "OVOsode",
-    "sub": "",
-    "description": "",
-    "image": "src/2.png",
-    "hoverImage": "src/2H.png",
-    "category": "",
-    "gallery": ["src/02_01.png", "src/02_02.png", "src/02_04.png"],
-    "tags": ["S", "UX/UI", "Enterprise"]
-  },
-  {
-    "slug": "codici",
-    "title": "Codici",
-    "sub": "",
-    "description": "",
-    "image": "src/3.png",
-    "hoverImage": "src/3H.png",
-    "category": "",
-    "gallery": ["src/03_01.png", "src/03_02.png", "src/03_03.png", "src/03_04.png"],
-    "tags": ["S", "UX/UI", "IA", "Sanitized"]
+    "tags": ["UX/UI", "Enterprise", "IA", "Sanitized", "S"]
   },
   {
     "slug": "antarctic-resolution",
@@ -41,7 +19,7 @@
     "hoverImage": "src/8H.png",
     "category": "INFORMATION DESIGN",
     "gallery": ["src/08_01.png", "src/08_02.png"],
-    "tags": ["S", "Data Viz", "Editorial"]
+    "tags": ["Data Viz", "Editorial", "S"]
   },
   {
     "slug": "design-economy",
@@ -52,29 +30,29 @@
     "hoverImage": "src/9H.png",
     "category": "",
     "gallery": ["src/09_01.png", "src/09_02.png"],
-    "tags": ["S", "Data Viz", "Editorial"]
+    "tags": ["Data Viz", "Editorial Design", "S"]
   },
   {
-    "slug": "the-passenger-via-propp",
-    "title": "The Passenger (via Propp)",
+    "slug": "data-visualization-studies",
+    "title": "Data Visualization Studies",
     "sub": "",
     "description": "",
     "image": "src/4.png",
     "hoverImage": "src/4H.png",
     "category": "",
-    "gallery": ["src/04_01.png", "src/04_02.png", "src/04_03.png", "src/04_04.png", "src/04_05.png"],
-    "tags": ["Data Viz", "Editorial"]
+    "gallery": ["src/04_01.png", "src/04_02.png", "src/04_03.png", "src/04_04.png", "src/04_05.png", "src/05_01.png", "src/05_02.png", "src/05_03.png"],
+    "tags": ["Data Viz", "Cartography", "Editorial"]
   },
   {
-    "slug": "mediazioni-algoritmiche",
-    "title": "Mediazioni algoritmiche",
+    "slug": "milano-oltre-il-visibile",
+    "title": "Milano oltre il visibile",
     "sub": "",
     "description": "",
-    "image": "src/5.png",
-    "hoverImage": "src/5H.png",
+    "image": "src/12_01.png",
+    "hoverImage": "src/12_02.png",
     "category": "",
-    "gallery": ["src/05_01.png", "src/05_02.png", "src/05_03.png"],
-    "tags": ["Data Viz", "Product"]
+    "gallery": ["src/12_01.png", "src/12_02.png", "src/12_03.png", "src/12_04.png"],
+    "tags": ["Data Viz", "Cartography", "Editorial"]
   },
   {
     "slug": "discojournal",
@@ -85,7 +63,29 @@
     "hoverImage": "src/6H.png",
     "category": "",
     "gallery": ["src/06_01.png", "src/06_02.png"],
-    "tags": ["UX/UI", "Product"]
+    "tags": ["UX/UI", "Editorial Systems"]
+  },
+  {
+    "slug": "cfs-lab",
+    "title": "CFS Lab",
+    "sub": "",
+    "description": "",
+    "image": "src/2.png",
+    "hoverImage": "src/2H.png",
+    "category": "",
+    "gallery": ["src/02_01.png", "src/02_02.png", "src/02_04.png"],
+    "tags": ["UX/UI", "Systems"]
+  },
+  {
+    "slug": "doublecheck",
+    "title": "DoubleCheck",
+    "sub": "",
+    "description": "",
+    "image": "src/3.png",
+    "hoverImage": "src/3H.png",
+    "category": "",
+    "gallery": ["src/03_01.png", "src/03_02.png", "src/03_03.png", "src/03_04.png"],
+    "tags": ["UX/UI", "Service", "Platform"]
   },
   {
     "slug": "superforma",
@@ -96,6 +96,6 @@
     "hoverImage": "src/7H.png",
     "category": "",
     "gallery": ["src/07_01.png", "src/07_02.png", "src/07_03.png", "src/07_04.png"],
-    "tags": ["UX/UI", "Product"]
+    "tags": ["Systems", "Platform", "Digital Fabrication"]
   }
 ]

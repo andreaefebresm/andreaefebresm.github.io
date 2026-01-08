@@ -112,14 +112,14 @@ function buildProject(project, projects) {
 }
 
 const projectOrder = [
-  'bwt',
-  'ovosode',
-  'codici',
+  'enterprise-ux-systems',
   'antarctic-resolution',
   'design-economy',
-  'the-passenger-via-propp',
-  'mediazioni-algoritmiche',
+  'data-visualization-studies',
+  'milano-oltre-il-visibile',
   'discojournal',
+  'cfs-lab',
+  'doublecheck',
   'superforma'
 ];
 
