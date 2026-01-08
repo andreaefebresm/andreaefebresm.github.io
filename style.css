@@ -275,10 +275,10 @@ main {
     border: 1px solid #FF4B00;
     border-radius: 999px;
     padding: 0.15rem 0.5rem;
-    font-size: 0.65rem;
-    line-height: 1;
+    font-size: 0.875rem;
+    line-height: 1.2;
     color: #FF4B00;
-    background-color: rgba(254, 245, 234, 0.8);
+    background-color: rgba(254, 245, 234, 0.92);
     font-family: "Syne", sans-serif;
     font-weight: 400;
     letter-spacing: 0;

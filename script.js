@@ -121,7 +121,28 @@ function buildProject(project, projects) {
 
 function renderTags(project) {
   const tags = Array.isArray(project.tags) ? project.tags : [];
-  return project.selected ? [...tags, 'S'] : tags;
+  const mappedTags = Array.from(new Set(tags.map(mapTag)));
+  return project.selected ? [...mappedTags, 'S'] : mappedTags;
+}
+
+function mapTag(tag) {
+  const normalized = String(tag).toLowerCase();
+  if (normalized === 'ux/ui') return 'UX/UI';
+  if (normalized.includes('data viz') || normalized.includes('cartography')) {
+    return 'Data Viz';
+  }
+  if (normalized.includes('editorial')) return 'Editorial';
+  if (
+    normalized.includes('product') ||
+    normalized.includes('platform') ||
+    normalized.includes('service') ||
+    normalized.includes('systems') ||
+    normalized.includes('enterprise') ||
+    normalized.includes('ia')
+  ) {
+    return 'Product';
+  }
+  return tag;
 }
 
 function renderProjectTags(project) {
