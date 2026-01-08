@@ -27,16 +27,20 @@
             <div class="prog_side">
                 <div>
                     <div class="intro">
+                        <p class="breadcrumb" id="breadcrumb"></p>
                         <h1 id="project-title"></h1>
                         <p class="sub" id="project-sub"></p>
+                        <div id="project-link"></div>
                     </div>
-                    <div>
-                        <p class="description" id="project-description"></p>
+                    <div id="project-description"></div>
+                    <div class="project-nav" id="project-nav">
+                        <a class="project-nav-link" id="prev-project" href=""></a>
+                        <a class="project-nav-link" id="next-project" href=""></a>
                     </div>
-                    <div id="project-link"></div>
                 </div>
             </div>
             <div class="gallery-container">
+                <div class="project-tags project-tags-detail" id="project-tags"></div>
                 <span class="arrow arrow-left">&#10094;</span>
                 <div class="immagine">
                     <img class="mainImage" id="mainImage" src="" alt="Immagine principale">
@@ -46,7 +50,7 @@
         </div>
     </main>
     <footer>
-        <p class="copy">COPYRIGHT 2024</p>
+        <p class="copy">COPYRIGHT <span data-current-year>2026</span></p>
         <p class="email"><a href="mailto:andreae.febresm@gmail.com">WRITE ME</a></p>
         <p class="cv">
             <a href="src/AEFM_CV.pdf" target="_blank">
