@@ -1,11 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
+  setCurrentYear();
   fetch('projects.json')
     .then(res => res.json())
     .then(projects => {
       const params = new URLSearchParams(window.location.search);
       const slug = params.get('slug');
       if (slug) {
-        buildProject(projects.find(p => p.slug === slug));
+        buildProject(projects.find(p => p.slug === slug), projects);
       } else {
         buildIndex(projects);
       }
@@ -13,16 +14,27 @@ document.addEventListener('DOMContentLoaded', () => {
     .catch(err => console.error(err));
 });
 
+function setCurrentYear() {
+  const year = new Date().getFullYear();
+  document.querySelectorAll('[data-current-year]').forEach(element => {
+    element.textContent = year;
+  });
+}
+
 function buildIndex(projects) {
   const gallery = document.getElementById('gallery');
   const renderProjects = items => items.map(project => `
     <a href="project.html?slug=${project.slug}">
       <div class="image-container">
-        <div class="project-tags">
-          ${project.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
-        </div>
         <img src="${project.image}" data-hover="${project.hoverImage}" data-category="${project.category}" alt="${project.title}">
         <div class="image-text">${project.title}</div>
+      </div>
+      <div class="card-meta">
+        <p class="card-title">${project.title}</p>
+        ${project.year ? `<p class="project-year">${project.year}</p>` : ''}
+        <div class="project-tags-inline">
+          ${renderTags(project).map(tag => `<span class="tag">${tag}</span>`).join('')}
+        </div>
       </div>
     </a>
   `).join('');
@@ -75,15 +87,21 @@ function setupInteractions() {
   });
 }
 
-function buildProject(project) {
+function buildProject(project, projects) {
   if (!project) return;
   document.title = `AEFM | ${project.title}`;
   document.getElementById('project-title').textContent = project.title;
+  document.getElementById('project-year').textContent = project.year || '';
   document.getElementById('project-sub').innerHTML = project.sub || '';
-  document.getElementById('project-description').innerHTML = project.description || '';
+  document.getElementById('project-description').innerHTML = formatDescription(project.description);
+  setProjectBreadcrumb(project);
+  setProjectNavigation(project, projects);
+  renderProjectTags(project);
   const linkDiv = document.getElementById('project-link');
-  if (project.link) {
-    linkDiv.innerHTML = `<a href="${project.link}" target="_blank"><button>${project.linkLabel || 'VISIT'}</button></a>`;
+  if (project.externalLink) {
+    linkDiv.innerHTML = `<a href="${project.externalLink}" target="_blank"><button>External link</button></a>`;
+  } else {
+    linkDiv.innerHTML = '';
   }
 
   const images = project.gallery || [];
@@ -99,4 +117,77 @@ function buildProject(project) {
   }
   document.querySelector('.arrow-left').addEventListener('click', () => change(-1));
   document.querySelector('.arrow-right').addEventListener('click', () => change(1));
+}
+
+function renderTags(project) {
+  const tags = Array.isArray(project.tags) ? project.tags : [];
+  return project.selected ? [...tags, 'S'] : tags;
+}
+
+function renderProjectTags(project) {
+  const tagContainer = document.getElementById('project-tags');
+  if (!tagContainer) return;
+  tagContainer.innerHTML = renderTags(project)
+    .map(tag => `<span class="tag">${tag}</span>`)
+    .join('');
+}
+
+function formatDescription(description) {
+  if (!description) return '';
+  return description
+    .split(/\n\s*\n/)
+    .map(paragraph => `<p class="description">${paragraph}</p>`)
+    .join('');
+}
+
+const projectOrder = [
+  'enterprise-ux-systems',
+  'design-economy',
+  'milano-oltre-il-visibile',
+  'antarctic-resolution',
+  'cfs-lab',
+  'discojournal',
+  'superforma',
+  'doublecheck',
+  'data-visualization-studies'
+];
+
+function setProjectBreadcrumb(project) {
+  const breadcrumb = document.getElementById('breadcrumb');
+  if (!breadcrumb) return;
+  breadcrumb.innerHTML = `<a href="index.html">Back to projects</a> / ${project.title}`;
+}
+
+function setProjectNavigation(project, projects) {
+  const prevLink = document.getElementById('prev-project');
+  const nextLink = document.getElementById('next-project');
+  if (!prevLink || !nextLink) return;
+
+  const currentIndex = projectOrder.indexOf(project.slug);
+  if (currentIndex === -1) {
+    prevLink.hidden = true;
+    nextLink.hidden = true;
+    return;
+  }
+
+  const prevSlug = projectOrder[currentIndex - 1];
+  const nextSlug = projectOrder[currentIndex + 1];
+  const prevProject = projects.find(item => item.slug === prevSlug);
+  const nextProject = projects.find(item => item.slug === nextSlug);
+
+  if (prevProject) {
+    prevLink.hidden = false;
+    prevLink.href = `project.html?slug=${prevProject.slug}`;
+    prevLink.textContent = `← Previous: ${prevProject.title}`;
+  } else {
+    prevLink.hidden = true;
+  }
+
+  if (nextProject) {
+    nextLink.hidden = false;
+    nextLink.href = `project.html?slug=${nextProject.slug}`;
+    nextLink.textContent = `Next: ${nextProject.title} →`;
+  } else {
+    nextLink.hidden = true;
+  }
 }
