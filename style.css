@@ -554,6 +554,14 @@ main {
     object-fit: cover;
   }
 
+    :root{
+    --footer-h: 72px; /* regola se il footer è più alto */
+  }
+
+  .prog .prog_side{
+    padding-bottom: calc(var(--footer-h) + 16px);
+  }
+
 }
 
 
