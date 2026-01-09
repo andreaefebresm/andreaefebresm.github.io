@@ -219,7 +219,16 @@ footer {
 .cv {
     text-align: right;
 }
-
+.project-nav{
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  #prev-project, #next-project{
+    flex: 1 1 100%;
+  }
+  #next-project{
+    text-align: left; /* opzionale: su mobile spesso si allinea tutto a sinistra */
+  }
 /* Main */
 main {
     margin-top: 0; 
