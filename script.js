@@ -158,7 +158,7 @@ function formatDescription(description) {
 }
 
 const projectOrder = [
-  'enterprise-ux-systems',
+  'ongoing-projects',
   'design-economy',
   'milano-oltre-il-visibile',
   'antarctic-resolution',
@@ -166,8 +166,9 @@ const projectOrder = [
   'discojournal',
   'superforma',
   'doublecheck',
-  'data-visualization-studies'
+  'data-visualization-works'
 ];
+
 
 function setProjectBreadcrumb(project) {
   const breadcrumb = document.getElementById('breadcrumb');
