@@ -192,19 +192,24 @@ function setProjectNavigation(project, projects) {
   const prevProject = projects.find(item => item.slug === prevSlug);
   const nextProject = projects.find(item => item.slug === nextSlug);
 
-  if (prevProject) {
-    prevLink.hidden = false;
+   if (prevProject) {
+    prevLink.style.visibility = 'visible';
     prevLink.href = `project.html?slug=${prevProject.slug}`;
     prevLink.textContent = `← Previous: ${prevProject.title}`;
   } else {
-    prevLink.hidden = true;
+    prevLink.style.visibility = 'hidden';
+    prevLink.removeAttribute('href');
+    prevLink.textContent = '';
   }
 
   if (nextProject) {
-    nextLink.hidden = false;
+    nextLink.style.visibility = 'visible';
     nextLink.href = `project.html?slug=${nextProject.slug}`;
     nextLink.textContent = `Next: ${nextProject.title} →`;
   } else {
-    nextLink.hidden = true;
+    nextLink.style.visibility = 'hidden';
+    nextLink.removeAttribute('href');
+    nextLink.textContent = '';
   }
+
 }
