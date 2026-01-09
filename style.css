@@ -529,4 +529,31 @@ main {
         right: 10px; 
     }
 
+    /* La griglia deve occupare tutta la viewport */
+  .prog .container{
+    height: 100vh;
+    align-items: stretch;
+  }
+
+  /* La colonna gallery deve essere alta quanto la viewport */
+  .prog .gallery-container{
+    height: 100vh;
+    max-height: 100vh;
+  }
+
+  /* L'area che contiene l'immagine deve riempire l'altezza */
+  .prog .immagine{
+    height: 100%;
+    max-height: 100%;
+  }
+
+  /* L'immagine deve riempire il contenitore, non la viewport “a caso” */
+  .prog .mainImage{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
 }
+
+
