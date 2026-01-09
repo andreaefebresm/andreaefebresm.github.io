@@ -582,6 +582,35 @@ body.prog .container {
   height: 100vh;
   overflow: hidden;
 }
+    /* Force single-line prev/next */
+body.prog .project-nav {
+  display: flex;
+  flex-wrap: nowrap;       /* <-- fondamentale */
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 1rem;
+  padding: 0 0.5rem;
+  box-sizing: border-box;
+}
+
+/* left and right anchoring */
+body.prog #prev-project {
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; /* se il titolo è troppo lungo */
+  max-width: 48%;
+}
+
+body.prog #next-project {
+  text-align: right;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 48%;
+}
+
 
 
 }
