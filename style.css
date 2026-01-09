@@ -571,6 +571,19 @@ main {
     padding-bottom: calc(var(--footer-h) + 16px);
   }
 
+    /* NO SCROLL on project pages */
+body.prog {
+  height: 100vh;
+  overflow: hidden;
+}
+
+body.prog main,
+body.prog .container {
+  height: 100vh;
+  overflow: hidden;
+}
+
+
 }
 
 
