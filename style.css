@@ -12,95 +12,22 @@ body {
 }
 
 /*------------------------------------------------*/
-/* gallery progetto singolo */
-.gallery-container {
-    top: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    max-height: 50%; 
-    overflow: hidden; 
-    z-index: 100; 
-    position: fixed; 
-}
-
-.immagine {
-    display: flex; 
-    justify-content: center;
-    align-items: center; 
-    height: 100%; 
-}
-
-.mainImage {
-    width: 100%; 
-    height: 40vh; 
-    object-fit: cover;
-    border-radius: 8px;
-}
-
-.arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 2rem;
-    color: #FF4B00; 
-    cursor: pointer;
-    user-select: none; 
-}
-
-.arrow-left {
-    left: 10px; 
-}
-
-.arrow-right {
-    right: 10px; 
-}
-
-
-.content {
-    margin-top: 50%; 
-    overflow-y: auto;
-    padding: 1rem; 
-}
-
-.prog_side {
-    padding: 0 0.5rem;
-    position: absolute;
-    top: 40vh;
-    margin-bottom: 2rem; 
-}
-.img_p {
-    max-width: 100%;
-    position: fixed;
-    height: 40vh;
-    width: 100vh;
-    object-fit: cover;
-}
-/*------------------------------------------------*/
-/*typo*/
+/* Typography */
 .syne-reg {
     font-family: "Syne", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 400;
-    font-style: normal;
 }
 .syne-med {
     font-family: "Syne", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 500;
-    font-style: normal;
 }
 .eb-garamond-med {
     font-family: "EB Garamond", serif;
-    font-optical-sizing: auto;
     font-weight: 500;
-    font-style: normal;
 }
 .eb-garamond-reg {
     font-family: "EB Garamond", serif;
-    font-optical-sizing: auto;
     font-weight: 400;
-    font-style: normal;
 }
 h1, p, li {
     font-family: "Syne", sans-serif;
@@ -113,15 +40,11 @@ a {
     font-weight: 400;
 }
 a:hover {
-    font-weight: 400;
     text-decoration: underline;
 }
 h1 {
     font-size: 1.4rem;
     font-weight: 300;
-}
-.copy {
-    padding-top: 2rem;
 }
 li {
     list-style: none;
@@ -134,23 +57,55 @@ h2 {
     font-weight: 500;
     font-size: 1rem;
 }
-button{
+button {
     background-color: #FF4B00;
     border-radius: 50px;
     border: none;
-    padding: 0.6rem;
+    padding: 0.5rem 1.2rem;
     font-family: "Syne", sans-serif;
     color: rgb(254, 245, 234);
-    font-size:1rem ;
+    font-size: 0.9rem;
+    cursor: pointer;
 }
-button:hover{
+button:hover {
     background-color: rgb(254, 245, 234);
-    border-radius: 50px;
     border: solid 1px #FF4B00;
-    padding: 0.6rem;
-    font-family: "Syne", sans-serif;
     color: #FF4B00;
-    font-size: 1rem;
+}
+.description {
+    font-family: "EB Garamond", serif;
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: black;
+    line-height: 1.7;
+}
+.description + .description {
+    margin-top: 1em;
+}
+.breadcrumb {
+    margin: 0 0 1rem 0;
+    font-size: 0.85rem;
+}
+.breadcrumb a {
+    color: #FF4B00;
+    text-decoration: none;
+}
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+.tag {
+    border: 1px solid #FF4B00;
+    border-radius: 999px;
+    padding: 0.15rem 0.5rem;
+    font-size: 0.8rem;
+    line-height: 1.2;
+    color: #FF4B00;
+    background-color: rgba(254, 245, 234, 0.92);
+    font-family: "Syne", sans-serif;
+    font-weight: 400;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    display: inline-block;
 }
 .sub {
     font-family: "EB Garamond", serif;
@@ -158,83 +113,39 @@ button:hover{
     font-weight: 400;
     color: black;
 }
-.description {
-    font-family: "EB Garamond", serif;
-    font-size: 1.1rem;
-    font-weight: 400;
-    color: black;
-}
-.breadcrumb {
-    margin: 0 0 0.5rem 0;
-    font-size: 0.9rem;
-}
-.project-nav {
-    display: flex;
-    justify-content: space-between;
-    gap: 1rem;
-    margin-top: 1.5rem;
-    flex-wrap: wrap;
+
+/*------------------------------------------------*/
+/* Header */
+header {
+    padding: 0.5rem 1rem;
+    text-align: left;
+    position: fixed;
     width: 100%;
-    padding: 0 0.5rem;
+    top: 0;
+    z-index: 1000;
+    background: rgb(254, 245, 234);
     box-sizing: border-box;
 }
-.prog .container {
-    grid-template-rows: 1fr auto;
-}
-.prog .prog_side,
-.prog .gallery-container {
-    grid-row: 1;
-}
-.prog .project-nav {
-    grid-row: 2;
-    grid-column: 1 / -1;
-    align-self: end;
-}
-.project-nav-link {
-    font-size: 0.9rem;
-    font-family: "Syne", sans-serif;
-}
 
-header {
-    padding: 0.5rem; 
-    text-align: left;
-    position: fixed; 
-    width: 100%; 
-    top: 0; 
-    z-index: 1000; 
-}
-
+/*------------------------------------------------*/
+/* Footer */
 footer {
     display: flex;
     align-items: baseline;
     justify-content: space-between;
     gap: 1rem;
-    padding: 0.5rem;
+    padding: 0.5rem 1rem;
     flex-wrap: wrap;
     white-space: nowrap;
 }
-.email {
-    text-align: center;
-}
-.cv {
-    text-align: right;
-}
-.project-nav{
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-  #prev-project, #next-project{
-    flex: 1 1 100%;
-  }
-  #next-project{
-    text-align: left; /* opzionale: su mobile spesso si allinea tutto a sinistra */
-  }
-/* Main */
-main {
-    margin-top: 0; 
-}
+.email { text-align: center; }
+.cv { text-align: right; }
+.copy { padding-top: 2rem; }
 
-/* homepage */
+/*------------------------------------------------*/
+/* Homepage */
+main { margin-top: 0; }
+
 .container {
     display: grid;
     overflow-y: auto;
@@ -245,10 +156,10 @@ main {
 
 /* Filter */
 .filter {
-    padding: 5rem 0.5rem 0rem 0.5rem;
+    padding: 5rem 0.5rem 0 0.5rem;
 }
 
-/* Images */
+/* Images grid */
 .images {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -262,16 +173,6 @@ main {
     aspect-ratio: 4 / 3;
     border-radius: 8px;
 }
-.project-tags {
-    position: absolute;
-    top: 0.5rem;
-    left: 0.5rem;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.25rem;
-    max-width: calc(100% - 1rem);
-    z-index: 2;
-}
 .project-tags-overlay {
     position: absolute;
     top: 0.5rem;
@@ -283,117 +184,276 @@ main {
     z-index: 2;
     pointer-events: none;
 }
-.project-tags-overlay .tag {
-    font-size: 0.875rem;
-    line-height: 1.3;
-}
-.project-tags-detail {
-    position: absolute;
-}
-.project-tags-inline {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.25rem;
-}
-.card-meta {
-    display: flex;
-    flex-direction: column;
-    gap: 0.25rem;
-    padding-top: 0.35rem;
-}
-.card-title {
-    margin: 0;
-}
-.project-year {
-    margin: 0;
-    font-size: 0.9rem;
-}
-.tag {
-    border: 1px solid #FF4B00;
-    border-radius: 999px;
-    padding: 0.15rem 0.5rem;
-    font-size: 0.875rem;
-    line-height: 1.2;
-    color: #FF4B00;
-    background-color: rgba(254, 245, 234, 0.92);
-    font-family: "Syne", sans-serif;
-    font-weight: 400;
-    letter-spacing: 0;
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px);
-    cursor: default;
-    pointer-events: none;
-}
-.filter ul li {
-    cursor: pointer;
-}
-.filter ul li:hover {
-    color: #FF4B00;
-}
-.filter ul li.active {
-    color: #FF4B00;
-}
-
-/* Image transitions */
 .images img {
-    transition: opacity 0.2s ease, transform 0.2s ease; 
-    opacity: 0; 
-    transform: scale(0.99);  
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    opacity: 0;
+    transform: scale(0.99);
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 .images img.show {
-    opacity: 1; 
-    transform: scale(1); 
-}
-.all-filter {
-    transition: opacity 0.2s ease; /* Transizione per l'opacità */
-}
-.image-text {
-    font-family: "Syne", sans-serif;
+    opacity: 1;
+    transform: scale(1);
 }
 
-/* Loader Styles */
-#loader {
-    position: fixed; /* Fisso per coprire tutto lo schermo */
-    top: 0;
-    left: 0;
+/* Tooltip */
+.tooltip {
+    position: absolute;
+    color: white;
+    font-family: "Syne", sans-serif;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.1s ease;
+}
+
+/*------------------------------------------------*/
+/* UX PROJECT LAYOUT */
+.layout-ux {
+    background: rgb(254, 245, 234);
+}
+
+.ux-page {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 4.5rem 1.25rem 4rem;
+}
+
+.ux-meta {
+    display: flex;
+    gap: 0.4rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.75rem;
+}
+
+.ux-title {
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    font-weight: 400;
+    font-family: "Syne", sans-serif;
+    margin-bottom: 0.75rem;
+    line-height: 1.2;
+    color: black;
+}
+
+.ux-hero-wrap {
+    width: 100%;
+    margin: 1.5rem 0 2.5rem;
+    border-radius: 8px;
+    overflow: hidden;
+    aspect-ratio: 16 / 7;
+    background: #e8e0d5;
+}
+.ux-hero-img {
     width: 100%;
     height: 100%;
-    background-color: black; /* Sfondo nero */
-    z-index: 9999; /* Assicurati che il loader sia sopra tutto il resto */
-    display: flex; /* Allinea gli elementi al centro */
-    justify-content: center; /* Centra orizzontalmente */
-    align-items: center; /* Centra verticalmente */
-    opacity: 1; /* Inizialmente visibile */
-    transition: opacity 0.8s ease; /* Modifica il tempo di transizione a 0.8 secondi */
+    object-fit: cover;
+    display: block;
 }
 
-/* Nascondi il loader dopo il caricamento */
-.loader-hidden {
-    opacity: 1; /* Nascondi il loader */
+.ux-section {
+    margin-bottom: 2.5rem;
 }
 
-/*------desktop-------*/
+.ux-section-label {
+    font-size: 0.72rem;
+    font-family: "Syne", sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #FF4B00;
+    margin-bottom: 0.85rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(255, 75, 0, 0.2);
+}
+
+.ux-text {
+    font-family: "EB Garamond", serif;
+    font-size: 1.15rem;
+    line-height: 1.7;
+    color: black;
+}
+.ux-text p + p { margin-top: 1em; }
+
+/* Process steps */
+.process-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+.process-step {
+    display: grid;
+    grid-template-columns: 2.5rem 1fr;
+    gap: 0.75rem;
+    align-items: start;
+}
+.step-number {
+    font-size: 0.75rem;
+    color: #FF4B00;
+    font-family: "Syne", sans-serif;
+    padding-top: 0.2rem;
+}
+.step-content {
+    font-family: "EB Garamond", serif;
+    font-size: 1.1rem;
+    line-height: 1.65;
+    color: black;
+}
+.step-content strong {
+    font-family: "Syne", sans-serif;
+    font-size: 0.82rem;
+    font-weight: 500;
+    display: block;
+    margin-bottom: 0.25rem;
+    color: black;
+    letter-spacing: 0.01em;
+}
+
+/* Process artifact grid */
+.process-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.6rem;
+}
+.process-item {
+    border-radius: 8px;
+    overflow: hidden;
+    background: #e8e0d5;
+    aspect-ratio: 4 / 3;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #aaa;
+    font-size: 0.8rem;
+    font-family: "Syne", sans-serif;
+}
+.process-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.process-item .caption {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.72rem;
+    font-family: "Syne", sans-serif;
+    color: #555;
+    background: linear-gradient(transparent, rgba(254, 245, 234, 0.95));
+}
+.process-item-wide {
+    grid-column: 1 / -1;
+    aspect-ratio: 16 / 6;
+}
+
+/* UX divider + nav */
+.ux-divider {
+    height: 1px;
+    background: rgba(0, 0, 0, 0.1);
+    margin: 2rem 0;
+}
+.ux-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+.ux-nav a {
+    font-size: 0.85rem;
+    color: #FF4B00;
+    text-decoration: none;
+    font-family: "Syne", sans-serif;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 48%;
+}
+.ux-nav a:hover { text-decoration: underline; }
+
+/*------------------------------------------------*/
+/* EDITORIAL / DATA VIZ LAYOUT */
+
+body.is-editorial {
+    overflow: hidden;
+    height: 100vh;
+}
+
+.layout-editorial {
+    height: 100vh;
+    overflow: hidden;
+}
+
+.editorial-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100vh;
+}
+
+.editorial-left {
+    padding: 4.5rem 1.5rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+}
+.editorial-left-inner {
+    flex: 1;
+    overflow: hidden;
+}
+
+.editorial-right {
+    overflow-y: auto;
+    padding-top: 4rem;
+}
+.editorial-gallery-img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+/* Editorial footer nav */
+.editorial-left .project-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.5rem 0;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    margin-top: 1rem;
+    flex-wrap: nowrap;
+}
+.project-nav-link {
+    font-size: 0.85rem;
+    font-family: "Syne", sans-serif;
+    color: #FF4B00;
+    text-decoration: none;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 48%;
+}
+.project-nav-link:hover { text-decoration: underline; }
+
+/*------------------------------------------------*/
+/* Desktop */
 @media screen and (min-width: 768px) {
-    /*-----------------------------------*/
+
     .image-container {
-        height: calc((100vh / 3) - 0.5rem); 
+        height: calc((100vh / 3) - 0.5rem);
         overflow: hidden;
         position: relative;
-        display: flex; /* Assicura un layout flessibile */
-        justify-content: center; /* Centra l'immagine orizzontalmente */
-        align-items: center; /* Centra l'immagine verticalmente */
+        display: flex;
+        justify-content: center;
+        align-items: center;
         aspect-ratio: auto;
     }
-    
     .image-container img {
-        width: 100%; /* Adatta la larghezza dell'immagine al contenitore */
-        height: 100%; /* Adatta l'altezza dell'immagine al contenitore */
-        object-fit: cover; /* L'immagine si adatta senza tagliarla */
-        object-position: center; /* Centra l'immagine */
-        transition: transform 0.3s ease; /* Transizione per effetto hover fluido */
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        transition: transform 0.3s ease;
     }
     .container {
         display: grid;
@@ -402,20 +462,17 @@ main {
         gap: 2.5rem;
         max-height: 100vh;
     }
-
     .images {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         gap: 0.5rem;
         height: 100vh;
-        width:auto;
         max-height: 100vh;
     }
     footer {
-        display: flex;
         position: fixed;
         bottom: 0;
-        padding: 0.5rem;
+        padding: 0.5rem 1rem;
         gap: 1rem;
         align-items: baseline;
         justify-content: space-between;
@@ -423,196 +480,48 @@ main {
         flex-wrap: nowrap;
         white-space: nowrap;
     }
-    /* HOVER TESTO */
-    .image-text {
-        display: none; 
-    }
-    .tooltip {
-        position: absolute; 
-        color: white; 
-        font-family: "Syne", sans-serif;
-        pointer-events: none; 
-        opacity: 0; 
-        transition: opacity 0.1s ease; 
-    }
-    .sx {
-        display: grid;
-        grid-template-columns: 1fr 10fr 1fr;
-    }
-    .images img {
-        transition: opacity 0.2s ease, transform 0.2s ease; 
-        opacity: 0; 
-        transform: scale(0.99);  
-        width: 100%;
-        object-fit: cover;
-    }
-    img {
-        max-width: 100%;
+    /* Tooltip on desktop */
+    .image-text { display: none; }
+
+    /* UX layout — wider on large screens */
+    .ux-page {
+        padding: 5rem 2rem 5rem;
     }
 
-    /* Progetto */
-    .prog_side {
-        display: grid;
-        align-content: space-between;
-        gap: 1rem;
-        margin-top: 5rem;
-        position: unset;
-      
-    }
-    .immagine {
-        max-height: 100vh;
-    }
-    .img_p {
-        width: 100%;
-        max-width: 100%;
-        position: unset;
-        height: 100vh;
-        object-fit: cover;
-    }
-    .intro {
-        padding-bottom: 2rem;
-    }
-    .prog {
-        padding: 0 0 0 0.5rem;
-        max-height: 100vh;
-    }
-
-    /* Loader Styles */
-    #loader {
-        position: fixed; /* Fisso per coprire tutto lo schermo */
+    /* Editorial left: sticky */
+    .editorial-left {
+        position: sticky;
         top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: black; /* Sfondo nero */
-        z-index: 9999; /* Assicurati che il loader sia sopra tutto il resto */
-        display: flex; /* Allinea gli elementi al centro */
-        justify-content: center; /* Centra orizzontalmente */
-        align-items: center; /* Centra verticalmente */
-        opacity: 1; /* Inizialmente visibile */
-        transition: opacity 0.8s ease; /* Modifica il tempo di transizione a 0.8 secondi */
+        height: 100vh;
     }
-
-    /* Nascondi il loader dopo il caricamento */
-    .loader-hidden {
-        opacity: 1; /* Nascondi il loader */
-    }
-
-    /* gallery */
-    .gallery-container {
-        position: relative; 
-        width: 100%;
-        max-width: 100%; 
-        margin: 0; 
-        object-fit: cover;
-        max-height: 100%;
-    }
-
-    .immagine {
-        display: flex; 
-        justify-content: center;
-    }
-
-    .mainImage {
-        width: 100%; 
-        height: 100vh; 
-        object-fit: cover;
-        border-radius: 8px;
-    }
-
-    .arrow {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        font-size: 2rem;
-        color: #FF4B00; 
-        cursor: pointer;
-        user-select: none; 
-    }
-
-    .arrow-left {
-        left: 10px; 
-    }
-
-    .arrow-right {
-        right: 10px; 
-    }
-
-    /* La griglia deve occupare tutta la viewport */
-  .prog .container{
-    height: 100vh;
-    align-items: stretch;
-  }
-
-  /* La colonna gallery deve essere alta quanto la viewport */
-  .prog .gallery-container{
-    height: 100vh;
-    max-height: 100vh;
-  }
-
-  /* L'area che contiene l'immagine deve riempire l'altezza */
-  .prog .immagine{
-    height: 100%;
-    max-height: 100%;
-  }
-
-  /* L'immagine deve riempire il contenitore, non la viewport “a caso” */
-  .prog .mainImage{
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-  }
-
-    :root{
-    --footer-h: 72px; /* regola se il footer è più alto */
-  }
-
-  .prog .prog_side{
-    padding-bottom: calc(var(--footer-h) + 16px);
-  }
-
-    /* NO SCROLL on project pages */
-body.prog {
-  height: 100vh;
-  overflow: hidden;
 }
 
-body.prog main,
-body.prog .container {
-  height: 100vh;
-  overflow: hidden;
+/*------------------------------------------------*/
+/* Mobile adjustments for editorial */
+@media screen and (max-width: 767px) {
+    body.is-editorial {
+        overflow: auto;
+        height: auto;
+    }
+    .layout-editorial {
+        height: auto;
+        overflow: visible;
+    }
+    .editorial-grid {
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+    .editorial-left {
+        padding: 4.5rem 1rem 1rem;
+        height: auto;
+    }
+    .editorial-right {
+        padding-top: 0;
+    }
+    .process-grid {
+        grid-template-columns: 1fr;
+    }
+    .process-item-wide {
+        aspect-ratio: 16 / 9;
+    }
 }
-    /* Force single-line prev/next */
-body.prog .project-nav {
-  display: flex;
-  flex-wrap: nowrap;       /* <-- fondamentale */
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  gap: 1rem;
-  padding: 0 0.5rem;
-  box-sizing: border-box;
-}
-
-/* left and right anchoring */
-body.prog #prev-project {
-  text-align: left;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis; /* se il titolo è troppo lungo */
-  max-width: 48%;
-}
-
-body.prog #next-project {
-  text-align: right;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-width: 48%;
-}
-
-
-
-}
-
-
