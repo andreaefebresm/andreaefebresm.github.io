@@ -1,128 +1,243 @@
 [
   {
-    "slug": "ongoing-projects",
-    "title": "Ongoing consultancy",
+    "slug": "fsm-planning",
+    "title": "FSM Platform — Field Service Planning",
     "year": "2025–ongoing",
-    "description": "This page brings together a set of internal digital platforms designed for enterprise contexts, focused on operational workflows, request handling, and content-heavy environments. The projects were developed under confidentiality constraints and within existing technical and organizational frameworks.\n\nAs part of Propp, my contribution focuses on UX and UI design, including information architecture, user flows, state-based diagrams, and the development of shared design systems. The work involves extending and restructuring existing platforms to improve clarity, consistency, and long-term durability. Detailed case studies and materials are available upon request.",
+    "type": "ux",
+    "description": "A back-office planning platform for a field service team managing technician schedules, routes, territories, and product quantities entirely in Excel — despite already using Dynamics 365 as their CRM. The goal was a dedicated planning tool that integrated with D365 without replacing it.",
+    "tags": ["UX/UI", "Product"],
+    "selected": false,
+    "externalLink": "",
+    "sub": "",
+    "image": "src/00_25_02.png",
+    "hoverImage": "src/00_25_01.png",
+    "process": [
+      {
+        "label": "Research & workflow mapping",
+        "text": "Sessions with the back-office team to understand how they actually used the spreadsheet — what the Excel columns represented, what workarounds they'd built, and what flexibility they couldn't give up."
+      },
+      {
+        "label": "Technical constraints",
+        "text": "Close collaboration with the developer to understand D365 API limits — which data could be read, what could be written back, and where the integration had hard boundaries that had to become design constraints."
+      },
+      {
+        "label": "IA & flow definition",
+        "text": "Mapping territories, technician assignments, routes, agendas, stops, and product quantities into a coherent information architecture. The complexity here wasn't technical — it was understanding how these layers related to each other in real operations."
+      },
+      {
+        "label": "Design & iteration",
+        "text": "Wireframes → prototype in Figma, tested with back-office operators. The core tension was between structure (needed for consistency) and flexibility (what they relied on in Excel). Resolved by separating fixed logic from flexible views."
+      }
+    ],
+    "keyDecision": "Too rigid and operators would work around it; too open and it wouldn't solve anything. The solution was separating fixed logic — territory rules, technician assignments — from flexible views — agenda layout, route planning — so the system enforces what matters without constraining how people move through their day.",
+    "processGallery": [],
+    "gallery": ["src/00_25_02.png", "src/00_25_03.png", "src/00_25_04.png"]
+  },
+  {
+    "slug": "codici-website",
+    "title": "Codici — Institutional Website",
+    "year": "2025–ongoing",
+    "type": "ux",
+    "description": "An institutional website for Codici Ricerche e Intervento, a social research organization. The project started from scratch with no existing digital presence to build on.",
+    "tags": ["UX/UI", "Product"],
+    "selected": false,
+    "externalLink": "",
+    "sub": "",
+    "image": "src/00_25_03.png",
+    "hoverImage": "src/00_25_01.png",
+    "process": [
+      {
+        "label": "Stakeholder interviews",
+        "text": "Direct conversations with the client to surface needs, priorities, and desiderata — translating open-ended requests into a defined scope and content structure."
+      },
+      {
+        "label": "Competitive review",
+        "text": "Research into comparable organizations' sites to identify conventions, gaps, and opportunities for differentiation within the constraints of an institutional context."
+      },
+      {
+        "label": "Wireframes → prototype",
+        "text": "Full UX process in Figma: from low-fidelity wireframes through a fully interactive prototype with UI. Working directly with the client meant managing expectations as much as managing design decisions."
+      }
+    ],
+    "keyDecision": "Translating open-ended desiderata into a structure that was clear, maintainable, and appropriate for the organization's communication needs — without over-designing for content that didn't exist yet.",
+    "processGallery": [],
+    "gallery": ["src/00_25_02.png", "src/00_25_03.png", "src/00_25_04.png"]
+  },
+  {
+    "slug": "ongoing-projects",
+    "title": "Ongoing consultancy — Design System",
+    "year": "2025–ongoing",
+    "type": "ux",
+    "description": "On a second field service management platform, I extended and updated an existing design system — auditing component usage across views, aligning inconsistencies, and redesigning specific screens to match updated product requirements.",
     "tags": ["UX/UI"],
     "selected": false,
     "externalLink": "",
     "sub": "",
     "image": "src/00_25_02.png",
     "hoverImage": "src/00_25_01.png",
-    "category": "",
+    "process": [
+      {
+        "label": "Audit",
+        "text": "Reviewing existing components across all views to identify inconsistencies, outdated patterns, and gaps between the design system and the live product."
+      },
+      {
+        "label": "Alignment",
+        "text": "Updating components and documentation to reflect current product requirements, working within existing technical and organizational constraints."
+      }
+    ],
+    "keyDecision": "Working within an existing system rather than proposing a redesign — identifying where to intervene minimally for maximum consistency without disrupting what already worked.",
+    "processGallery": [],
     "gallery": ["src/00_25_02.png", "src/00_25_03.png", "src/00_25_04.png"]
   },
   {
     "slug": "design-economy",
     "title": "Design Economy",
     "year": "2025",
-    "description": "Design Economy is an editorial project developed for Fondazione Symbola and POLI.design, centered on the visual interpretation of economic and cultural data related to the Italian design sector. The goal was to translate structured datasets into a coherent visual system suitable for publication.\n\nI was responsible for the graphic layout, overall visual language, and the design of the data visualizations. The work combined data visualization and editorial design to support readability and narrative flow, aligning analytical content with a structured and accessible visual framework.",
+    "type": "editorial",
+    "description": "An editorial publication for Fondazione Symbola and POLI.design, translating economic and cultural data on the Italian design sector into a 120-page report with over 50 data visualizations.\n\nI was responsible for the graphic layout, visual language, and the design of all data visualizations. The main challenge was maintaining narrative coherence across a large volume of heterogeneous data — charts, maps, and infographics had to read consistently while adapting to very different dataset structures.",
     "tags": ["Data Viz", "Editorial Design"],
     "selected": false,
     "externalLink": "https://symbola.net/ricerca/design-economy-2025/",
     "sub": "",
     "image": "src/01_25_02.png",
     "hoverImage": "src/01_25_01.png",
-    "category": "",
     "gallery": ["src/01_25_02.png", "src/01_25_03.png", "src/01_25_04.png"]
   },
   {
     "slug": "milano-oltre-il-visibile",
     "title": "Milano oltre il visibile",
     "year": "2025",
-    "description": "Milano oltre il visibile is a data-driven project exploring the city of Milan through cartographic and spatial visualizations that move beyond its visible and institutional narratives. The project focuses on representing urban phenomena through data and geography.\n\nDeveloped as part of Propp, my contribution involved translating structured information into maps and visual systems that support interpretation and exploration. The work balances analytical accuracy with editorial clarity, integrating visualizations into a broader narrative framework without enforcing a singular reading of the data.",
+    "type": "editorial",
+    "description": "A data-driven project exploring Milan through cartographic visualizations that go beyond its institutional narratives — using data and geography to surface less visible urban dynamics.\n\nWorking within Propp, I translated structured datasets into maps and visual systems designed to support interpretation rather than direct it. Each visualization required decisions about what to show, what to omit, and how much framing to apply.",
     "tags": ["Data Viz", "Editorial"],
     "selected": false,
     "externalLink": "https://propp.it/Milano-oltre-il-visibile",
     "sub": "",
     "image": "src/02_25_02.png",
     "hoverImage": "src/02_25_01.png",
-    "category": "",
     "gallery": ["src/02_25_02.png", "src/02_25_03.png"]
   },
   {
     "slug": "antarctic-resolution",
     "title": "Antarctic Resolution",
     "year": "2020",
-    "description": "Antarctic Resolution is an editorial research project investigating Antarctica as a complex geopolitical and environmental system. The publication relies on data visualization to support analysis and interpretation across multiple layers of information.\n\nWithin a data visualization team at The Pomo, I contributed to the visual translation of datasets prepared by the research team. Using RAWGraphs for exploration and Adobe Illustrator for refinement, the work focused on clarity, consistency, and accuracy, aligning with strict editorial constraints and integrating seamlessly into a publication designed by others.",
+    "type": "editorial",
+    "description": "An editorial research project treating Antarctica as a geopolitical and environmental system, using data visualization to layer and communicate complex, multi-source information.\n\nAs part of a data visualization team at The Pomo, I translated research datasets into publication-ready visuals using RAWGraphs for exploration and Illustrator for refinement. Working within strict editorial constraints required close attention to consistency, accuracy, and visual integration.",
     "tags": ["Data Viz", "Editorial"],
     "selected": false,
     "externalLink": "",
     "sub": "",
     "image": "src/8.png",
     "hoverImage": "src/8H.png",
-    "category": "INFORMATION DESIGN",
     "gallery": ["src/08_01.png", "src/08_02.png"]
   },
   {
     "slug": "cfs-lab",
     "title": "CFS Lab",
     "year": "2025",
-    "description": "CFS Lab is the research laboratory of the Politecnico di Milano, for which a digital platform was designed as the foundation of its online presence. The current implementation takes the form of a landing page, conceived as the first step of a broader system.\n\nI designed the structure and UX of the platform and developed the website using WordPress, starting from a complete system defined and prototyped in Figma. The project was approached as a scalable framework, intended to support future growth in content, research outputs, and institutional communication.",
+    "type": "ux",
+    "description": "A digital platform for the Circular Food Systems Lab at Politecnico di Milano — designed as a scalable foundation for a research lab with growing content needs across six sections: home, projects, events, activities, Modulo Design, and Talents in Residence.",
     "tags": ["UX/UI", "Product"],
     "selected": false,
     "externalLink": "https://www.circularfoodsystemlab.polimi.it/",
     "sub": "",
     "image": "src/04_25_02.png",
     "hoverImage": "src/04_25_01.png",
-    "category": "",
+    "process": [
+      {
+        "label": "UX & information architecture",
+        "text": "Designing the full structure in Figma — defining how six content sections relate to each other and how the site would scale as content grew."
+      },
+      {
+        "label": "Prototype & development",
+        "text": "From fully interactive Figma prototype to WordPress implementation. The current landing page is intentionally structured to grow without requiring a redesign."
+      }
+    ],
+    "keyDecision": "Building for future content types and editorial flexibility from the start — the system had to accommodate sections that didn't have content yet without looking incomplete.",
+    "processGallery": [],
     "gallery": ["src/04_25_02.png", "src/04_25_03.png", "src/04_25_04.png"]
   },
   {
     "slug": "discojournal",
     "title": "DiscoJournal",
     "year": "2022–2025",
-    "description": "DiscoJournal is a digital platform created for a collective of researchers, designed to support evolving editorial formats over time. Each annual issue adopts a distinct form and visual language in response to its theme, while remaining anchored to a shared framework.\n\nMy work focused on defining this flexible visual and structural system during the initial branding and digital identity phase. The result is an adaptable platform that allows the website to evolve across editions while preserving coherence, recognizability, and usability for content-heavy research outputs.",
+    "type": "ux",
+    "description": "A digital platform for a research collective, built to support an editorial format that changes with each annual edition — different themes, different visual languages, same underlying framework. Now in its third edition and actively in use.",
     "tags": ["UX/UI", "Product"],
     "selected": false,
     "externalLink": "https://discojournal.com/",
     "sub": "",
     "image": "src/4.png",
     "hoverImage": "src/4H.png",
-    "category": "",
-    "gallery": ["src/05_25_02.png","src/05_25_03.png","src/04_01.png", "src/04_02.png", "src/04_03.png", "src/04_04.png", "src/04_05.png"]
+    "process": [
+      {
+        "label": "Branding & system design",
+        "text": "Defining a flexible visual and structural system during the initial phase — one that gives each edition room to look and feel distinct while keeping the platform coherent across content-heavy research outputs."
+      },
+      {
+        "label": "Three editions, one framework",
+        "text": "The system has supported three editions with different visual languages. The challenge was designing for variation without designing chaos — setting constraints loose enough to allow expression, tight enough to maintain identity."
+      }
+    ],
+    "keyDecision": "Designing for variation without designing chaos — setting constraints loose enough to allow expression, tight enough to maintain recognizability across editions.",
+    "processGallery": [],
+    "gallery": ["src/05_25_02.png","src/05_25_03.png","src/04_01.png", "src/04_02.png", "src/04_03.png"]
   },
   {
     "slug": "superforma",
     "title": "Superforma",
     "year": "2020–2025",
-    "description": "Superforma is a design studio specialized in 3D printing and digital fabrication, working across product design, prototyping, and applied research. Over a five-year period, the studio developed a structured and recognizable practice focused on experimentation, production, and knowledge sharing within the field of additive manufacturing.\n\nMy role included the design and development of the website, the definition of the visual identity and social communication, and the organization of workshops and public events. As a partner in the studio, I contributed to shaping Superforma’s long-term vision and public presence, integrating digital tools, fabrication practices, and educational activities into a coherent design system.",
+    "type": "ux",
+    "description": "A design studio specializing in 3D printing and digital fabrication, active for five years across product design, prototyping, applied research, and education — including over six workshops with an average of five participants each.\n\nAs a studio partner, I designed and developed the website, defined the visual identity and social communication, and organized public events and workshops. The work required integrating very different outputs into a single coherent identity that could evolve over time.",
     "tags": ["Product", "Digital"],
     "selected": false,
     "externalLink": "",
     "sub": "",
     "image": "src/1.png",
     "hoverImage": "src/1H.png",
-    "category": "",
+    "process": [],
+    "keyDecision": "",
+    "processGallery": [],
     "gallery": ["src/01_01.png", "src/01_02.png", "src/01_03.png", "src/01_04.png"]
   },
   {
     "slug": "doublecheck",
     "title": "DoubleCheck",
     "year": "2019",
-    "description": "DoubleCheck is an interactive web project designed to test users’ ability to recognize manipulated and misleading images online. The experience is structured as a quiz and was developed as the final project of Density Design.\n\nThe work focused on structuring the interaction flow and ensuring clarity and usability across different contexts. The platform was translated into 22 languages, requiring particular attention to scalability, accessibility, and consistency across localized versions.",
+    "type": "ux",
+    "description": "An interactive web experience that tests users' ability to recognize manipulated and misleading images online, developed as the final project of Density Design and later released in 22 languages.",
     "tags": ["UX/UI", "Product"],
     "selected": false,
     "externalLink": "https://doublecheck.theglassroom.org/english/about.html",
     "sub": "",
     "image": "src/5.png",
     "hoverImage": "src/5H.png",
-    "category": "",
+    "process": [
+      {
+        "label": "Interaction flow",
+        "text": "Structuring a clear, engaging quiz format that works across very different literacy levels and cultural contexts — without relying on language-specific assumptions."
+      },
+      {
+        "label": "Scaling to 22 languages",
+        "text": "Scaling to 22 languages demanded early decisions about layout flexibility, content modularity, and consistency. The UX had to hold up without language-specific assumptions baked into the structure."
+      }
+    ],
+    "keyDecision": "Designing a layout flexible enough to accommodate 22 languages — including languages with very different text lengths and reading directions — without reworking the interaction model for each.",
+    "processGallery": [],
     "gallery": ["src/05_01.png", "src/05_02.png", "src/05_03.png"]
   },
   {
     "slug": "data-visualization-works",
     "title": "Data Visualization Works",
     "year": "2019–2025",
-    "description": "Data Visualization Studies groups a series of projects exploring how data can be translated into maps and visual systems to support interpretation and exploration. The work includes cartographic and infographic contributions developed for The Passenger as part of Propp, as well as experimental visualizations focused on algorithmic mediation and data relationships.\n\nAcross these projects, my contribution centered on transforming structured datasets into readable visual forms. The visualizations balance accuracy, clarity, and narrative coherence, and are designed to invite exploration rather than impose a single interpretation.",
+    "type": "editorial",
+    "description": "A collection of data visualization projects developed across different contexts — cartographic and infographic contributions for The Passenger (Iperborea) through Propp, and experimental visualizations exploring algorithmic mediation and data relationships.\n\nAcross these projects, the core work is the same: transforming structured datasets into visual forms that are readable, accurate, and open to multiple interpretations. Every decision about what to show, how to encode it, and how much to annotate is also an editorial decision.",
     "tags": ["Data Viz", "Editorial"],
     "selected": false,
     "externalLink": "",
     "sub": "",
     "image": "src/6.png",
     "hoverImage": "src/6H.png",
-    "category": "",
     "gallery": ["src/06_01.png", "src/06_02.png", "src/09_25_02.png", "src/09_25_01.png"]
   }
 ]
