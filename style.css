@@ -125,6 +125,7 @@ header {
     z-index: 1000;
     background: rgb(254, 245, 234);
     box-sizing: border-box;
+    border-bottom: 1px solid rgba(0,0,0,0.06);
 }
 
 /*------------------------------------------------*/
@@ -211,6 +212,7 @@ main { margin-top: 0; }
 /* UX PROJECT LAYOUT */
 .layout-ux {
     background: rgb(254, 245, 234);
+    box-sizing: border-box;
 }
 
 .ux-page {
@@ -480,7 +482,7 @@ body.is-editorial {
     }
     .container {
         display: grid;
-        grid-template-columns: 1fr 2fr;
+        grid-template-columns: 280px 1fr;
         overflow-y: auto;
         gap: 2.5rem;
         max-height: 100vh;
@@ -499,7 +501,7 @@ body.is-editorial {
         gap: 1rem;
         align-items: baseline;
         justify-content: space-between;
-        width: 30vw;
+        width: 280px;
         flex-wrap: nowrap;
         white-space: nowrap;
     }
