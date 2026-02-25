@@ -123,9 +123,8 @@ header {
     width: 100%;
     top: 0;
     z-index: 1000;
-    background: rgb(254, 245, 234);
+    background: transparent;
     box-sizing: border-box;
-    border-bottom: 1px solid rgba(0,0,0,0.06);
 }
 
 /*------------------------------------------------*/
