@@ -216,9 +216,9 @@ main { margin-top: 0; }
 }
 
 .ux-page {
-    max-width: 720px;
-    margin: 0 auto;
-    padding: 4.5rem 1.25rem 4rem;
+    max-width: 100%;
+    margin: 0;
+    padding: 4.5rem 1.5rem 4rem;
 }
 
 .ux-meta {
@@ -510,7 +510,7 @@ body.is-editorial {
 
     /* UX layout — wider on large screens */
     .ux-page {
-        padding: 5rem 2rem 5rem;
+        padding: 5rem 1.5rem 5rem;
     }
 
     /* Editorial left: sticky */
