@@ -1,91 +1,78 @@
 [
   {
-    "slug": "fsm-planning",
-    "title": "FSM Platform — Field Service Planning",
-    "year": "2025–ongoing",
-    "type": "ux",
-    "description": "A back-office planning platform for a field service team managing technician schedules, routes, territories, and product quantities entirely in Excel — despite already using Dynamics 365 as their CRM. The goal was a dedicated planning tool that integrated with D365 without replacing it.",
-    "tags": ["UX/UI", "Product"],
-    "selected": false,
-    "externalLink": "",
-    "sub": "",
-    "image": "src/00_25_02.png",
-    "hoverImage": "src/00_25_01.png",
-    "process": [
-      {
-        "label": "Research & workflow mapping",
-        "text": "Sessions with the back-office team to understand how they actually used the spreadsheet — what the Excel columns represented, what workarounds they'd built, and what flexibility they couldn't give up."
-      },
-      {
-        "label": "Technical constraints",
-        "text": "Close collaboration with the developer to understand D365 API limits — which data could be read, what could be written back, and where the integration had hard boundaries that had to become design constraints."
-      },
-      {
-        "label": "IA & flow definition",
-        "text": "Mapping territories, technician assignments, routes, agendas, stops, and product quantities into a coherent information architecture. The complexity here wasn't technical — it was understanding how these layers related to each other in real operations."
-      },
-      {
-        "label": "Design & iteration",
-        "text": "Wireframes → prototype in Figma, tested with back-office operators. The core tension was between structure (needed for consistency) and flexibility (what they relied on in Excel). Resolved by separating fixed logic from flexible views."
-      }
-    ],
-    "keyDecision": "Too rigid and operators would work around it; too open and it wouldn't solve anything. The solution was separating fixed logic — territory rules, technician assignments — from flexible views — agenda layout, route planning — so the system enforces what matters without constraining how people move through their day.",
-    "processGallery": [],
-    "gallery": ["src/00_25_02.png", "src/00_25_03.png", "src/00_25_04.png"]
-  },
-  {
-    "slug": "codici-website",
-    "title": "Codici — Institutional Website",
-    "year": "2025–ongoing",
-    "type": "ux",
-    "description": "An institutional website for Codici Ricerche e Intervento, a social research organization. The project started from scratch with no existing digital presence to build on.",
-    "tags": ["UX/UI", "Product"],
-    "selected": false,
-    "externalLink": "",
-    "sub": "",
-    "image": "src/00_25_03.png",
-    "hoverImage": "src/00_25_01.png",
-    "process": [
-      {
-        "label": "Stakeholder interviews",
-        "text": "Direct conversations with the client to surface needs, priorities, and desiderata — translating open-ended requests into a defined scope and content structure."
-      },
-      {
-        "label": "Competitive review",
-        "text": "Research into comparable organizations' sites to identify conventions, gaps, and opportunities for differentiation within the constraints of an institutional context."
-      },
-      {
-        "label": "Wireframes → prototype",
-        "text": "Full UX process in Figma: from low-fidelity wireframes through a fully interactive prototype with UI. Working directly with the client meant managing expectations as much as managing design decisions."
-      }
-    ],
-    "keyDecision": "Translating open-ended desiderata into a structure that was clear, maintainable, and appropriate for the organization's communication needs — without over-designing for content that didn't exist yet.",
-    "processGallery": [],
-    "gallery": ["src/00_25_02.png", "src/00_25_03.png", "src/00_25_04.png"]
-  },
-  {
     "slug": "ongoing-projects",
-    "title": "Ongoing consultancy — Design System",
+    "title": "Ongoing consultancy",
     "year": "2025–ongoing",
     "type": "ux",
-    "description": "On a second field service management platform, I extended and updated an existing design system — auditing component usage across views, aligning inconsistencies, and redesigning specific screens to match updated product requirements.",
-    "tags": ["UX/UI"],
+    "description": "Three concurrent projects developed within Propp: a field service management platform built from scratch, a design system extension on a second FSM tool, and an institutional website for Codici Ricerche e Intervento. All involve confidential clients; sanitized materials available on request.",
+    "tags": ["UX/UI", "Product"],
     "selected": false,
     "externalLink": "",
     "sub": "",
     "image": "src/00_25_02.png",
     "hoverImage": "src/00_25_01.png",
-    "process": [
+    "projects": [
       {
-        "label": "Audit",
-        "text": "Reviewing existing components across all views to identify inconsistencies, outdated patterns, and gaps between the design system and the live product."
+        "title": "FSM Platform — Field Service Planning",
+        "description": "A back-office planning platform for a field service team managing technician schedules, routes, territories, and product quantities entirely in Excel — despite already using Dynamics 365 as their CRM.",
+        "process": [
+          {
+            "label": "Research & workflow mapping",
+            "text": "Sessions with the back-office team to understand how they actually used the spreadsheet — what the Excel columns represented, what workarounds they'd built, and what flexibility they couldn't give up."
+          },
+          {
+            "label": "Technical constraints",
+            "text": "Close collaboration with the developer to understand D365 API limits — which data could be read, what could be written back, and where the integration had hard boundaries that had to become design constraints."
+          },
+          {
+            "label": "IA & flow definition",
+            "text": "Mapping territories, technician assignments, routes, agendas, stops, and product quantities into a coherent information architecture. The complexity here wasn't technical — it was understanding how these layers related to each other in real operations."
+          },
+          {
+            "label": "Design & iteration",
+            "text": "Wireframes → prototype in Figma, tested with back-office operators. The core tension was between structure (needed for consistency) and flexibility (what they relied on in Excel). Resolved by separating fixed logic from flexible views."
+          }
+        ],
+        "keyDecision": "Too rigid and operators would work around it; too open and it wouldn't solve anything. The solution was separating fixed logic — territory rules, technician assignments — from flexible views — agenda layout, route planning — so the system enforces what matters without constraining how people move through their day.",
+        "processGallery": []
       },
       {
-        "label": "Alignment",
-        "text": "Updating components and documentation to reflect current product requirements, working within existing technical and organizational constraints."
+        "title": "FSM Platform — Design System",
+        "description": "On a second field service management platform, I extended and updated an existing design system — auditing component usage across views, aligning inconsistencies, and redesigning specific screens to match updated product requirements.",
+        "process": [
+          {
+            "label": "Audit",
+            "text": "Reviewing existing components across all views to identify inconsistencies, outdated patterns, and gaps between the design system and the live product."
+          },
+          {
+            "label": "Alignment",
+            "text": "Updating components and documentation to reflect current product requirements, working within existing technical and organizational constraints."
+          }
+        ],
+        "keyDecision": "Working within an existing system rather than proposing a redesign — identifying where to intervene minimally for maximum consistency without disrupting what already worked.",
+        "processGallery": []
+      },
+      {
+        "title": "Codici — Institutional Website",
+        "description": "An institutional website for Codici Ricerche e Intervento, a social research organization. The project started from scratch with no existing digital presence to build on.",
+        "process": [
+          {
+            "label": "Stakeholder interviews",
+            "text": "Direct conversations with the client to surface needs, priorities, and desiderata — translating open-ended requests into a defined scope and content structure."
+          },
+          {
+            "label": "Competitive review",
+            "text": "Research into comparable organizations' sites to identify conventions, gaps, and opportunities for differentiation within the constraints of an institutional context."
+          },
+          {
+            "label": "Wireframes → prototype",
+            "text": "Full UX process in Figma: from low-fidelity wireframes through a fully interactive prototype with UI. Working directly with the client meant managing expectations as much as managing design decisions."
+          }
+        ],
+        "keyDecision": "Translating open-ended desiderata into a structure that was clear, maintainable, and appropriate for the organization's communication needs — without over-designing for content that didn't exist yet.",
+        "processGallery": []
       }
     ],
-    "keyDecision": "Working within an existing system rather than proposing a redesign — identifying where to intervene minimally for maximum consistency without disrupting what already worked.",
     "processGallery": [],
     "gallery": ["src/00_25_02.png", "src/00_25_03.png", "src/00_25_04.png"]
   },

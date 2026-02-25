@@ -127,10 +127,46 @@ function buildUXProject(project, projects) {
   // overview
   document.getElementById('ux-description').innerHTML = formatDescription(project.description);
 
-  // process steps
+  // nested sub-projects (e.g. ongoing consultancy)
   const processSection = document.getElementById('ux-process-section');
   const processSteps = document.getElementById('ux-process-steps');
-  if (project.process && project.process.length) {
+
+  if (project.projects && project.projects.length) {
+    // render each sub-project as its own block
+    processSection.style.display = 'block';
+    processSteps.innerHTML = project.projects.map(sub => `
+      <div class="sub-project">
+        <h2 class="sub-project-title">${sub.title}</h2>
+        <p class="ux-text" style="margin-bottom:1rem;">${sub.description}</p>
+        ${sub.process && sub.process.length ? sub.process.map((step, i) => `
+          <div class="process-step">
+            <span class="step-number">${String(i + 1).padStart(2, '0')}</span>
+            <div class="step-content">
+              <strong>${step.label}</strong>
+              ${step.text}
+            </div>
+          </div>
+        `).join('') : ''}
+        ${sub.keyDecision ? `
+          <div class="sub-key-decision">
+            <p class="ux-section-label" style="margin-top:1.25rem;">Key decision</p>
+            <p class="ux-text">${sub.keyDecision}</p>
+          </div>
+        ` : ''}
+        ${sub.processGallery && sub.processGallery.length ? `
+          <div class="process-grid" style="margin-top:1rem;">
+            ${sub.processGallery.map((item, i) => `
+              <div class="process-item ${i === 0 && sub.processGallery.length > 2 ? 'process-item-wide' : ''}">
+                <img src="${typeof item === 'string' ? item : item.src}" alt="">
+                ${typeof item === 'object' && item.caption ? `<div class="caption">${item.caption}</div>` : ''}
+              </div>
+            `).join('')}
+          </div>
+        ` : ''}
+      </div>
+    `).join('<div class="sub-project-divider"></div>');
+  } else if (project.process && project.process.length) {
+    // single project with flat process array
     processSection.style.display = 'block';
     processSteps.innerHTML = project.process.map((step, i) => `
       <div class="process-step">
@@ -143,10 +179,10 @@ function buildUXProject(project, projects) {
     `).join('');
   }
 
-  // process artifacts (processGallery)
+  // process artifacts (processGallery) — only for flat projects
   const artifactsSection = document.getElementById('ux-artifacts-section');
   const artifactsGrid = document.getElementById('ux-process-grid');
-  if (project.processGallery && project.processGallery.length) {
+  if (!project.projects && project.processGallery && project.processGallery.length) {
     artifactsSection.style.display = 'block';
     artifactsGrid.innerHTML = project.processGallery.map((item, i) => `
       <div class="process-item ${i === 0 && project.processGallery.length > 2 ? 'process-item-wide' : ''}">
@@ -158,10 +194,10 @@ function buildUXProject(project, projects) {
     `).join('');
   }
 
-  // key decision
+  // key decision — only for flat projects
   const decisionSection = document.getElementById('ux-decision-section');
   const decisionDiv = document.getElementById('ux-key-decision');
-  if (project.keyDecision) {
+  if (!project.projects && project.keyDecision) {
     decisionSection.style.display = 'block';
     decisionDiv.innerHTML = `<p>${project.keyDecision}</p>`;
   }
@@ -216,8 +252,6 @@ function buildEditorialProject(project, projects) {
 
 /* ─── SHARED HELPERS ─── */
 const projectOrder = [
-  'fsm-planning',
-  'codici-website',
   'ongoing-projects',
   'design-economy',
   'milano-oltre-il-visibile',

@@ -347,6 +347,29 @@ main { margin-top: 0; }
     aspect-ratio: 16 / 6;
 }
 
+/* Sub-projects (e.g. ongoing consultancy) */
+.sub-project {
+    margin-bottom: 1rem;
+}
+.sub-project-title {
+    font-family: "Syne", sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: black;
+    margin-bottom: 0.75rem;
+}
+.sub-project-divider {
+    height: 1px;
+    background: rgba(0,0,0,0.08);
+    margin: 2rem 0;
+}
+.sub-key-decision p {
+    font-family: "EB Garamond", serif;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: black;
+}
+
 /* UX divider + nav */
 .ux-divider {
     height: 1px;
