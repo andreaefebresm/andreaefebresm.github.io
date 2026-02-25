@@ -1,14 +1,21 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 html {
     background-color: rgb(254, 245, 234);
+    overflow-x: hidden;
 }
 
 html, body {
     height: 100vh;
+    overflow-x: hidden;
 }
 
 body {
     padding: 0;
     margin: 0;
+    overflow-x: hidden;
 }
 
 /*------------------------------------------------*/
@@ -150,8 +157,8 @@ main { margin-top: 0; }
     display: grid;
     overflow-y: auto;
     gap: 1.5rem;
-    width: 100vw;
-    max-width: 100vw;
+    width: 100%;
+    max-width: 100%;
 }
 
 /* Filter */
@@ -164,8 +171,8 @@ main { margin-top: 0; }
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 0.5rem;
-    width: 100vw;
-    max-width: 100vw;
+    width: 100%;
+    max-width: 100%;
 }
 .image-container {
     position: relative;
@@ -215,9 +222,11 @@ main { margin-top: 0; }
 }
 
 .ux-page {
+    width: 100%;
     max-width: 100%;
     margin: 0;
     padding: 4.5rem 1.5rem 4rem;
+    box-sizing: border-box;
 }
 
 .ux-meta {
