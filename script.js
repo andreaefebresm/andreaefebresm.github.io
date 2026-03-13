@@ -24,6 +24,13 @@ function setCurrentYear() {
 /* INDEX */
 /* ---------------------------------------- */
 const SECTIONS = ['Experience Design', 'Data Visualization', 'Web Design'];
+
+const SECTION_DESCRIPTIONS = {
+    'Experience Design': 'What I find most interesting about this kind of work is the gap between how something is supposed to work and how people actually use it. I start from there, mapping real flows, asking real questions, and design around what I find.',
+    'Data Visualization': 'Data is rarely the problem. The problem is what gets lost in translation. I work on making complex information readable without making it simple, keeping the nuance while finding the form.',
+    'Web Design': 'A website is a commitment to content, to identity, to whoever will use it over time. I try to build things that don\'t need to be redone every two years.'
+};
+
 let activeSection = SECTIONS[0];
 
 function buildIndex(projects) {
@@ -39,18 +46,30 @@ function buildIndex(projects) {
             activeSection = section;
             document.querySelectorAll('.section-nav-btn').forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
+            updateDescription();
             renderProjects(projects, list);
         });
         nav.appendChild(btn);
     });
 
+    // Description element
+    const desc = document.createElement('p');
+    desc.className = 'section-description';
+    desc.id = 'section-description';
+    desc.textContent = SECTION_DESCRIPTIONS[activeSection];
+    nav.parentElement.insertBefore(desc, nav.nextSibling);
+
     renderProjects(projects, list);
+}
+
+function updateDescription() {
+    const desc = document.getElementById('section-description');
+    if (desc) desc.textContent = SECTION_DESCRIPTIONS[activeSection];
 }
 
 function renderProjects(projects, container) {
     const filtered = projects.filter(p => p.section === activeSection);
     container.innerHTML = '';
-
     filtered.forEach(project => {
         container.appendChild(buildProjectRow(project));
     });
@@ -74,23 +93,25 @@ function buildProjectRow(project) {
         el.style.cursor = 'default';
     }
 
-    const typeLabel = isCaseStudy
-        ? '<span class="project-row-type">→ Case study</span>'
-        : hasExternal
-            ? '<span class="project-row-type">↗ External link</span>'
-            : '';
-
+    const arrow = isCaseStudy ? '↘' : hasExternal ? '↗' : '';
     const imageHtml = project.image
         ? `<img src="${project.image}" data-hover="${project.hoverImage || project.image}" alt="${project.title}">`
+        : '';
+
+    const subtitleHtml = project.subtitle
+        ? `<span class="project-row-subtitle">${project.subtitle}</span>`
         : '';
 
     el.innerHTML = `
         <div class="project-row-image">${imageHtml}</div>
         <div class="project-row-body">
-            <span class="project-row-title">${project.title}</span>
-            ${typeLabel}
+            <div>
+                <span class="project-row-title">${project.title}</span>
+                ${subtitleHtml}
+            </div>
+            <span class="project-row-year">${project.year}</span>
         </div>
-        <div class="project-row-year">${project.year}</div>
+        <div class="project-row-arrow">${arrow}</div>
     `;
 
     if (project.image && project.hoverImage) {

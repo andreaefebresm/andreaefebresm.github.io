@@ -2,19 +2,16 @@
   {
     "slug": "btw",
     "title": "Designing a field service tool people would actually use",
+    "subtitle": "Sanitised",
     "year": "2025",
     "type": "case-study",
     "section": "Experience Design",
-    "tags": [
-      "UX/UI"
-    ],
+    "tags": ["UX/UI"],
     "selected": false,
     "externalLink": "",
     "image": "src/placeholder.png",
     "hoverImage": "src/placeholder.png",
-    "gallery": [
-      "src/placeholder.png"
-    ],
+    "gallery": ["src/placeholder.png"],
     "context": "A field service company with 36 technicians across northern and central Italy. Intervention requests come in through a call center or directly via CRM — then a 6-person back office team handles planning and assignment.",
     "problem": "The CRM couldn't support the complexity of their operations. The back office had no reliable way to track technician availability, skills, or notes — so they defaulted to spreadsheets. At the same time, the company needed to maximize the number of interventions per day, which required smarter planning logic that the existing tools couldn't provide.",
     "role": "I mapped the full workflow — from incoming request to technician assignment — through conversational interviews with both back office staff and technicians. From there I defined the information architecture, designed the interfaces, and worked in parallel with the developer throughout implementation.",
@@ -24,19 +21,16 @@
   {
     "slug": "ovo-sode",
     "title": "Restructuring a courier management system mid-growth",
+    "subtitle": "Sanitised",
     "year": "2025",
     "type": "case-study",
     "section": "Experience Design",
-    "tags": [
-      "UX/UI"
-    ],
+    "tags": ["UX/UI"],
     "selected": false,
     "externalLink": "",
     "image": "src/placeholder.png",
     "hoverImage": "src/placeholder.png",
-    "gallery": [
-      "src/placeholder.png"
-    ],
+    "gallery": ["src/placeholder.png"],
     "context": "A Milan-based bike courier service operating from two warehouses. A back office team of dispatchers creates routes and assigns them to couriers. Couriers use a lightweight app to manage deliveries in real time — confirming drops, flagging issues.",
     "problem": "The platform was originally built around a single model: multi-stop routes with pickups and deliveries. Over time, a second type was introduced — queue-based deliveries, point-to-point from supermarket to end customer. The system hadn't been designed for both, and the distinction wasn't reflected in the interface.\n\nAt the same time, dispatchers were struggling with a gap in the original logic: there was no clear way to track when the same package needed both a pickup and a delivery. The design system had also fallen behind — when queues appeared on the live map, there were no defined colors or visual rules to distinguish them.",
     "role": "I joined an existing project mid-development, inheriting a partially defined interface and an incomplete design system. I audited what existed, identified the gaps, and took ownership of the missing pieces — redesigning the views that weren't working, defining the design system rules, and working in parallel with the developer throughout.",
@@ -46,19 +40,16 @@
   {
     "slug": "codici",
     "title": "Giving a research center a digital presence that reflects its work",
+    "subtitle": "Codici Ricerche e Intervento",
     "year": "2024",
     "type": "case-study",
     "section": "Experience Design",
-    "tags": [
-      "UX/UI"
-    ],
+    "tags": ["UX/UI"],
     "selected": false,
     "externalLink": "",
     "image": "src/placeholder.png",
     "hoverImage": "src/placeholder.png",
-    "gallery": [
-      "src/placeholder.png"
-    ],
+    "gallery": ["src/placeholder.png"],
     "context": "Codici is a Milan-based social cooperative working at the intersection of research and social intervention. Their work is project-based, editorially rich, and driven by a clear methodology — but their website didn't reflect any of it.",
     "problem": "The site had a flat structure that flattened everything into a few generic sections. Projects existed but their outputs were buried. Events and news were mixed together with no distinction. And the annual research grant — one of the most distinctive things Codici does, a public call that funds two projects each year — had no dedicated presence at all.\n\nThe result was a site that listed what they did without communicating how or why they did it.",
     "role": "I led the full project — analysing the existing site and content, redefining the information architecture, designing wireframes and UI, and managing the relationship with the client through multiple rounds of iteration. Branding was rebuilt from scratch, keeping only the existing logo as a fixed point.",
@@ -68,20 +59,16 @@
   {
     "slug": "doublecheck",
     "title": "Building a tool to teach visual misinformation",
+    "subtitle": "Density Design",
     "year": "2019",
     "type": "case-study",
     "section": "Experience Design",
-    "tags": [
-      "UX/UI",
-      "Product"
-    ],
+    "tags": ["UX/UI", "Product"],
     "selected": false,
     "externalLink": "https://doublecheck.theglassroom.org/english/about.html",
     "image": "src/placeholder.png",
     "hoverImage": "src/placeholder.png",
-    "gallery": [
-      "src/placeholder.png"
-    ],
+    "gallery": ["src/placeholder.png"],
     "context": "A university project developed at Density Design in 2019, when fact-checking labels on social media didn't exist yet. The brief asked to design a digital artifact that would invite a specific audience to reflect and act on a researched topic. The team addressed people who used social media as their primary news source — without the tools or habits to question what they were seeing.",
     "problem": "Visual misinformation is not one thing. A manipulated image can be a photomontage, a mislabeled photo, or a real image stripped of its context — each mechanism works differently, but all exploit the same assumption: that seeing means knowing. Most people who encounter false images online aren't careless, they're simply unequipped.\n\nThe research behind the project mapped this complexity across real debunked cases, showing how frequently images are falsified around major events — and how rarely the distinction between types of manipulation is made visible.",
     "role": "Within the team I contributed to the research phase, led the UX and interaction design, and wrote part of the code. The project moved from research findings to concept to working artifact — I was involved across all three.",
@@ -91,20 +78,16 @@
   {
     "slug": "interconnected",
     "title": "Visualizing what your smart objects know about you",
+    "subtitle": "Master's thesis",
     "year": "2021",
     "type": "case-study",
     "section": "Experience Design",
-    "tags": [
-      "UX/UI",
-      "Data Viz"
-    ],
+    "tags": ["UX/UI", "Data Viz"],
     "selected": false,
     "externalLink": "https://interconnected-ecru.vercel.app/",
     "image": "src/placeholder.png",
     "hoverImage": "src/placeholder.png",
-    "gallery": [
-      "src/placeholder.png"
-    ],
+    "gallery": ["src/placeholder.png"],
     "context": "A self-initiated master's thesis in Communication Design, developed independently from concept to code. The project addresses a problem that affects everyone but that few people can actually explain: what data do smart objects collect, how is it processed, and what can it reveal about you.",
     "problem": "Smart objects are ubiquitous but opaque. People interact with them daily without understanding the data layer underneath — not because they don't care, but because the system is genuinely complex. Data flows through first, second, and third parties; different devices capture different types of information; and what can be inferred from that data goes far beyond what is explicitly collected.\n\nThe challenge was making this complexity navigable without simplifying it into something false.",
     "role": "I defined the research question, mapped the system, designed the full experience, and oversaw development — working with collaborators on the React implementation while remaining responsible for every interaction and narrative decision.",
@@ -113,133 +96,107 @@
   },
   {
     "slug": "design-economy",
-    "title": "Design Economy",
+    "title": "Art directing a report on the Italian design sector",
+    "subtitle": "Fondazione Symbola, POLI.design",
     "year": "2025",
     "type": "dataviz",
     "section": "Data Visualization",
-    "tags": [
-      "Data Viz",
-      "Editorial Design"
-    ],
+    "tags": ["Data Viz", "Editorial Design"],
     "selected": false,
     "externalLink": "https://symbola.net/ricerca/design-economy-2025/",
     "image": "src/placeholder.png",
     "hoverImage": "src/placeholder.png",
-    "gallery": [
-      "src/placeholder.png"
-    ],
-    "description": "Editorial project developed for Fondazione Symbola and POLI.design, centered on the visual interpretation of economic and cultural data related to the Italian design sector. Responsible for graphic layout, visual language, and data visualizations."
+    "gallery": ["src/placeholder.png"],
+    "description": "Art direction, layout, and data visualization for an annual report on the economic and cultural landscape of Italian design. The work involved translating structured datasets into a coherent visual system, balancing analytical content with editorial clarity."
   },
   {
     "slug": "iperborea-the-passenger",
-    "title": "The Passenger",
+    "title": "Mapping complex geographies for an editorial series",
+    "subtitle": "Iperborea",
     "year": "2025",
     "type": "dataviz",
     "section": "Data Visualization",
-    "tags": [
-      "Data Viz",
-      "Editorial"
-    ],
+    "tags": ["Data Viz", "Editorial"],
     "selected": false,
     "externalLink": "https://propp.it/The-Passenger-2025",
     "image": "src/placeholder.png",
     "hoverImage": "src/placeholder.png",
-    "gallery": [
-      "src/placeholder.png"
-    ],
-    "description": "Cartographic and infographic contributions for Iperborea's The Passenger series, developed as part of Propp. Maps and visual systems designed to support interpretation and exploration of complex geographic and cultural datasets."
+    "gallery": ["src/placeholder.png"],
+    "description": "Cartographic and data visualization contributions for The Passenger, Iperborea's travel and culture series. Maps and visual systems designed to support interpretation and exploration of complex geographic and cultural datasets."
   },
   {
     "slug": "milano-oltre-il-visibile",
-    "title": "Milano oltre il visibile",
+    "title": "Building the visual system for a data-driven portrait of Milan",
+    "subtitle": "Propp",
     "year": "2025",
     "type": "dataviz",
     "section": "Data Visualization",
-    "tags": [
-      "Data Viz"
-    ],
+    "tags": ["Data Viz"],
     "selected": false,
     "externalLink": "https://propp.it/Milano-oltre-il-visibile",
     "image": "src/placeholder.png",
     "hoverImage": "src/placeholder.png",
-    "gallery": [
-      "src/placeholder.png"
-    ],
-    "description": "Data-driven project exploring the city of Milan through cartographic and spatial visualizations that move beyond its visible and institutional narratives."
+    "gallery": ["src/placeholder.png"],
+    "description": "Cartography and visual system design for a project exploring Milan through spatial data and urban geography. The work focused on representing the city beyond its institutional narratives, through maps and visual layers that invite exploration rather than impose a reading."
   },
   {
     "slug": "antarctic-resolution",
-    "title": "Antarctic Resolution",
+    "title": "Visualizing Antarctica as a geopolitical and environmental system",
+    "subtitle": "The Pomo",
     "year": "2020",
     "type": "dataviz",
     "section": "Data Visualization",
-    "tags": [
-      "Data Viz",
-      "Editorial"
-    ],
+    "tags": ["Data Viz", "Editorial"],
     "selected": false,
     "externalLink": "https://antarctic-resolution.org/openaccess/",
     "image": "src/placeholder.png",
     "hoverImage": "src/placeholder.png",
-    "gallery": [
-      "src/placeholder.png"
-    ],
-    "description": "Editorial research project investigating Antarctica as a complex geopolitical and environmental system. Data visualization contributions developed within a team at The Pomo."
+    "gallery": ["src/placeholder.png"],
+    "description": "Data visualization contributions for an editorial research project investigating Antarctica across geopolitical, environmental, and scientific dimensions. Working within a team, the focus was on translating complex datasets into clear, consistent visual forms within strict editorial constraints."
   },
   {
     "slug": "cfs-lab",
-    "title": "CFS Lab",
+    "title": "Designing and building a research lab's first digital presence",
+    "subtitle": "Politecnico di Milano",
     "year": "2025",
     "type": "external",
     "section": "Web Design",
-    "tags": [
-      "UX/UI",
-      "Product"
-    ],
+    "tags": ["UX/UI"],
     "selected": false,
     "externalLink": "https://www.circularfoodsystemlab.polimi.it/",
     "image": "src/placeholder.png",
     "hoverImage": "src/placeholder.png",
-    "gallery": [
-      "src/placeholder.png"
-    ],
-    "description": "Digital platform for the research laboratory of Politecnico di Milano. Designed structure and UX, developed the website using WordPress from a complete system defined in Figma."
+    "gallery": ["src/placeholder.png"],
+    "description": "Branding, UX design, and WordPress development for the Circular Food System Lab at Politecnico di Milano. The site was conceived as a scalable framework, designed and prototyped in Figma and built to support future growth in content and research outputs."
   },
   {
     "slug": "discojournal",
-    "title": "DiscoJournal",
+    "title": "Building a flexible identity for an evolving research journal",
+    "subtitle": "DiscoJournal",
     "year": "2022–2025",
     "type": "external",
     "section": "Web Design",
-    "tags": [
-      "UX/UI",
-      "Product"
-    ],
+    "tags": ["UX/UI"],
     "selected": false,
     "externalLink": "https://discojournal.com/",
     "image": "src/placeholder.png",
     "hoverImage": "src/placeholder.png",
-    "gallery": [
-      "src/placeholder.png"
-    ],
-    "description": "Digital platform for a collective of researchers, designed to support evolving editorial formats across annual issues. Defined the flexible visual and structural system during the initial branding and digital identity phase."
+    "gallery": ["src/placeholder.png"],
+    "description": "Branding, web design, and WordPress development for a research collective publishing annual issues on shifting themes. The work focused on defining a visual and structural system flexible enough to evolve across editions while preserving coherence and usability."
   },
   {
     "slug": "veroamaro",
-    "title": "Vero Amaro Favero",
+    "title": "Branding and building a website for an Italian amaro",
+    "subtitle": "Vero Amaro Favero",
     "year": "2024",
     "type": "external",
     "section": "Web Design",
-    "tags": [
-      "Product"
-    ],
+    "tags": ["Product"],
     "selected": false,
     "externalLink": "https://www.veroamaro.it/",
     "image": "src/placeholder.png",
     "hoverImage": "src/placeholder.png",
-    "gallery": [
-      "src/placeholder.png"
-    ],
-    "description": "Website design and development for Vero Amaro Favero."
+    "gallery": ["src/placeholder.png"],
+    "description": "Branding, web design, and development for Vero Amaro Favero, a small Italian amaro producer. The project covered visual identity and the design and build of the website."
   }
 ]

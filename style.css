@@ -90,12 +90,14 @@ body.index-page main {
     margin-top: 1rem;
 }
 
+/* HOME GRID — no strokes */
 .home-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     height: calc(100vh - var(--header-h) - 130px);
 }
 
+/* LEFT */
 .home-left {
     position: sticky;
     top: var(--header-h);
@@ -111,6 +113,7 @@ body.index-page main {
 .section-nav {
     display: flex;
     flex-direction: column;
+    gap: 0.5rem;
 }
 
 .section-nav-btn {
@@ -118,7 +121,7 @@ body.index-page main {
     border: none;
     cursor: pointer;
     text-align: left;
-    padding: 0.9rem 0;
+    padding: 0.5rem 0;
     font-family: var(--font-serif);
     font-size: 2.2rem;
     font-weight: 400;
@@ -131,6 +134,15 @@ body.index-page main {
 .section-nav-btn.active { color: var(--black); }
 .section-nav-btn:hover { color: var(--black); }
 
+.section-description {
+    font-family: var(--font-serif);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--gray);
+    margin-top: 1.5rem;
+    max-width: 340px;
+}
+
 .home-footer {
     display: flex;
     gap: 1.5rem;
@@ -142,6 +154,7 @@ body.index-page main {
 .home-footer a { color: var(--gray); }
 .home-footer a:hover { color: var(--orange); }
 
+/* RIGHT */
 .home-right {
     height: calc(100vh - var(--header-h));
     overflow-y: auto;
@@ -153,11 +166,12 @@ body.index-page main {
 /* PROJECT ROW */
 .project-row {
     display: grid;
-    grid-template-columns: 75px 1fr auto;
-    gap: 1.1rem;
-    align-items: start;
-    padding: 1.1rem 0;
+    grid-template-columns: 110px 1fr auto;
+    gap: 1.25rem;
+    align-items: stretch;
+    padding: 1.25rem 0;
     border-top: 1px solid var(--black);
+    border-bottom: none;
     cursor: pointer;
     text-decoration: none;
     color: inherit;
@@ -168,7 +182,7 @@ body.index-page main {
 }
 
 .project-row-image {
-    width: 75px;
+    width: 110px;
     aspect-ratio: 3 / 4;
     overflow: hidden;
     border-radius: 2px;
@@ -183,38 +197,57 @@ body.index-page main {
     transition: opacity 0.2s ease;
 }
 
+/* Body: title top, year bottom — stretched */
 .project-row-body {
     display: flex;
     flex-direction: column;
-    gap: 0.4rem;
+    justify-content: space-between;
     padding-top: 0.1rem;
 }
 
 .project-row-title {
     font-family: var(--font-serif);
-    font-size: 1.45rem;
+    font-size: 1.7rem;
     font-weight: 400;
-    line-height: 1.3;
+    line-height: 1.25;
     color: var(--black);
     transition: color 0.15s ease;
 }
 
 .project-row:hover .project-row-title { color: var(--orange); }
 
-.project-row-type {
+.project-row-subtitle {
+    display: block;
     font-family: var(--font-sans);
-    font-size: 0.65rem;
-    color: var(--black);
+    font-size: 0.72rem;
+    color: var(--gray);
+    margin-top: 0.2rem;
+    letter-spacing: 0.02em;
 }
+
 
 .project-row-year {
     font-family: var(--font-serif);
     font-size: 1rem;
     color: var(--gray);
-    white-space: nowrap;
-    text-align: right;
-    padding-top: 0.1rem;
+    margin-top: auto;
+    padding-top: 0.5rem;
 }
+
+/* Arrow: large, right-aligned, bottom */
+.project-row-arrow {
+    font-family: var(--font-serif);
+    font-size: 1.8rem;
+    color: var(--black);
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding-bottom: 0.1rem;
+    transition: color 0.15s ease;
+    white-space: nowrap;
+}
+
+.project-row:hover .project-row-arrow { color: var(--orange); }
 
 /* Tags — project page only */
 .tag {
@@ -411,6 +444,14 @@ h1.project-title {
     .bio-text { font-size: 1.3rem; }
     .bio { padding: 1.5rem 1rem; }
     header { padding: 0 1rem; }
+
+    .project-row {
+        grid-template-columns: 90px 1fr auto;
+    }
+
+    .project-row-image { width: 90px; }
+    .project-row-title { font-size: 1.3rem; }
+    .project-row-arrow { font-size: 1.4rem; }
 
     body.prog { overflow: auto; height: auto; }
     body.prog main { height: auto; overflow: auto; }
