@@ -1,3 +1,35 @@
+@font-face {
+    font-family: "Ortica";
+    src: url("src/fonts/OrticaLinear-Light.woff2") format("woff2"),
+         url("src/fonts/OrticaLinear-Light.woff") format("woff");
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Ortica";
+    src: url("src/fonts/OrticaLinear-Regular.woff2") format("woff2"),
+         url("src/fonts/OrticaLinear-Regular.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Ortica";
+    src: url("src/fonts/OrticaLinear-Bold.woff2") format("woff2"),
+         url("src/fonts/OrticaLinear-Bold.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "OrticaAngular";
+    src: url("src/fonts/OrticaAngular-Bold.woff2") format("woff2"),
+         url("src/fonts/OrticaAngular-Bold.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+}
+
 /* ---------------------------------------- */
 /* BASE */
 /* ---------------------------------------- */
@@ -9,7 +41,7 @@
     --black: #111111;
     --gray: #888;
     --font-sans: "Syne", sans-serif;
-    --font-serif: "EB Garamond", serif;
+    --font-serif: "Ortica", serif;
     --header-h: 2.8rem;
 }
 
@@ -71,7 +103,6 @@ body.index-page main {
 
 .bio {
     padding: 2.5rem 1.5rem 2rem;
-    border-bottom: 1px solid var(--black);
 }
 
 .bio-text {
@@ -102,7 +133,6 @@ body.index-page main {
     position: sticky;
     top: var(--header-h);
     height: calc(100vh - var(--header-h));
-    border-right: 1px solid var(--black);
     padding: 2.5rem 1.5rem 1.5rem;
     display: flex;
     flex-direction: column;
@@ -136,11 +166,11 @@ body.index-page main {
 
 .section-description {
     font-family: var(--font-serif);
-    font-size: 0.95rem;
-    line-height: 1.6;
-    color: var(--gray);
-    margin-top: 1.5rem;
-    max-width: 340px;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    color: var(--black);
+    margin-bottom: 2rem;
+    max-width: 600px;
 }
 
 .home-footer {
@@ -172,6 +202,7 @@ body.index-page main {
     padding: 1.25rem 0;
     border-top: 1px solid var(--black);
     border-bottom: none;
+    min-height: 0;
     cursor: pointer;
     text-decoration: none;
     color: inherit;
@@ -237,14 +268,16 @@ body.index-page main {
 /* Arrow: large, right-aligned, bottom */
 .project-row-arrow {
     font-family: var(--font-serif);
-    font-size: 1.8rem;
+    font-size: 2.5rem;
     color: var(--black);
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
-    padding-bottom: 0.1rem;
+    align-self: stretch;
     transition: color 0.15s ease;
     white-space: nowrap;
+    line-height: 1;
+    padding-bottom: 0;
 }
 
 .project-row:hover .project-row-arrow { color: var(--orange); }
