@@ -31,7 +31,6 @@ function buildIndex(projects) {
     const list = document.getElementById('projects-list');
     if (!nav || !list) return;
 
-    // Build section nav buttons
     SECTIONS.forEach(section => {
         const btn = document.createElement('button');
         btn.className = 'section-nav-btn' + (section === activeSection ? ' active' : '');
@@ -52,14 +51,8 @@ function renderProjects(projects, container) {
     const filtered = projects.filter(p => p.section === activeSection);
     container.innerHTML = '';
 
-    // Section label
-    const label = document.createElement('div');
-    label.className = 'projects-section-label';
-    label.textContent = activeSection;
-    container.appendChild(label);
-
-    filtered.forEach((project, i) => {
-        container.appendChild(buildProjectRow(project, i));
+    filtered.forEach(project => {
+        container.appendChild(buildProjectRow(project));
     });
 }
 
@@ -81,7 +74,6 @@ function buildProjectRow(project) {
         el.style.cursor = 'default';
     }
 
-    const tags = (project.tags || []).map(t => `<span class="tag">${t}</span>`).join('');
     const typeLabel = isCaseStudy
         ? '<span class="project-row-type">→ Case study</span>'
         : hasExternal
@@ -96,13 +88,11 @@ function buildProjectRow(project) {
         <div class="project-row-image">${imageHtml}</div>
         <div class="project-row-body">
             <span class="project-row-title">${project.title}</span>
-            <div class="project-row-tags">${tags}</div>
             ${typeLabel}
         </div>
         <div class="project-row-year">${project.year}</div>
     `;
 
-    // Hover image swap
     if (project.image && project.hoverImage) {
         const img = el.querySelector('img');
         if (img) {
@@ -118,18 +108,9 @@ function buildProjectRow(project) {
 /* PROJECT PAGE */
 /* ---------------------------------------- */
 const PROJECT_ORDER = [
-    'btw',
-    'ovo-sode',
-    'codici',
-    'doublecheck',
-    'interconnected',
-    'design-economy',
-    'iperborea-the-passenger',
-    'milano-oltre-il-visibile',
-    'antarctic-resolution',
-    'cfs-lab',
-    'discojournal',
-    'veroamaro'
+    'btw', 'ovo-sode', 'codici', 'doublecheck', 'interconnected',
+    'design-economy', 'iperborea-the-passenger', 'milano-oltre-il-visibile',
+    'antarctic-resolution', 'cfs-lab', 'discojournal', 'veroamaro'
 ];
 
 function buildProject(project, projects) {
@@ -137,15 +118,12 @@ function buildProject(project, projects) {
 
     document.title = `AEFM | ${project.title}`;
 
-    // Breadcrumb
     const breadcrumb = document.getElementById('breadcrumb');
     if (breadcrumb) breadcrumb.innerHTML = `<a href="index.html">← Back</a>`;
 
-    // Title
     const titleEl = document.getElementById('project-title');
     if (titleEl) titleEl.textContent = project.title;
 
-    // Tags + year
     const tagsEl = document.getElementById('project-tags');
     if (tagsEl) {
         const tags = project.tags || [];
@@ -153,7 +131,6 @@ function buildProject(project, projects) {
         tagsEl.innerHTML = all.map(t => `<span class="tag">${t}</span>`).join('');
     }
 
-    // External link
     const linkDiv = document.getElementById('project-link');
     if (linkDiv) {
         linkDiv.innerHTML = project.externalLink
@@ -161,7 +138,6 @@ function buildProject(project, projects) {
             : '';
     }
 
-    // Content
     const descEl = document.getElementById('project-description');
     if (descEl) {
         descEl.innerHTML = project.type === 'case-study'
@@ -171,10 +147,8 @@ function buildProject(project, projects) {
                 : '';
     }
 
-    // Navigation
     setProjectNavigation(project, projects);
 
-    // Gallery
     const images = project.gallery && project.gallery.length
         ? project.gallery
         : project.image ? [project.image] : [];
@@ -182,9 +156,7 @@ function buildProject(project, projects) {
     const mainImage = document.getElementById('mainImage');
     let current = 0;
 
-    if (mainImage && images.length) {
-        mainImage.src = images[0];
-    }
+    if (mainImage && images.length) mainImage.src = images[0];
 
     const arrowLeft = document.querySelector('.arrow-left');
     const arrowRight = document.querySelector('.arrow-right');
