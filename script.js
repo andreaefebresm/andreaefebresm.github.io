@@ -15,9 +15,8 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function setCurrentYear() {
-    const year = new Date().getFullYear();
     document.querySelectorAll('[data-current-year]').forEach(el => {
-        el.textContent = year;
+        el.textContent = new Date().getFullYear();
     });
 }
 
@@ -25,78 +24,92 @@ function setCurrentYear() {
 /* INDEX */
 /* ---------------------------------------- */
 const SECTIONS = ['Experience Design', 'Data Visualization', 'Web Design'];
+let activeSection = SECTIONS[0];
 
 function buildIndex(projects) {
-    const container = document.getElementById('projects-list');
-    if (!container) return;
+    const nav = document.getElementById('section-nav');
+    const list = document.getElementById('projects-list');
+    if (!nav || !list) return;
 
+    // Build section nav buttons
     SECTIONS.forEach(section => {
-        const sectionProjects = projects.filter(p => p.section === section);
-        if (!sectionProjects.length) return;
-
-        // Section header
-        const header = document.createElement('div');
-        header.className = 'section-header';
-        header.innerHTML = `<span class="section-title">${section}</span>`;
-        container.appendChild(header);
-
-        // Project rows
-        sectionProjects.forEach(project => {
-            const row = buildProjectRow(project);
-            container.appendChild(row);
+        const btn = document.createElement('button');
+        btn.className = 'section-nav-btn' + (section === activeSection ? ' active' : '');
+        btn.textContent = section;
+        btn.addEventListener('click', () => {
+            activeSection = section;
+            document.querySelectorAll('.section-nav-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            renderProjects(projects, list);
         });
+        nav.appendChild(btn);
+    });
+
+    renderProjects(projects, list);
+}
+
+function renderProjects(projects, container) {
+    const filtered = projects.filter(p => p.section === activeSection);
+    container.innerHTML = '';
+
+    // Section label
+    const label = document.createElement('div');
+    label.className = 'projects-section-label';
+    label.textContent = activeSection;
+    container.appendChild(label);
+
+    filtered.forEach((project, i) => {
+        container.appendChild(buildProjectRow(project, i));
     });
 }
 
 function buildProjectRow(project) {
     const isCaseStudy = project.type === 'case-study';
-    const isExternal = project.type === 'external' || project.type === 'dataviz';
+    const hasExternal = !!project.externalLink;
 
     const el = document.createElement('a');
     el.className = 'project-row';
 
     if (isCaseStudy) {
         el.href = `project.html?slug=${project.slug}`;
-    } else if (project.externalLink) {
+    } else if (hasExternal) {
         el.href = project.externalLink;
         el.target = '_blank';
         el.rel = 'noopener noreferrer';
     } else {
-        el.href = '#';
+        el.removeAttribute('href');
+        el.style.cursor = 'default';
     }
 
-    const tags = Array.isArray(project.tags) ? project.tags : [];
-    const tagsHtml = tags.map(t => `<span class="tag">${t}</span>`).join('');
-
+    const tags = (project.tags || []).map(t => `<span class="tag">${t}</span>`).join('');
     const typeLabel = isCaseStudy
         ? '<span class="project-row-type">→ Case study</span>'
-        : project.externalLink
+        : hasExternal
             ? '<span class="project-row-type">↗ External link</span>'
             : '';
 
+    const imageHtml = project.image
+        ? `<img src="${project.image}" data-hover="${project.hoverImage || project.image}" alt="${project.title}">`
+        : '';
+
     el.innerHTML = `
-        <div class="project-row-image">
-            <img
-                src="${project.image}"
-                data-hover="${project.hoverImage || project.image}"
-                alt="${project.title}"
-            >
-        </div>
+        <div class="project-row-image">${imageHtml}</div>
         <div class="project-row-body">
             <span class="project-row-title">${project.title}</span>
-            <div class="project-row-tags">${tagsHtml}</div>
+            <div class="project-row-tags">${tags}</div>
             ${typeLabel}
         </div>
         <div class="project-row-year">${project.year}</div>
     `;
 
     // Hover image swap
-    const img = el.querySelector('img');
-    const originalSrc = project.image;
-    const hoverSrc = project.hoverImage || project.image;
-
-    img.addEventListener('mouseenter', () => { img.src = hoverSrc; });
-    img.addEventListener('mouseleave', () => { img.src = originalSrc; });
+    if (project.image && project.hoverImage) {
+        const img = el.querySelector('img');
+        if (img) {
+            img.addEventListener('mouseenter', () => { img.src = project.hoverImage; });
+            img.addEventListener('mouseleave', () => { img.src = project.image; });
+        }
+    }
 
     return el;
 }
@@ -126,9 +139,7 @@ function buildProject(project, projects) {
 
     // Breadcrumb
     const breadcrumb = document.getElementById('breadcrumb');
-    if (breadcrumb) {
-        breadcrumb.innerHTML = `<a href="index.html">← Back</a>`;
-    }
+    if (breadcrumb) breadcrumb.innerHTML = `<a href="index.html">← Back</a>`;
 
     // Title
     const titleEl = document.getElementById('project-title');
@@ -137,7 +148,7 @@ function buildProject(project, projects) {
     // Tags + year
     const tagsEl = document.getElementById('project-tags');
     if (tagsEl) {
-        const tags = Array.isArray(project.tags) ? project.tags : [];
+        const tags = project.tags || [];
         const all = project.year ? [project.year, ...tags] : tags;
         tagsEl.innerHTML = all.map(t => `<span class="tag">${t}</span>`).join('');
     }
@@ -150,23 +161,24 @@ function buildProject(project, projects) {
             : '';
     }
 
-    // Description / case study sections
+    // Content
     const descEl = document.getElementById('project-description');
     if (descEl) {
-        if (project.type === 'case-study') {
-            descEl.innerHTML = buildCaseSections(project);
-        } else {
-            descEl.innerHTML = project.description
-                ? `<p class="case-section-text">${project.description}</p>`
+        descEl.innerHTML = project.type === 'case-study'
+            ? buildCaseSections(project)
+            : project.description
+                ? `<div class="case-section-text"><p>${project.description}</p></div>`
                 : '';
-        }
     }
 
     // Navigation
     setProjectNavigation(project, projects);
 
     // Gallery
-    const images = project.gallery || (project.image ? [project.image] : []);
+    const images = project.gallery && project.gallery.length
+        ? project.gallery
+        : project.image ? [project.image] : [];
+
     const mainImage = document.getElementById('mainImage');
     let current = 0;
 
@@ -174,21 +186,21 @@ function buildProject(project, projects) {
         mainImage.src = images[0];
     }
 
-    function change(direction) {
-        if (!images.length || !mainImage) return;
-        current = (current + direction + images.length) % images.length;
-        mainImage.src = images[current];
-    }
-
     const arrowLeft = document.querySelector('.arrow-left');
     const arrowRight = document.querySelector('.arrow-right');
-    if (arrowLeft) arrowLeft.addEventListener('click', () => change(-1));
-    if (arrowRight) arrowRight.addEventListener('click', () => change(1));
 
-    // Hide arrows if only one image
     if (images.length <= 1) {
         if (arrowLeft) arrowLeft.style.display = 'none';
         if (arrowRight) arrowRight.style.display = 'none';
+    } else {
+        if (arrowLeft) arrowLeft.addEventListener('click', () => {
+            current = (current - 1 + images.length) % images.length;
+            mainImage.src = images[current];
+        });
+        if (arrowRight) arrowRight.addEventListener('click', () => {
+            current = (current + 1) % images.length;
+            mainImage.src = images[current];
+        });
     }
 }
 
@@ -198,7 +210,7 @@ function buildCaseSections(project) {
         { key: 'problem', label: 'Problem' },
         { key: 'role', label: 'My role' },
         { key: 'process', label: 'Process' },
-        { key: 'outcome', label: 'Outcome' }
+        { key: 'outcome', label: 'Outcome' },
     ];
 
     return sections
@@ -212,8 +224,7 @@ function buildCaseSections(project) {
                 <div class="case-section">
                     <div class="case-section-label">${s.label}</div>
                     <div class="case-section-text">${paragraphs}</div>
-                </div>
-            `;
+                </div>`;
         })
         .join('');
 }
@@ -230,10 +241,8 @@ function setProjectNavigation(project, projects) {
         return;
     }
 
-    const prevSlug = PROJECT_ORDER[currentIndex - 1];
-    const nextSlug = PROJECT_ORDER[currentIndex + 1];
-    const prevProject = projects.find(p => p.slug === prevSlug);
-    const nextProject = projects.find(p => p.slug === nextSlug);
+    const prevProject = projects.find(p => p.slug === PROJECT_ORDER[currentIndex - 1]);
+    const nextProject = projects.find(p => p.slug === PROJECT_ORDER[currentIndex + 1]);
 
     if (prevProject) {
         prevLink.style.visibility = 'visible';

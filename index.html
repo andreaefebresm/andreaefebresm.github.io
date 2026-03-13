@@ -23,19 +23,29 @@
     </header>
 
     <main>
+        <!-- BIO: full width -->
         <section class="bio">
-            <p class="bio-text">UX designer working on complex systems and data-driven interfaces. I design clear and usable experiences for information-heavy products and multi-role workflows, combining UX, information architecture, and data visualization.</p>
-            <p class="bio-text">My work focuses on enterprise tools, structured digital platforms, and editorial data projects, with an emphasis on clarity, decision-making, and real-world constraints.</p>
+            <p class="bio-text">UX designer working on complex systems and data-driven interfaces — enterprise tools, structured digital platforms, and editorial data projects.</p>
             <p class="bio-note">Some projects are presented in a sanitized version due to confidentiality.</p>
         </section>
 
-        <div id="projects-list"></div>
-    </main>
+        <!-- TWO COLUMNS -->
+        <div class="home-grid">
+            <!-- LEFT: section nav -->
+            <div class="home-left">
+                <nav class="section-nav" id="section-nav"></nav>
+                <footer class="home-footer">
+                    <p class="copy">© <span data-current-year>2026</span></p>
+                    <p><a href="mailto:andreae.febresm@gmail.com">Write me</a></p>
+                    <p><a href="src/AndreaElenaFebresMedina_CV.pdf" target="_blank">CV</a></p>
+                </footer>
+            </div>
 
-    <footer>
-        <p class="copy">© <span data-current-year>2026</span></p>
-        <p><a href="mailto:andreae.febresm@gmail.com">Write me</a></p>
-        <p><a href="src/AndreaElenaFebresMedina_CV.pdf" target="_blank">CV</a></p>
-    </footer>
+            <!-- RIGHT: project list -->
+            <div class="home-right">
+                <div id="projects-list"></div>
+            </div>
+        </div>
+    </main>
 </body>
 </html>
