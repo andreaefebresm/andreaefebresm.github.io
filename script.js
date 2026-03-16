@@ -133,15 +133,20 @@ function buildProject(project, projects) {
   let current = 0;
   if (images.length) mainImage.src = images[0];
 
-  function change(dir) {
-    if (!images.length) return;
-    current = (current + dir + images.length) % images.length;
-    mainImage.src = images[current];
-  }
   const arrowL = document.querySelector('.arrow-left');
   const arrowR = document.querySelector('.arrow-right');
-  if (arrowL) arrowL.addEventListener('click', () => change(-1));
-  if (arrowR) arrowR.addEventListener('click', () => change(1));
+
+  if (images.length <= 1) {
+    if (arrowL) arrowL.style.display = 'none';
+    if (arrowR) arrowR.style.display = 'none';
+  } else {
+    function change(dir) {
+      current = (current + dir + images.length) % images.length;
+      mainImage.src = images[current];
+    }
+    if (arrowL) arrowL.addEventListener('click', () => change(-1));
+    if (arrowR) arrowR.addEventListener('click', () => change(1));
+  }
 }
 
 function formatDescription(text) {
