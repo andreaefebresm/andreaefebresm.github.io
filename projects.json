@@ -195,7 +195,7 @@
     "selected": false,
     "externalLink": "https://www.circularfoodsystemlab.polimi.it/",
     "image": "src/images/cfslab.png",
-    "hoverImage": "src/images/cfs.png",
+    "hoverImage": "src/images/cfslab.png",
     "gallery": ["src/placeholder.png"],
     "description": "Branding, UX design, and WordPress development for the Circular Food System Lab at Politecnico di Milano. The site was conceived as a scalable framework, designed and prototyped in Figma and built to support future growth in content and research outputs."
   },
