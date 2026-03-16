@@ -45,7 +45,6 @@
 
 html, body {
     height: 100%;
-    overflow: hidden;
     background-color: var(--bg);
     color: var(--black);
     font-family: var(--font-sans);
