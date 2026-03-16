@@ -104,7 +104,7 @@
     "tags": ["Data Viz", "Editorial Design"],
     "selected": false,
     "externalLink": "https://symbola.net/ricerca/design-economy-2025/",
-    "image": "src/placeholder.png",
+    "image": "src/images/designeconomy.png",
     "hoverImage": "src/images/designeconomy.png",
     "gallery": ["src/images/designeconomy.png-01","src/images/designeconomy-02.png","src/images/designeconomy-03.png"],
     "context": "An annual report commissioned by Fondazione Symbola and POLI.design mapping the economic and cultural state of the Italian design sector — structured datasets, survey results, and editorial content across a publication-length document.",
