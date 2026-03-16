@@ -128,7 +128,7 @@ function formatDescription(text) {
 }
 
 const PROJECT_ORDER = [
-  'btw','ovo-sode','codici','doublecheck','interconnected',
+  'field-service','courier','codici','doublecheck','interconnected',
   'dataviz-collection','design-economy','iperborea-the-passenger','milano-oltre-il-visibile','antarctic-resolution',
   'cfs-lab','discojournal','veroamaro'
 ];

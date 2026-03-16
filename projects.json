@@ -87,7 +87,7 @@
     "externalLink": "https://interconnected-ecru.vercel.app/",
     "image": "src/images/interconnected.png",
     "hoverImage": "src/images/interconnected.png",
-    "gallery": ["src/placeholder.png"],
+    "gallery": ["src/images/interconnected-01.png","src/images/interconnected-02.png","src/images/interconnected-03.png","src/images/interconnected-04.png"],
     "context": "A self-initiated master's thesis in Communication Design, developed independently from concept to code. The project addresses a problem that affects everyone but that few people can actually explain: what data do smart objects collect, how is it processed, and what can it reveal about you.",
     "problem": "Smart objects are ubiquitous but opaque. People interact with them daily without understanding the data layer underneath — not because they don't care, but because the system is genuinely complex. Data flows through first, second, and third parties; different devices capture different types of information; and what can be inferred from that data goes far beyond what is explicitly collected.\n\nThe challenge was making this complexity navigable without simplifying it into something false.",
     "role": "I defined the research question, mapped the system, designed the full experience, and oversaw development — working with collaborators on the React implementation while remaining responsible for every interaction and narrative decision.",
