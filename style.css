@@ -36,7 +36,7 @@
     --font-serif: "Ortica", serif;
     --font-sans: "Syne", sans-serif;
     --header-h: 2.6rem;
-    --bio-h: 6rem;
+    --bio-h: 8rem;
     --filter-h: 3.4rem;
     --content-h: calc(100vh - var(--header-h) - var(--bio-h) - var(--filter-h));
 }
