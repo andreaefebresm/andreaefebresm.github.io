@@ -28,7 +28,7 @@
 }
 
 :root {
-    --bg: #FEF5EA;
+    --bg: #EFEFEF;
     --black: #111111;
     --gray: #888888;
     --gray-light: #bbbbbb;
@@ -325,7 +325,7 @@ body.prog {
     height: calc(100vh - var(--header-h));
     position: relative;
     overflow: hidden;
-    background: #F0EBE3;
+    background: #EFEFEF;
     display: flex;
     align-items: center;
     justify-content: center;

@@ -178,7 +178,7 @@
     "externalLink": "",
     "image": "src/images/dataviz-col.png",
     "hoverImage": "src/images/dataviz-col.png",
-    "gallery": ["src/images/dataviz-col-01.png","src/images/dataviz-col-02.png","src/images/dataviz-col-03.png","src/images/dataviz-col-04.png","src/images/dataviz-col-05.png","src/images/dataviz-col-06.png","src/images/dataviz-col-07.png","src/images/dataviz-col-07.png"],
+    "gallery": ["src/images/dataviz-col-01.png","src/images/dataviz-col-02.png","src/images/dataviz-col-03.png","src/images/dataviz-col-04.png","src/images/dataviz-col-05.png","src/images/dataviz-col-06.png","src/images/dataviz-col-07.png","src/images/dataviz-col-08.png"],
     "context": "A collection of data visualization work produced during Communication Design studies at Politecnico di Milano and through early freelance commissions — different formats, scales, and contexts.",
     "role": "Each piece involved the full process: data collection and cleaning, visual exploration, and final design. Tools varied by project — RAWGraphs, D3, Illustrator, Figma.",
     "process": "The projects span editorial infographics, interactive experiments, and print-ready charts. Working across different briefs and constraints was how I developed a consistent approach to translating data into visual form — learning what works by trying many things.",
