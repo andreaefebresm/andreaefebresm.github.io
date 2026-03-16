@@ -35,12 +35,17 @@
     --orange: #FF4B00;
     --font-serif: "Ortica", serif;
     --font-sans: "Syne", sans-serif;
+    --header-h: 2.6rem;
+    --bio-h: 6rem;
+    --filter-h: 3.4rem;
+    --content-h: calc(100vh - var(--header-h) - var(--bio-h) - var(--filter-h));
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 html, body {
     height: 100%;
+    overflow: hidden;
     background-color: var(--bg);
     color: var(--black);
     font-family: var(--font-sans);
@@ -55,7 +60,7 @@ header {
     z-index: 100;
     background: var(--bg);
     padding: 0 1.5rem;
-    height: 2.6rem;
+    height: var(--header-h);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -77,6 +82,10 @@ header {
 /* ---- Bio ---- */
 .bio {
     padding: 2rem 1.5rem 1.75rem;
+    height: var(--bio-h);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .bio-text {
     font-family: var(--font-serif);
@@ -95,6 +104,7 @@ header {
 /* ---- Filter ---- */
 .filter {
     padding: 0.9rem 1.5rem;
+    height: var(--filter-h);
     display: flex;
     justify-content: center;
     align-items: baseline;
@@ -119,16 +129,15 @@ header {
 .home-cols {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    height: calc(100vh - 2.6rem - 6rem - 3.4rem);
+    height: var(--content-h);
+    overflow: hidden;
 }
 .home-left {
     padding: 2rem 1.5rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    position: sticky;
-    top: 2.6rem;
-    height: calc(100vh - 2.6rem - 6rem - 3.4rem);
+    height: var(--content-h);
     overflow: hidden;
 }
 .section-description {
@@ -148,10 +157,12 @@ header {
 .home-footer a:hover { text-decoration: underline; }
 
 .home-right {
-    height: calc(100vh - 2.6rem - 6rem - 3.4rem);
+    height: var(--content-h);
     overflow-y: auto;
     padding: 0 1.5rem 2rem;
+    scrollbar-width: none;
 }
+.home-right::-webkit-scrollbar { display: none; }
 
 /* ---- Project rows ---- */
 .proj-row {
@@ -227,16 +238,18 @@ body.prog {
 .prog-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    height: calc(100vh - 2.6rem);
+    height: calc(100vh - var(--header-h));
 }
 .prog-left {
     padding: 2rem 1.5rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: calc(100vh - 2.6rem);
+    height: calc(100vh - var(--header-h));
     overflow-y: auto;
+    scrollbar-width: none;
 }
+.prog-left::-webkit-scrollbar { display: none; }
 .prog-intro { display: flex; flex-direction: column; gap: 0.5rem; }
 .prog-breadcrumb { font-size: 0.72rem; color: var(--gray); }
 .prog-breadcrumb a { color: var(--gray); }
@@ -307,16 +320,20 @@ body.prog {
 .project-nav a:hover { color: var(--black); }
 #next-project { text-align: right; }
 
-/* Gallery */
+/* ---- Gallery ---- */
 .prog-right {
-    height: calc(100vh - 2.6rem);
+    height: calc(100vh - var(--header-h));
     position: relative;
     overflow: hidden;
+    background: #F0EBE3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .prog-right img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     display: block;
 }
 .arrow {
@@ -324,12 +341,12 @@ body.prog {
     top: 50%;
     transform: translateY(-50%);
     font-size: 1.5rem;
-    color: var(--bg);
+    color: var(--black);
     cursor: pointer;
     user-select: none;
     z-index: 10;
     padding: 0.5rem;
-    opacity: 0.7;
+    opacity: 0.3;
     transition: opacity 0.15s;
 }
 .arrow:hover { opacity: 1; }
@@ -338,18 +355,17 @@ body.prog {
 
 /* ---- Mobile ---- */
 @media (max-width: 767px) {
+    html, body { overflow: auto; }
     .home-cols {
         grid-template-columns: 1fr;
         height: auto;
     }
     .home-left {
-        position: static;
         height: auto;
         padding: 1.5rem 1rem 1rem;
     }
     .home-right {
-        height: auto;
-        overflow-y: visible;
+        height: 70vh;
         padding: 0 1rem 2rem;
     }
     .section-description { margin-bottom: 1.5rem; }
@@ -357,6 +373,6 @@ body.prog {
     .filter { font-size: 1rem; gap: 0.5rem; flex-wrap: wrap; }
     .prog-container { grid-template-columns: 1fr; height: auto; }
     .prog-left { height: auto; }
-    .prog-right { height: 50vh; }
+    .prog-right { height: 60vw; }
     body.prog { overflow: auto; }
 }
