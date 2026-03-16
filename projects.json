@@ -68,7 +68,7 @@
     "externalLink": "https://doublecheck.theglassroom.org/english/about.html",
     "image": "src/images/doublecheck.png",
     "hoverImage": "src/images/doublecheck.png",
-    "gallery": ["src/placeholder.png"],
+    "gallery": ["src/images/doublecheck-01.png","src/images/doublecheck-02.png","src/images/doublecheck-03.png","src/images/doublecheck-04.png","src/images/doublecheck-05.png"],
     "context": "A university project developed at Density Design in 2019, when fact-checking labels on social media didn't exist yet. The brief asked to design a digital artifact that would invite a specific audience to reflect and act on a researched topic. The team addressed people who used social media as their primary news source — without the tools or habits to question what they were seeing.",
     "problem": "Visual misinformation is not one thing. A manipulated image can be a photomontage, a mislabeled photo, or a real image stripped of its context — each mechanism works differently, but all exploit the same assumption: that seeing means knowing. Most people who encounter false images online aren't careless, they're simply unequipped.\n\nThe research behind the project mapped this complexity across real debunked cases, showing how frequently images are falsified around major events — and how rarely the distinction between types of manipulation is made visible.",
     "role": "Within the team I contributed to the research phase, led the UX and interaction design, and wrote part of the code. The project moved from research findings to concept to working artifact — I was involved across all three.",
