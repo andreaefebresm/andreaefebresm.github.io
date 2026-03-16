@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   setCurrentYear();
+  initAboutPanel();
   fetch('projects.json')
     .then(res => res.json())
     .then(projects => {
@@ -17,6 +18,27 @@ document.addEventListener('DOMContentLoaded', () => {
 function setCurrentYear() {
   const year = new Date().getFullYear();
   document.querySelectorAll('[data-current-year]').forEach(el => el.textContent = year);
+}
+
+function initAboutPanel() {
+  const trigger = document.getElementById('about-trigger');
+  const panel = document.getElementById('about-panel');
+  const overlay = document.getElementById('about-overlay');
+  const close = document.getElementById('about-close');
+  if (!trigger || !panel) return;
+
+  function open() {
+    panel.classList.add('open');
+    overlay.classList.add('open');
+  }
+  function closePanel() {
+    panel.classList.remove('open');
+    overlay.classList.remove('open');
+  }
+
+  trigger.addEventListener('click', open);
+  close.addEventListener('click', closePanel);
+  overlay.addEventListener('click', closePanel);
 }
 
 const SECTION_DESCRIPTIONS = {
@@ -128,7 +150,7 @@ function formatDescription(text) {
 }
 
 const PROJECT_ORDER = [
-  'field-service','courier','codici','doublecheck','interconnected',
+  'btw','ovo-sode','codici','doublecheck','interconnected',
   'dataviz-collection','design-economy','iperborea-the-passenger','milano-oltre-il-visibile','antarctic-resolution',
   'cfs-lab','discojournal','veroamaro'
 ];

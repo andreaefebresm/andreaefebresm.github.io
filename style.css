@@ -28,7 +28,7 @@
 }
 
 :root {
-    --bg: #EFEFEF;
+    --bg: #FEF5EA;
     --black: #111111;
     --gray: #888888;
     --gray-light: #bbbbbb;
@@ -36,7 +36,7 @@
     --font-serif: "Ortica", serif;
     --font-sans: "Syne", sans-serif;
     --header-h: 2.6rem;
-    --bio-h: 8rem;
+    --bio-h: 6rem;
     --filter-h: 3.4rem;
     --content-h: calc(100vh - var(--header-h) - var(--bio-h) - var(--filter-h));
 }
@@ -325,7 +325,7 @@ body.prog {
     height: calc(100vh - var(--header-h));
     position: relative;
     overflow: hidden;
-    background: #EFEFEF;
+    background: #F0EBE3;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -352,6 +352,107 @@ body.prog {
 .arrow:hover { opacity: 1; }
 .arrow-left { left: 0.75rem; }
 .arrow-right { right: 0.75rem; }
+
+/* ---- About panel ---- */
+.about-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.25);
+    z-index: 200;
+}
+.about-overlay.open { display: block; }
+
+.about-panel {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 420px;
+    max-width: 100vw;
+    height: 100vh;
+    background: var(--bg);
+    z-index: 201;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    overflow-y: auto;
+    scrollbar-width: none;
+    padding: 2rem 1.5rem 3rem;
+}
+.about-panel::-webkit-scrollbar { display: none; }
+.about-panel.open { transform: translateX(0); }
+
+.about-close {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    background: none;
+    border: none;
+    font-size: 0.9rem;
+    color: var(--gray);
+    cursor: pointer;
+    font-family: var(--font-sans);
+    padding: 0;
+}
+.about-close:hover { color: var(--black); }
+
+.about-content { margin-top: 2rem; }
+
+.about-bio p {
+    font-family: var(--font-serif);
+    font-size: 1.1rem;
+    line-height: 1.55;
+    color: var(--black);
+    margin-bottom: 2rem;
+}
+
+.about-section {
+    margin-bottom: 1.75rem;
+    border-top: 1px solid var(--black);
+    padding-top: 0.75rem;
+}
+.about-section h3 {
+    font-family: var(--font-sans);
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--gray);
+    margin-bottom: 0.75rem;
+}
+.about-row {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-family: var(--font-sans);
+    font-size: 0.78rem;
+    line-height: 1.5;
+    color: var(--black);
+}
+.about-year {
+    color: var(--gray);
+    font-size: 0.72rem;
+}
+.about-role { font-weight: 600; }
+
+.about-skills {
+    font-family: var(--font-sans);
+    font-size: 0.78rem;
+    color: var(--black);
+    line-height: 1.6;
+}
+
+.about-contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+.about-contacts a {
+    font-family: var(--font-sans);
+    font-size: 0.78rem;
+    color: var(--orange);
+}
+.about-contacts a:hover { text-decoration: underline; }
 
 /* ---- Mobile ---- */
 @media (max-width: 767px) {
