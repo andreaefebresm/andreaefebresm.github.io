@@ -403,7 +403,14 @@ body.prog {
 
     /* Project page */
     body.prog { overflow: auto; }
-    .prog-container { grid-template-columns: 1fr; height: auto; }
+    .prog-container {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+    .prog-right {
+        order: -1;
+        height: 60vw;
+    }
     .prog-left { height: auto; }
-    .prog-right { height: 60vw; }
 }
