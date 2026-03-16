@@ -36,7 +36,7 @@
     --font-serif: "Ortica", serif;
     --font-sans: "Syne", sans-serif;
     --header-h: 2.6rem;
-    --bio-h: 8rem;
+    --bio-h: 6rem;
     --filter-h: 3.4rem;
     --content-h: calc(100vh - var(--header-h) - var(--bio-h) - var(--filter-h));
 }
@@ -45,6 +45,7 @@
 
 html, body {
     height: 100%;
+    overflow: hidden;
     background-color: var(--bg);
     color: var(--black);
     font-family: var(--font-sans);
@@ -355,23 +356,54 @@ body.prog {
 /* ---- Mobile ---- */
 @media (max-width: 767px) {
     html, body { overflow: auto; }
+
+    /* Bio */
+    .bio {
+        height: auto;
+        padding: 1.5rem 1rem 1rem;
+    }
+    .bio-text { font-size: 1.25rem; }
+
+    /* Filter */
+    .filter {
+        height: auto;
+        padding: 0.75rem 1rem;
+        font-size: 1rem;
+        flex-wrap: wrap;
+        gap: 0.25rem;
+    }
+
+    /* Home columns: stack as description → projects → footer */
     .home-cols {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
         height: auto;
     }
     .home-left {
         height: auto;
-        padding: 1.5rem 1rem 1rem;
+        overflow: visible;
+        padding: 1.5rem 1rem 0;
+        display: contents; /* dissolve left into flow so we can reorder children */
+    }
+    .section-description {
+        order: 1;
+        padding: 0 1rem 1rem;
+    }
+    .home-footer {
+        order: 3;
+        padding: 1.5rem 1rem 2rem;
+        margin-top: 0;
     }
     .home-right {
-        height: 70vh;
-        padding: 0 1rem 2rem;
+        order: 2;
+        height: auto;
+        overflow-y: visible;
+        padding: 0 1rem;
     }
-    .section-description { margin-bottom: 1.5rem; }
-    .home-footer { margin-top: 1.5rem; }
-    .filter { font-size: 1rem; gap: 0.5rem; flex-wrap: wrap; }
+
+    /* Project page */
+    body.prog { overflow: auto; }
     .prog-container { grid-template-columns: 1fr; height: auto; }
     .prog-left { height: auto; }
     .prog-right { height: 60vw; }
-    body.prog { overflow: auto; }
 }
