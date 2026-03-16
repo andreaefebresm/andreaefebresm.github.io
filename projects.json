@@ -99,7 +99,7 @@
     "title": "Art directing a report on the Italian design sector",
     "subtitle": "Fondazione Symbola, POLI.design",
     "year": "2025",
-    "type": "dataviz",
+    "type": "case-study",
     "section": "Data Visualization",
     "tags": ["Data Viz", "Editorial Design"],
     "selected": false,
@@ -107,14 +107,17 @@
     "image": "src/placeholder.png",
     "hoverImage": "src/placeholder.png",
     "gallery": ["src/placeholder.png"],
-    "description": "Art direction, layout, and data visualization for an annual report on the economic and cultural landscape of Italian design. The work involved translating structured datasets into a coherent visual system, balancing analytical content with editorial clarity."
+    "context": "An annual report commissioned by Fondazione Symbola and POLI.design mapping the economic and cultural state of the Italian design sector — structured datasets, survey results, and editorial content across a publication-length document.",
+    "role": "I was responsible for art direction, layout, and data visualization. The work involved defining the visual language of the report, designing the charts and infographics, and laying out the full document.",
+    "process": "The main challenge was maintaining visual coherence across a large volume of heterogeneous content — data-heavy spreads alongside editorial text, charts of different types and scales. Each visualization required decisions about the right form for the data and how to integrate it with the surrounding layout without losing either analytical clarity or editorial quality.",
+    "outcome": "The report was published and distributed by Fondazione Symbola. It is available online at symbola.net."
   },
   {
     "slug": "iperborea-the-passenger",
     "title": "Mapping complex geographies for an editorial series",
     "subtitle": "Iperborea",
     "year": "2025",
-    "type": "dataviz",
+    "type": "case-study",
     "section": "Data Visualization",
     "tags": ["Data Viz", "Editorial"],
     "selected": false,
@@ -122,14 +125,17 @@
     "image": "src/placeholder.png",
     "hoverImage": "src/placeholder.png",
     "gallery": ["src/placeholder.png"],
-    "description": "Cartographic and data visualization contributions for The Passenger, Iperborea's travel and culture series. Maps and visual systems designed to support interpretation and exploration of complex geographic and cultural datasets."
+    "context": "The Passenger is Iperborea's travel and culture series — each issue dedicated to a country or region, combining journalism, essays, and visual content into a single editorial object.",
+    "role": "I contributed cartographic and data visualization work for multiple issues, designing maps and visual systems to support the editorial content.",
+    "process": "Each map required translating complex geographic and cultural datasets into a form that could work within the constraints of print — fixed dimensions, limited color, and readers who are not data specialists. The work involved both the visual design and the underlying decisions about what to show and how to frame it.",
+    "outcome": "The visualizations were published across multiple issues of The Passenger series by Iperborea."
   },
   {
     "slug": "milano-oltre-il-visibile",
     "title": "Building the visual system for a data-driven portrait of Milan",
     "subtitle": "Propp",
     "year": "2025",
-    "type": "dataviz",
+    "type": "case-study",
     "section": "Data Visualization",
     "tags": ["Data Viz"],
     "selected": false,
@@ -137,14 +143,17 @@
     "image": "src/placeholder.png",
     "hoverImage": "src/placeholder.png",
     "gallery": ["src/placeholder.png"],
-    "description": "Cartography and visual system design for a project exploring Milan through spatial data and urban geography. The work focused on representing the city beyond its institutional narratives, through maps and visual layers that invite exploration rather than impose a reading."
+    "context": "A data-driven project exploring Milan through cartographic visualizations that go beyond its institutional narratives — using data and geography to surface less visible urban dynamics.",
+    "role": "Working within Propp, I translated structured datasets into maps and visual systems designed to support interpretation rather than direct it.",
+    "process": "Each visualization required decisions about what to show, what to omit, and how much framing to apply. The goal was to let the data surface patterns without over-determining how a reader should respond to them — leaving room for exploration rather than imposing a single reading.",
+    "outcome": "The project was completed and published by Propp."
   },
   {
     "slug": "antarctic-resolution",
     "title": "Visualizing Antarctica as a geopolitical and environmental system",
     "subtitle": "The Pomo",
     "year": "2020",
-    "type": "dataviz",
+    "type": "case-study",
     "section": "Data Visualization",
     "tags": ["Data Viz", "Editorial"],
     "selected": false,
@@ -152,7 +161,10 @@
     "image": "src/placeholder.png",
     "hoverImage": "src/placeholder.png",
     "gallery": ["src/placeholder.png"],
-    "description": "Data visualization contributions for an editorial research project investigating Antarctica across geopolitical, environmental, and scientific dimensions. Working within a team, the focus was on translating complex datasets into clear, consistent visual forms within strict editorial constraints."
+    "context": "An editorial research project treating Antarctica as a geopolitical and environmental system, using data visualization to layer and communicate complex, multi-source information.",
+    "role": "As part of a data visualization team at The Pomo, I translated research datasets into publication-ready visuals — using RAWGraphs for exploration and Illustrator for refinement.",
+    "process": "Working within strict editorial constraints required close attention to consistency, accuracy, and visual integration. Each chart had to hold up analytically while fitting within a tightly defined visual system shared across the whole publication.",
+    "outcome": "The project was published by The Pomo and is available in open access at antarctic-resolution.org."
   },
   {
     "slug": "cfs-lab",
