@@ -160,7 +160,7 @@
     "externalLink": "https://antarctic-resolution.org/openaccess/",
     "image": "src/images/antarctic-resolution.png",
     "hoverImage": "src/images/antarctic-resolution.png",
-    "gallery": ["src/placeholder.png"],
+    "gallery": ["src/images/antarctic-resolution-01.png","src/images/antarctic-resolution-02.png","src/images/antarctic-resolution-03.png"],
     "context": "An editorial research project treating Antarctica as a geopolitical and environmental system, using data visualization to layer and communicate complex, multi-source information.",
     "role": "As part of a data visualization team at The Pomo, I translated research datasets into publication-ready visuals — using RAWGraphs for exploration and Illustrator for refinement.",
     "process": "Working within strict editorial constraints required close attention to consistency, accuracy, and visual integration. Each chart had to hold up analytically while fitting within a tightly defined visual system shared across the whole publication.",
