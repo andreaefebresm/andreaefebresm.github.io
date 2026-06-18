@@ -1,0 +1,104 @@
+/* ---- Archive page ---- */
+body.archive-page {
+    height: auto;
+    overflow: auto;
+}
+
+.archive-intro {
+    padding: 2rem 1.5rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.archive-breadcrumb {
+    font-size: 0.72rem;
+    color: var(--gray);
+}
+.archive-breadcrumb a:hover { text-decoration: underline; }
+
+.archive-note {
+    font-family: var(--font-serif);
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: var(--black);
+    max-width: 640px;
+}
+
+.archive-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    padding: 0 1.5rem 3rem;
+}
+
+.archive-item {
+    cursor: pointer;
+    color: var(--black);
+}
+.archive-thumb {
+    width: 100%;
+    aspect-ratio: 4/3;
+    border-radius: 2px;
+    overflow: hidden;
+    background: #F0EBE3;
+    margin-bottom: 0.6rem;
+}
+.archive-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.2s;
+}
+.archive-item:hover .archive-thumb img {
+    transform: scale(1.03);
+}
+.archive-title {
+    font-family: var(--font-serif);
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--black);
+}
+.archive-caption {
+    font-family: var(--font-sans);
+    font-size: 0.68rem;
+    color: var(--gray);
+    margin-top: 0.2rem;
+    line-height: 1.4;
+}
+
+/* ---- Lightbox ---- */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(17,17,17,0.92);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+}
+.lightbox.open { display: flex; }
+.lightbox img {
+    max-width: 88%;
+    max-height: 88%;
+    object-fit: contain;
+}
+.lightbox-close {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    font-size: 2rem;
+    color: var(--bg);
+    cursor: pointer;
+    line-height: 1;
+}
+
+/* ---- Mobile ---- */
+@media (max-width: 767px) {
+    .archive-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        padding: 0 1rem 2rem;
+    }
+}

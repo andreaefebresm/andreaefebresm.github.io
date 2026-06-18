@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Flora Fund",
+    "caption": "Sito bilingue (IT/EN), fondazione filantropica — Londra (con Propp)",
+    "image": "src/placeholder.png",
+    "externalLink": "https://floral-fund-example.org"
+  },
+  {
+    "title": "Vero Amaro Favero",
+    "caption": "Branding e sito, amaro artigianale italiano",
+    "image": "src/placeholder.png",
+    "externalLink": "https://www.veroamaro.it/"
+  },
+  {
+    "title": "Food Lab Network",
+    "caption": "Web design",
+    "image": "src/placeholder.png",
+    "externalLink": ""
+  },
+  {
+    "title": "Studio Effe",
+    "caption": "Web design",
+    "image": "src/placeholder.png",
+    "externalLink": "https://studioeffe.co"
+  },
+  {
+    "title": "Whiteout",
+    "caption": "Web design",
+    "image": "src/placeholder.png",
+    "externalLink": ""
+  }
+]
