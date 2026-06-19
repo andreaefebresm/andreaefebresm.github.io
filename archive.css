@@ -26,7 +26,7 @@ body.archive-page {
 
 .archive-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 1.5rem;
     padding: 0 1.5rem 3rem;
 }
