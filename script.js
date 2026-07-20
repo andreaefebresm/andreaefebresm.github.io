@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
   setCurrentYear();
-  initAboutPanel();
   fetch('projects.json')
     .then(res => res.json())
     .then(projects => {
@@ -18,27 +17,6 @@ document.addEventListener('DOMContentLoaded', () => {
 function setCurrentYear() {
   const year = new Date().getFullYear();
   document.querySelectorAll('[data-current-year]').forEach(el => el.textContent = year);
-}
-
-function initAboutPanel() {
-  const trigger = document.getElementById('about-trigger');
-  const panel = document.getElementById('about-panel');
-  const overlay = document.getElementById('about-overlay');
-  const close = document.getElementById('about-close');
-  if (!trigger || !panel) return;
-
-  function open() {
-    panel.classList.add('open');
-    overlay.classList.add('open');
-  }
-  function closePanel() {
-    panel.classList.remove('open');
-    overlay.classList.remove('open');
-  }
-
-  trigger.addEventListener('click', open);
-  close.addEventListener('click', closePanel);
-  overlay.addEventListener('click', closePanel);
 }
 
 const SECTION_DESCRIPTIONS = {
@@ -133,20 +111,15 @@ function buildProject(project, projects) {
   let current = 0;
   if (images.length) mainImage.src = images[0];
 
+  function change(dir) {
+    if (!images.length) return;
+    current = (current + dir + images.length) % images.length;
+    mainImage.src = images[current];
+  }
   const arrowL = document.querySelector('.arrow-left');
   const arrowR = document.querySelector('.arrow-right');
-
-  if (images.length <= 1) {
-    if (arrowL) arrowL.style.display = 'none';
-    if (arrowR) arrowR.style.display = 'none';
-  } else {
-    function change(dir) {
-      current = (current + dir + images.length) % images.length;
-      mainImage.src = images[current];
-    }
-    if (arrowL) arrowL.addEventListener('click', () => change(-1));
-    if (arrowR) arrowR.addEventListener('click', () => change(1));
-  }
+  if (arrowL) arrowL.addEventListener('click', () => change(-1));
+  if (arrowR) arrowR.addEventListener('click', () => change(1));
 }
 
 function formatDescription(text) {
@@ -155,8 +128,8 @@ function formatDescription(text) {
 }
 
 const PROJECT_ORDER = [
-  'field-service','courier','codici','doublecheck','interconnected',
-  'dataviz-collection','design-economy','iperborea-the-passenger','milano-oltre-il-visibile','antarctic-resolution',
+  'btw','ovo-sode','codici','doublecheck','interconnected',
+  'design-economy','iperborea-the-passenger','milano-oltre-il-visibile','antarctic-resolution',
   'cfs-lab','discojournal','veroamaro'
 ];
 
