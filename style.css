@@ -4,6 +4,7 @@
          url("src/fonts/OrticaLinear-Light.woff") format("woff");
     font-weight: 300;
     font-style: normal;
+    font-display: swap;
 }
 @font-face {
     font-family: "Ortica";
@@ -11,6 +12,7 @@
          url("src/fonts/OrticaLinear-Regular.woff") format("woff");
     font-weight: 400;
     font-style: normal;
+    font-display: swap;
 }
 @font-face {
     font-family: "Ortica";
@@ -18,6 +20,7 @@
          url("src/fonts/OrticaLinear-Bold.woff") format("woff");
     font-weight: 700;
     font-style: normal;
+    font-display: swap;
 }
 @font-face {
     font-family: "OrticaAngular";
@@ -25,10 +28,11 @@
          url("src/fonts/OrticaAngular-Bold.woff") format("woff");
     font-weight: 700;
     font-style: normal;
+    font-display: swap;
 }
 
 :root {
-    --bg: #EFEFEF;
+    --bg: #FEF5EA;
     --black: #111111;
     --gray: #888888;
     --gray-light: #bbbbbb;
@@ -36,7 +40,7 @@
     --font-serif: "Ortica", serif;
     --font-sans: "Syne", sans-serif;
     --header-h: 2.6rem;
-    --bio-h: 8rem;
+    --bio-h: 6rem;
     --filter-h: 3.4rem;
     --content-h: calc(100vh - var(--header-h) - var(--bio-h) - var(--filter-h));
 }
@@ -325,7 +329,7 @@ body.prog {
     height: calc(100vh - var(--header-h));
     position: relative;
     overflow: hidden;
-    background: #EFEFEF;
+    background: #F0EBE3;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -353,165 +357,26 @@ body.prog {
 .arrow-left { left: 0.75rem; }
 .arrow-right { right: 0.75rem; }
 
-/* ---- About panel ---- */
-.about-overlay {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.25);
-    z-index: 200;
-}
-.about-overlay.open { display: block; }
-
-.about-panel {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 420px;
-    max-width: 100vw;
-    height: 100vh;
-    background: var(--bg);
-    z-index: 201;
-    transform: translateX(100%);
-    transition: transform 0.3s ease;
-    overflow-y: auto;
-    scrollbar-width: none;
-    padding: 2rem 1.5rem 3rem;
-}
-.about-panel::-webkit-scrollbar { display: none; }
-.about-panel.open { transform: translateX(0); }
-
-.about-close {
-    position: absolute;
-    top: 1rem;
-    right: 1.5rem;
-    background: none;
-    border: none;
-    font-size: 0.9rem;
-    color: var(--gray);
-    cursor: pointer;
-    font-family: var(--font-sans);
-    padding: 0;
-}
-.about-close:hover { color: var(--black); }
-
-.about-content { margin-top: 2rem; }
-
-.about-bio p {
-    font-family: var(--font-serif);
-    font-size: 1.1rem;
-    line-height: 1.55;
-    color: var(--black);
-    margin-bottom: 2rem;
-}
-
-.about-section {
-    margin-bottom: 1.75rem;
-    border-top: 1px solid var(--black);
-    padding-top: 0.75rem;
-}
-.about-section h3 {
-    font-family: var(--font-sans);
-    font-size: 0.68rem;
-    font-weight: 600;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--gray);
-    margin-bottom: 0.75rem;
-}
-.about-row {
-    display: grid;
-    grid-template-columns: 100px 1fr;
-    gap: 0.5rem;
-    margin-bottom: 0.5rem;
-    font-family: var(--font-sans);
-    font-size: 0.78rem;
-    line-height: 1.5;
-    color: var(--black);
-}
-.about-year {
-    color: var(--gray);
-    font-size: 0.72rem;
-}
-.about-role { font-weight: 600; }
-
-.about-skills {
-    font-family: var(--font-sans);
-    font-size: 0.78rem;
-    color: var(--black);
-    line-height: 1.6;
-}
-
-.about-contacts {
-    display: flex;
-    flex-direction: column;
-    gap: 0.4rem;
-}
-.about-contacts a {
-    font-family: var(--font-sans);
-    font-size: 0.78rem;
-    color: var(--orange);
-}
-.about-contacts a:hover { text-decoration: underline; }
-
 /* ---- Mobile ---- */
 @media (max-width: 767px) {
     html, body { overflow: auto; }
-
-    /* Bio */
-    .bio {
-        height: auto;
-        padding: 1.5rem 1rem 1rem;
-    }
-    .bio-text { font-size: 1.25rem; }
-
-    /* Filter */
-    .filter {
-        height: auto;
-        padding: 0.75rem 1rem;
-        font-size: 1rem;
-        flex-wrap: wrap;
-        gap: 0.25rem;
-    }
-
-    /* Home columns: stack as description → projects → footer */
     .home-cols {
-        display: flex;
-        flex-direction: column;
+        grid-template-columns: 1fr;
         height: auto;
     }
     .home-left {
         height: auto;
-        overflow: visible;
-        padding: 1.5rem 1rem 0;
-        display: contents; /* dissolve left into flow so we can reorder children */
-    }
-    .section-description {
-        order: 1;
-        padding: 0 1rem 1rem;
-    }
-    .home-footer {
-        order: 3;
-        padding: 1.5rem 1rem 2rem;
-        margin-top: 0;
+        padding: 1.5rem 1rem 1rem;
     }
     .home-right {
-        order: 2;
-        height: auto;
-        overflow-y: visible;
-        padding: 0 1rem;
+        height: 70vh;
+        padding: 0 1rem 2rem;
     }
-
-    /* Project page */
-    body.prog { overflow: auto; }
-    .prog-container {
-        display: flex;
-        flex-direction: column;
-        height: auto;
-    }
-    .prog-right {
-        order: -1;
-        height: 60vw;
-    }
+    .section-description { margin-bottom: 1.5rem; }
+    .home-footer { margin-top: 1.5rem; }
+    .filter { font-size: 1rem; gap: 0.5rem; flex-wrap: wrap; }
+    .prog-container { grid-template-columns: 1fr; height: auto; }
     .prog-left { height: auto; }
+    .prog-right { height: 60vw; }
+    body.prog { overflow: auto; }
 }
