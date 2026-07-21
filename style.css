@@ -334,7 +334,15 @@ body.prog {
     align-items: center;
     justify-content: center;
 }
-.prog-right img {
+.media-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.media-container img,
+.media-container video {
     width: 100%;
     height: 100%;
     object-fit: contain;
