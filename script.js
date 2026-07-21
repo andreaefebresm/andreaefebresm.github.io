@@ -107,14 +107,37 @@ function buildProject(project, projects) {
   setProjectNavigation(project, projects);
 
   const images = project.gallery || [];
-  const mainImage = document.getElementById('mainImage');
+  const mediaContainer = document.getElementById('mediaContainer');
   let current = 0;
-  if (images.length) mainImage.src = images[0];
+
+  function isVideo(src) {
+    return /\.(mp4|webm|mov)$/i.test(src);
+  }
+
+  function renderMedia(src) {
+    mediaContainer.innerHTML = '';
+    if (isVideo(src)) {
+      const video = document.createElement('video');
+      video.src = src;
+      video.autoplay = true;
+      video.loop = true;
+      video.muted = true;
+      video.playsInline = true;
+      mediaContainer.appendChild(video);
+    } else {
+      const img = document.createElement('img');
+      img.src = src;
+      img.alt = project.title;
+      mediaContainer.appendChild(img);
+    }
+  }
+
+  if (images.length) renderMedia(images[0]);
 
   function change(dir) {
     if (!images.length) return;
     current = (current + dir + images.length) % images.length;
-    mainImage.src = images[current];
+    renderMedia(images[current]);
   }
   const arrowL = document.querySelector('.arrow-left');
   const arrowR = document.querySelector('.arrow-right');
